@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6f8c42f8-6ea0-455d-984d-2cbdcf15d61c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/layout/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layout/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap-3.3.7-dist.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/js/dataTables.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/img/banniere.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables-1.10.15.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/Contributing.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/column_render.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/complex_header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/defaults.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/dom_multiple_elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/dom_toolbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/dt_events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/events_live.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/footer_callback.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/html5-data-attributes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/html5-data-options.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/language_file.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/length_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/object_dom_read.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/row_callback.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/row_grouping.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/advanced_init/sort_direction_control.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/custom_data_flat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/custom_data_property.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/data/arrays.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/data/arrays_custom_prop.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/data/arrays_subobjects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/data/objects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/data/objects_deep.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/data/objects_root_array.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/data/objects_subarrays.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/data/orthogonal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/deep.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/defer_render.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/null_data_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/objects.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/objects_subarrays.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/orthogonal-data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/ajax/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/add_row.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/api_in_init.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/counter_columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/highlight.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/multi_filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/multi_filter_select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/regex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/row_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/select_row.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/select_single_row.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/show_hide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/api/tabs_and_scrolling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/alt_pagination.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/comma-decimal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/complex_header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/dom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/filter_only.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/flexible_width.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/hidden_columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/language.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/multi_col_sort.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/multiple_tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/scroll_x.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/scroll_xy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/scroll_y.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/scroll_y_dynamic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/state_save.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/table_sorting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/basic_init/zero_configuration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/data_sources/ajax.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/data_sources/dom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/data_sources/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/data_sources/js_array.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/data_sources/server_side.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/plug-ins/api.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/plug-ins/dom_sort.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/plug-ins/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/plug-ins/range_filtering.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/plug-ins/sorting_auto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/plug-ins/sorting_manual.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/resources/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/resources/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/resources/details_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/resources/details_open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/resources/examples.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/resources/syntax/Syntax Highlighter license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/resources/syntax/shCore.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/resources/syntax/shCore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/custom_vars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/defer_loading.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/ids.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/jsonp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/object_data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/pipeline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/row_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/ids-arrays.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/ids-objects.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/jsonp.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/mysql.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/objects.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/oracle.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/postgres.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/server_processing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/sqlite.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/sqlserver.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/scripts/ssp.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/select_rows.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/server_side/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/cell-border.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/compact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/display.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/hover.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/jqueryUI.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/material.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/no-classes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/order-column.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/row-border.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/stripe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/examples/styling/uikit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/css/autoFill.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/alwaysAsk.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/enableDisable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/fills.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/focus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/keyTable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/plugins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/scrolling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.jqueryui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.jqueryui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.semanticui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/autoFill.semanticui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/dataTables.autoFill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/AutoFill/js/dataTables.autoFill.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/buttons.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/common.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/css/mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/api/addRemove.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/api/enable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/api/group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/api/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/api/text.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/columnGroups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/columnText.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/columnsToggle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/restore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/stateSave.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/column_visibility/text.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/copyi18n.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/filename.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/hidden.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/pdfMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/pdfPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/swfPath.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/flash/tsv.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/copyi18n.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/customFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/excelBorder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/excelCellShading.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/excelTextBold.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/filename.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/outputFormat-function.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/outputFormat-orthogonal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/pdfImage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/pdfMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/pdfOpen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/pdfPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/html5/tsv.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/className.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/collections-autoClose.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/collections-sub.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/collections.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/custom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/keys.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/multiple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/pageLength.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/plugins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/print/autoPrint.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/print/columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/print/customisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/print/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/print/message.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/print/select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/print/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/styling/icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.colVis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.colVis.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.flash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.flash.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.html5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.html5.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.jqueryui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.jqueryui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.print.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.print.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.semanticui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/buttons.semanticui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/dataTables.buttons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/js/dataTables.buttons.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Buttons/swf/flashExport.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/css/colReorder.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/initialisation/col_filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/initialisation/new_init.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/initialisation/predefined.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/initialisation/realtime.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/initialisation/reset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/initialisation/scrolling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/integration/colvis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/integration/fixedcolumns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/integration/fixedheader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/integration/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/integration/responsive.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/integration/server_side.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/integration/state_save.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/styling/alt_insert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/js/dataTables.colReorder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/ColReorder/js/dataTables.colReorder.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/css/fixedColumns.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/colvis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/css_size.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/index_column.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/left_right_columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/right_column.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/server-side-processing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/size_fixed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/size_fluid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/initialisation/two_columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/integration/api.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/integration/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/integration/select-checkbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/integration/select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/col_filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/colvis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/rowspan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/rtl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/examples/styling/server-side-processing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/js/dataTables.fixedColumns.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/css/fixedHeader.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/integration/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/integration/colreorder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/integration/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/integration/responsive-bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/integration/responsive.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/enable-disable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/header_footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/horizontal-scroll.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/offset-automatic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/offset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/show-hide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/options/two_tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/js/dataTables.fixedHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/css/keyTable.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/initialisation/blurable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/initialisation/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/initialisation/scroller.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/initialisation/scrolling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/initialisation/server-side.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/initialisation/stateSave.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/styling/focusStyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/js/dataTables.keyTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/KeyTable/js/dataTables.keyTable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/css/responsive.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/child-rows/column-control.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/child-rows/custom-renderer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/child-rows/disable-child-rows.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/child-rows/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/child-rows/right-column.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/child-rows/whole-row-control.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/column-control/auto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/column-control/classes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/column-control/colreorder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/column-control/column-visibility.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/column-control/columnPriority.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/column-control/fixedHeader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/column-control/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/column-control/init-classes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/display-types/bootstrap-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/display-types/bootstrap4-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/display-types/foundation-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/display-types/immediateShow.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/display-types/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/display-types/jqueryui-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/display-types/modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/display-types/semanticui-modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/initialisation/ajax.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/initialisation/className.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/initialisation/default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/initialisation/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/initialisation/option.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/styling/compact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/styling/scrolling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/dataTables.responsive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/dataTables.responsive.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.jqueryui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.jqueryui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.semanticui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Responsive/js/responsive.semanticui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/css/rowGroup.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/initialisation/ajaxObjects.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/initialisation/customRow.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/initialisation/endRender.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/initialisation/event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/initialisation/fixedOrdering.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/initialisation/startAndEndRender.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/js/dataTables.rowGroup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowGroup/js/dataTables.rowGroup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/rowReorder.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/css/semanticui.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/initialisation/defaults.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/initialisation/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/initialisation/responsive.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/initialisation/restrictedOrdering.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/initialisation/scroll.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/initialisation/selector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/styling/reorderClass.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/examples/styling/snapX.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/js/dataTables.rowReorder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/RowReorder/js/dataTables.rowReorder.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/css/scroller.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/data/2500.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/data/ssp.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/initialisation/api_scrolling.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/initialisation/fixedColumns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/initialisation/large_js_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/initialisation/select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/initialisation/server-side_processing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/initialisation/state_saving.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/js/dataTables.scroller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Scroller/js/dataTables.scroller.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/css/select.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/api/cancellableEvents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/api/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/api/get.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/api/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/api/select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/blurable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/cells.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/checkbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/deferRender.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/i18n.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/multi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/reload.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/initialisation/single.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/styling/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/styling/bootstrap4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/styling/foundation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/styling/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/styling/jqueryui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/examples/styling/semanticui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/js/dataTables.select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/extensions/Select/js/dataTables.select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.material.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.material.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.uikit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/dataTables.uikit.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/jquery.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/jquery.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/css/jquery.dataTables_themeroller.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/images/Sorting icons.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/images/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/images/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.jqueryui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.jqueryui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.material.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.material.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.semanticui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.semanticui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.uikit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/dataTables.uikit.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/DataTables/media/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/js/jquery.js" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/layout/default.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nbproject/private/config.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nbproject/private/private.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nbproject/private/private.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nbproject/project.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nbproject/project.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitattributes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webroot/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#7#45#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webroot/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="40">
+                <caret line="2" selection-start-line="2" selection-end-line="2" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/webroot/index.php" />
+        <option value="$PROJECT_DIR$/webroot/css/style.css" />
+        <option value="$PROJECT_DIR$/view/layout/default.php" />
+        <option value="$PROJECT_DIR$/.gitattributes" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+        <option value="$PROJECT_DIR$/.idea/Projet-PPE3.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Projet-PPE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-PPE3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-PPE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-PPE3" type="462c0819:PsiDirectoryNode" />
+              <item name="nbproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-PPE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-PPE3" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-PPE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-PPE3" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-PPE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-PPE3" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-PPE3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-PPE3" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f8c42f8-6ea0-455d-984d-2cbdcf15d61c" name="Default Changelist" comment="" />
+      <created>1570429545958</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570429545958</updated>
+      <workItem from="1570429547155" duration="1581000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1581000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="40">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/img/banniere.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nbproject/private/config.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nbproject/private/private.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nbproject/private/private.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nbproject/project.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nbproject/project.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
