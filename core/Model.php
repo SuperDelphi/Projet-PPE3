@@ -1,25 +1,16 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Controller
- *
- * @author travail
- */
-class Model {
+class Model
+{
 
     static $connections = array();
     public $conf = 'default';
     public $table = false;
     public $db;
 
-    function __construct() {
-        //connexion à la base
+    function __construct()
+    {
+        // Connexion à la base de données
         $conf = Conf::$databases[$this->conf];
         if (isset(Model::$connections[$this->conf])) {
             $this->db = Model::$connections[$this->conf];
@@ -35,24 +26,32 @@ class Model {
             if (Conf::$debug >= 1) {
                 die($e->getMessage());
             } else {
-                die('impossible de se connecter à la base de données');
+                die('Connexion à la base de données impossible.');
             }
         }
-        //initialisation de variables
+
+        // Initialisation des variables
         if ($this->table === false) {
             $this->table = strtolower(get_class($this)) . 's';
         }
     }
 
-    function find($req = '', $ret = 'OBJ') {
-        //si $ret !=OBJ on renverra un tableau associatif
+    function findFirst($req, $ret = 'OBJ')
+    {
+        return current($this->find($req, $ret));
+    }
+
+    function find($req = '', $ret = 'OBJ')
+    {
+        // Si $ret != "OBJ", renvoi d'un tableau associatif
         if ($ret == 'OBJ') {
             $par_ret = PDO::FETCH_OBJ;
         } else {
             $par_ret = PDO::FETCH_BOTH;
         }
         $sql = 'select ';
-        //si la projection est renseignée on l'utilise sinon on met toutes les colonnes (*)
+
+        // Si la projection est renseignée, on l'utilise. Dans le cas contraire, on met toutes les colonnes (*).
         if (isset($req['projection'])) {
             $sql .= $req['projection'] . ' ';
         } else {
@@ -84,7 +83,7 @@ class Model {
             $sql .= $req['groupby'];
         }
         try {
-          
+
             $pre = $this->db->prepare($sql);
             $pre->execute();
             return $pre->fetchall($par_ret);
@@ -97,11 +96,8 @@ class Model {
         }
     }
 
-    function findFirst($req, $ret = 'OBJ') {
-        return current($this->find($req, $ret));
-    }
-
-    function delete($req) {
+    function delete($req)
+    {
         $sql = 'delete from ' . $this->table . ' ';
         //construction de la condition
 
@@ -133,7 +129,8 @@ class Model {
         return $info;
     }
 
-    function update($req) {
+    function update($req)
+    {
         $info = null;
         $sql = 'update ' . $this->table . ' set ';
         //on récupère les données à mettre à jour dans $req['donnees'] et la clef primaire dans $req['cle']
@@ -178,7 +175,8 @@ class Model {
     }
 
     //inserer une ligne avec une colonne en ai
-    function insertAI($colonnes, $donnees) {
+    function insertAI($colonnes, $donnees)
+    {
         $sql = 'insert into ' . $this->table . ' ( ';
         $sql .= implode(',', $colonnes);
         $sql .= ') values(';
@@ -205,7 +203,8 @@ class Model {
     }
 
 //inserer une ligne avec une colonne en ai
-    function insert($colonnes, $donnees) {
+    function insert($colonnes, $donnees)
+    {
         $info = null;
         $sql = 'insert into ' . $this->table . ' ( ';
         $sql .= implode(',', $colonnes);
