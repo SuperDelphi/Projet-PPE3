@@ -14,29 +14,27 @@ class Controller
         $this->request = $request;
     }
 
-//put your code here
-
     /**
-     *
-     * permet de charger un model
+     * Charge un modèle
      */
     function loadModel($name)
     {
         $file = ROOT . DS . 'model' . DS . $name . '.php';
         require_once($file);
-        //if (!isset($this->name)) {
-        $this->name = new $name();
-        //}
-        return $this->name;
+
+        if (!isset($this->name)) {
+            $this->name = new $name();
+            return $this->name;
+        } else {
+            return null;
+        }
     }
 
     /**
-     *
-     * permet de gerer les erreurs e404
+     * Gère les erreurs 404
      */
     function e404($message)
     {
-
         $this->set('message', $message);
         $this->render('/errors/404');
 
@@ -73,8 +71,7 @@ class Controller
     }
 
     /**
-     * redirection vers une autre page
-     *
+     * Redirection vers une autre page
      */
     function redirect($page)
     {

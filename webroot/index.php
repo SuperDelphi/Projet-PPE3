@@ -16,5 +16,3 @@ define('BASE_SITE', dirname($_SERVER['SCRIPT_NAME']));
 include CORE . DS . 'includes.php';
 
 $d = new Dispatcher();
-
-
