@@ -1,5 +1,5 @@
 <?php
-class Personne
+class Personne extends Model
 {
     var $nom;
     var $prenom;
