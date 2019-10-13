@@ -6,6 +6,11 @@
         <title><?php echo isset($title_for_layout) ? $title_for_layout : ""; ?></title>
     </head>
     <body>
-        <?= $content_for_layout ?>
+        <header>
+            <h1>T2T</h1>
+        </header>
+        <section>
+            <?= $content_for_layout ?>
+        </section>
     </body>
 </html>

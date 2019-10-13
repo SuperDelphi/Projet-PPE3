@@ -1,7 +1,10 @@
 <?php
+require_once("Personne.php");
+
 class Joueur extends Personne
 {
-    var $idClub;
+    var $table = "joueur inner join personne on joueur.idJoueur = personne.idPersonne ";
+/*    var $idClub;
     var $licence;
     var $visible;
 
@@ -17,5 +20,5 @@ class Joueur extends Personne
     function getJoueurByNom($nom){
         $j[joueurs] = $this->find(array('conditions' => array('nom' => $nom)));
         return $j;
-    }
+    }*/
 }

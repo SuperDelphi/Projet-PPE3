@@ -1,7 +1,7 @@
 <?php
 class Personne extends Model
 {
-    var $nom;
+/*    var $nom;
     var $prenom;
     var $age;
     var $mail;
@@ -13,6 +13,6 @@ class Personne extends Model
         $this->age = $age;
         $this->mail = $mail;
         $this->adresse = $adresse;
-    }
+    }*/
 }
 
