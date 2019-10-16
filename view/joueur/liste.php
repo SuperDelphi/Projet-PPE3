@@ -8,7 +8,7 @@
                     <th>Age</th>
                     <th>Mail</th>
                     <th>Adresse</th>
-                    <th>Numéro du Club</th>
+                    <th>Nom du Club</th>
                     <th>Licence</th>
 
                 </tr>
@@ -16,12 +16,12 @@
             <?php foreach ($joueurs as $j) : ?>
                 <tr>
                     <td><a href="<?php echo BASE_URL . '/joueur/detail/' . $j->nom; ?>" 
-                           title="Cliquez pour modifier"><?= $j->idJoueur ?></a></td>
+                           title="Cliquez pour modifier"><?= $j->nom ?></a></td>
                     <td> <?= $j->prenom ?></td>
                     <td><?= $j->age ?></td>
                     <td><?= $j->mail ?></td>
                     <td><?= $j->adresse ?></td>
-                    <td><?= $j->idClub ?></td>
+                    <td><?= $j->nomClub ?></td>
                     <td><?= $j->licence ?></td>
                 </tr>
 
