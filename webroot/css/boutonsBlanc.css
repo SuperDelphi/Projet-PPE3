@@ -25,7 +25,14 @@ body{
 }
 
 .primarybuttonWhite:hover {
-    background: rgb(234, 237, 240);
+    background: #F8FCFF;
     border: 2.5px solid #0a409e;
     transition-duration: 0.5s;
+}
+
+.primarybuttonWhite:active{
+    background: #edf6fd;
+    border: none;
+    color: #b4d8f0;
+    border-radius: 3px;
 }
