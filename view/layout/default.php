@@ -5,6 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title><?php echo isset($title_for_layout) ? $title_for_layout : ""; ?></title>
+    <link rel="stylesheet" href="../../webroot/css/footer.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
         <li>Politique de confidentialité</li>
     </ul>
 
-    <h4>Mentions légales</h4>
+    <h4>L'UFOLEP 17</h4>
     <p>Résidence Club La Fayette, Avenue de Bourgogne</p>
     <p>17401 La Rochelle (CEDEX 01)</p>
     <p>05 46 41 73 13</p>
