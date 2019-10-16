@@ -16,7 +16,7 @@
             <?php foreach ($joueurs as $j) : ?>
                 <tr>
                     <td><a href="<?php echo BASE_URL . '/joueur/detail/' . $j->nom; ?>" 
-                           title="Cliquez pour modifier"><?= $j->idJoueur ?></a></td>
+                           title="Cliquez pour modifier"><?= $j->nom ?></a></td>
                     <td> <?= $j->prenom ?></td>
                     <td><?= $j->age ?></td>
                     <td><?= $j->mail ?></td>
