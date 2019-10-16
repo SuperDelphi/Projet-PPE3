@@ -1,11 +1,18 @@
-body{ 
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
 a {
     text-decoration: none;
+    text-decoration-color: currentColor;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    color: none;
 }
 
-.primarybuttonWhite {
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.primarybuttonWhite  {
     background: white;
     color: #0a409e;
     border : 2px solid #cbd7eb;
@@ -14,4 +21,11 @@ a {
     padding-right: 27px;
     padding-top: 12px;
     padding-bottom: 12px;
+    border-radius: 3px;
+}
+
+.primarybuttonWhite:hover {
+    background: rgb(234, 237, 240);
+    border: 2.5px solid #0a409e;
+    transition-duration: 0.5s;
 }
