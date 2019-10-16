@@ -1,6 +1,6 @@
 <?php
 
-class JoueurController extends Controller {
+class GerantController extends Controller {
 
     private $modGerant = null;
     
