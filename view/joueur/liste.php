@@ -8,7 +8,7 @@
                     <th>Age</th>
                     <th>Mail</th>
                     <th>Adresse</th>
-                    <th>Numéro du Club</th>
+                    <th>Nom du Club</th>
                     <th>Licence</th>
 
                 </tr>
@@ -21,7 +21,7 @@
                     <td><?= $j->age ?></td>
                     <td><?= $j->mail ?></td>
                     <td><?= $j->adresse ?></td>
-                    <td><?= $j->idClub ?></td>
+                    <td><?= $j->nomClub ?></td>
                     <td><?= $j->licence ?></td>
                 </tr>
 
