@@ -4,6 +4,7 @@ require_once("Personne.php");
 class Joueur extends Personne
 {
     var $table = "joueur inner join personne on joueur.idJoueur = personne.idPersonne ";
+
 /*    var $idClub;
     var $licence;
     var $visible;
