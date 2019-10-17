@@ -1,3 +1,8 @@
-.idea
-*.xml
-/nbproject/private/
+
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/dataSources/79bfc19a-b5ba-4775-be9a-1d747bc6cd55.xml
+.idea/discord.xml
+.idea/php.xml
+.idea/workspace.xml
+.idea/workspace.xml
