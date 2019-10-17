@@ -2,3 +2,26 @@ footer {
     background-color: #000f2e;
     color: #ffffff;
 }
+
+.link {
+    color: #ffffff;
+}
+
+.link:hover {
+    color: #0048BD;
+}
+
+/* Bloque le footer en bas de la page */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #000000;
+    color: #FFFFFF;
+}
