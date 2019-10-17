@@ -14,23 +14,23 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">UFOLEP 17</a>
+            <a class="navbar-brand link" href="#">UFOLEP 17</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto"></ul>
-                <form class="form-inline my-2 my-lg-0" ">
-                    <ul class=" navbar-nav" style="padding-right:50px;>
+                <form class="form-inline my-2 my-lg-0">
+                    <ul class=" navbar-nav" style="padding-right:50px;">
                         <li class=" nav-item active">
-                    <a class="nav-link" href="#">Championnats<span class="sr-only">(current)</span></a>
+                    <a class="nav-link link" href="#">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Classements</a>
+                        <a class="nav-link link" href="#">Classements</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Archives</a>
+                        <a class="nav-link link" href="#">Archives</a>
                     </li>
                     </ul>
                     <input class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..." aria-label="Search">
@@ -38,7 +38,7 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Connexion</a>
+                        <a class="nav-link link" href="#">Connexion</a>
                     </li>
                 </ul>
             </div>
