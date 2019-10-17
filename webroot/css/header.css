@@ -3,6 +3,10 @@ header {
     color: #ffffff;
 }
 
+a {
+    
+}
+
 input::placeholder {
     font-size: 0.6em;
 }

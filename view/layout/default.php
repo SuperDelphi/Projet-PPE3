@@ -20,9 +20,11 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Championnats<span class="sr-only">(current)</span></a>
+                <ul class="navbar-nav mr-auto"></ul>
+                <form class="form-inline my-2 my-lg-0" ">
+                    <ul class=" navbar-nav" style="padding-right:50px;>
+                        <li class=" nav-item active">
+                    <a class="nav-link" href="#">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Classements</a>
@@ -30,10 +32,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Archives</a>
                     </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
+                    </ul>
                     <input class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..." aria-label="Search">
                 </form>
+
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Connexion</a>
