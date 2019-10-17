@@ -1,2 +1,12 @@
+header {
+    background-color: #000f2e;
+    color: #ffffff;
+}
 
+a {
+    
+}
 
+input::placeholder {
+    font-size: 0.6em;
+}
