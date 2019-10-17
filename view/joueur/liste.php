@@ -21,7 +21,7 @@
                     <td><?= $j->age ?></td>
                     <td><?= $j->mail ?></td>
                     <td><?= $j->adresse ?></td>
-                    <td><?= $j->nomClub ?></td>
+                    <td><?= $j->nomEquipe ?></td>
                     <td><?= $j->licence ?></td>
                 </tr>
 
