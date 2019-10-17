@@ -3,8 +3,12 @@ header {
     color: #ffffff;
 }
 
-a {
-    
+.link {
+    color: #ffffff;
+}
+
+.link:hover {
+    color: #0048BD;
 }
 
 input::placeholder {
