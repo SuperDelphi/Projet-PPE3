@@ -22,7 +22,7 @@
                     <td><?= $j->mail ?></td>
                     <td><?= $j->adresse ?></td>
                     <td><?= $j->nomEquipe ?></td>
-                    <td><?= $j->licence ?></td>
+                    <td><?= $j->licenceJoueur ?></td>
                 </tr>
 
             <?php endforeach; ?>
