@@ -3,27 +3,30 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title><?php echo isset($title_for_layout) ? $title_for_layout : ""; ?></title>
-    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/footer.css' ?>">
-    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/header.css' ?>">
     <link rel="stylesheet" href='<?php echo BASE_SITE . DS . '/bootstrap/css/bootstrap.css' ?>'>
+    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/fonts.css' ?>">
+    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/main.css' ?>">
+    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/header.css' ?>">
+    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/footer.css' ?>">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand link" href="#">UFOLEP 17</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand link" href="#">UFOLEP 17</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto"></ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <ul class=" navbar-nav" style="padding-right:50px;">
-                        <li class=" nav-item active">
-                    <a class="nav-link link" href="#">Championnats<span class="sr-only">(current)</span></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <form class="form-inline my-2 my-lg-0">
+                <ul class=" navbar-nav" style="padding-right:50px;">
+                    <li class=" nav-item active">
+                        <a class="nav-link link" href="#">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link" href="#">Classements</a>
@@ -31,25 +34,26 @@
                     <li class="nav-item">
                         <a class="nav-link link" href="#">Archives</a>
                     </li>
-                    </ul>
-                    <input class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..." aria-label="Search">
-                </form>
-
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link link" href="#">Connexion</a>
-                    </li>
                 </ul>
-            </div>
-        </nav>
-    </header>
-    <section>
-        <?= $content_for_layout ?>
-    </section>
+                <input class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..."
+                       aria-label="Search">
+            </form>
+
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link link" href="#">Connexion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section>
+    <?= $content_for_layout ?>
+</section>
 </body>
 
 <!-- Footer -->
-<div class="footer">
+<div class="footer-container">
     <footer class="page-footer font-small blue pt-4">
 
         <!-- Footer Links -->
@@ -106,7 +110,8 @@
 
                     <!-- Content -->
                     <h5 class="text-uppercase" style="text-align:right;">L'UFOLEP 17 </h5>
-                    <p style="text-align:right;">Résidence Club La Fayette, Avenue de Bourgogne 17401 La Rochelle (CEDEX 01)
+                    <p style="text-align:right;">Résidence Club La Fayette, Avenue de Bourgogne 17401 La Rochelle (CEDEX
+                        01)
                         <br>05 46 41 73 13
                         <br>ufolep-usep@laligue17.org</p>
                     <br>

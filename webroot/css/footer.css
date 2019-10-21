@@ -3,25 +3,18 @@ footer {
     color: #ffffff;
 }
 
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #000000;
+    color: #FFFFFF;
+}
+
 .link {
     color: #ffffff;
 }
 
 .link:hover {
     color: #0048BD;
-}
-
-/* Bloque le footer en bas de la page */
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #000000;
-    color: #FFFFFF;
 }

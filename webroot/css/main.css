@@ -1,0 +1,10 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Aide à bloquer le footer en bas de page */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
