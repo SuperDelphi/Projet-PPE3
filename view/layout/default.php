@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/footer.css' ?>">
     <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/header.css' ?>">
     <link rel="stylesheet" href='<?php echo BASE_SITE . DS . '/bootstrap/css/bootstrap.css' ?>'>
-    <link rel="stylesheet" href='<?php echo BASE_SITE . DS . '/bootstrap/js/bootstrap.js' ?>'>
 </head>
 
 <body>
