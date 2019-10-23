@@ -1,6 +1,6 @@
 .idea
 *.xml
-/nbproject/private/
+nbproject
 webroot/css/boutons.css
 view/tests.html
 webroot/css/boutons.css
