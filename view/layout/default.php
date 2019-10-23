@@ -41,7 +41,7 @@
 
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link link" href="#">Connexion</a>
+                    <a class="nav-link link" href="#"><?php echo($_SESSION) ? "Mon Espace" : "Connexion"; ?></a>
                 </li>
             </ul>
         </div>
