@@ -3,9 +3,7 @@
 class Security {
     static function hardEscape($string) {
         $string = addslashes($string);
-        $string = htmlspecialchars($string);
-        $string = escapeshellcmd($string);
-        $string = escapeshellarg($string);
+        // TODO Ajouter éventuellement d'autres fonctions d'échappement
 
         return $string;
     }

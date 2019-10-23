@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 class AuthController extends Controller
 {
     function auth()
