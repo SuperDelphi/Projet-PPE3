@@ -27,15 +27,18 @@ function get_ip()
         $ip = $_SERVER['REMOTE_ADDR'];
     }
     return $ip;
+    list($a, $b, $c, $d) = explode('.',$ip);
+    $iptronq_user= $a+"."+$b;
+    
 }
     function verif()
     {
         $bool=FALSE;
         while($bool=FALSE){
-            list($w, $x, $y,$z) = explode('.',$ip);  // Exemple : 192.168.10.3 = w=192 , x=168 , y=10 , z=3 
-            $iptronquée= $w+"."+$x;
+            list($w, $x, $y,$z) = explode('.',$_SESSION['ip']);  // Exemple : 192.168.10.3 = w=192 , x=168 , y=10 , z=3 
+            $iptronq_session= $w+"."+$x;
             
-            if($iptronquée==$ipsession){
+            if($iptronq_user==$iptronq_session){
                 echo("SUCCESSFUL");
             }
             else{
