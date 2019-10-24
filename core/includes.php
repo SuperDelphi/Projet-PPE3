@@ -13,3 +13,4 @@ require 'Session.php';
 
 // Scripts
 require "../scripts/Security.php";
+require "../scripts/Session.php";

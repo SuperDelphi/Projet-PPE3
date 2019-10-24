@@ -3,6 +3,7 @@
 // Définition du projet racine
 
 session_start();
+
 define('WEBROOT', dirname(__FILE__));
 
 define('ROOT', dirname(WEBROOT));
