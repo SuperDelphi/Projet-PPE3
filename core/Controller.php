@@ -26,7 +26,7 @@ class Controller
             $this->name = new $name();
             return $this->name;
         } else {
-            return null;
+            return new $name();
         }
     }
 
