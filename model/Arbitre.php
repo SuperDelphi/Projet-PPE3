@@ -2,7 +2,6 @@
 
 class Arbitre extends Compte
 {
-    
     var $table = "arbitre inner join personne on arbitre.idArbitre = personne.idPersonne";
     
     private $mdp;

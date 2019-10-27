@@ -3,7 +3,7 @@
 
 class AuthController extends Controller
 {
-    function auth()
+    function login()
     {
         $error = false;
         if (isset($_POST["user"], $_POST["passwd"])) {
@@ -26,5 +26,11 @@ class AuthController extends Controller
         } else {
             $this->render("login");
         }
+    }
+
+    function logout()
+    {
+        Session::destruct();
+        $this->redirect("/joueur/liste");
     }
 }

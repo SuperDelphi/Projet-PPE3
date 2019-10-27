@@ -11,5 +11,12 @@ require 'Controller.php';
 require 'Model.php';
 require 'Session.php';
 
+// Modèles
+require_once ROOT . DS . 'model' . DS . 'Personne.php';
+require_once ROOT . DS . 'model' . DS . 'Compte.php';
+require_once ROOT . DS . 'model' . DS . 'Arbitre.php';
+require_once ROOT . DS . 'model' . DS . 'Joueur.php';
+require_once ROOT . DS . 'model' . DS . 'Championnat.php';
+
 // Scripts
-require "../scripts/Security.php";
+require_once ROOT . DS . 'scripts' . DS . 'Security.php';

@@ -41,7 +41,8 @@
 
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link link" href="#"><?php echo($_SESSION) ? "Mon Espace" : "Connexion"; ?></a>
+                    <a class="nav-link link" href="<?php echo($_SESSION) ? BASE_URL . DS . "admin/listeChampionnat" : BASE_URL . DS . "auth/login"; ?>">
+                        <?php echo($_SESSION) ? "Mon espace" : "Connexion"; ?></a>
                 </li>
             </ul>
         </div>

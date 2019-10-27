@@ -18,7 +18,7 @@ class Session
         }
     }
 
-    function __destruct()
+    public static function destruct()
     {
         session_destroy();
     }
@@ -35,15 +35,19 @@ class Session
         else
             $ip = $_SERVER['REMOTE_ADDR'];
 
-        $ip = explode(".", $ip);
-        $ippref = $ip[0] . "." . $ip[1];
+        // On détermine le format de l'adresse IP (IPv4/v6)
+        if (count(explode(":", $ip)) > 1)
+            $delimiter = ":";
+        else
+            $delimiter = ".";
+
+        $ip = explode($delimiter, $ip);
+
+        $ippref = $ip[0] . $delimiter . $ip[1];
 
         $_SESSION["identifiant"] = $user;
         $_SESSION["hash"] = $hash;
         $_SESSION["type"] = $accountType;
         $_SESSION["ippref"] = $ippref;
-        $_SESSION = [
-
-        ];
     }
 }
