@@ -76,6 +76,14 @@ class Model
             }
             $sql .= ' ';
         }
+        
+        // Si le GROUP BY est renseigné, alors on l'ajoute à la requête
+        // si le order by est renseigné on l'ajoute à la requete
+        if (isset($req['orderby'])) {
+            $sql .= 'order by ';
+
+            $sql .= $req['orderby'];
+        }
 
         // Si le GROUP BY est renseigné, alors on l'ajoute à la requête
         if (isset($req['groupby'])) {
