@@ -12,7 +12,17 @@
                 <label>Type</label><br>
                 <label>(Départemental, régional, ...)</label>
             </td>
-            <td><input type="text" name="typeChampionnat" value="" size="20" /></td>
+            <td>
+                <input type="text" name="typeChampionnat" value="" size="20" />
+                <select name="typeChampionnat" required>
+                    <?php
+                    foreach ($typesChampionnat as $typeChampionnat) : ?>
+                    <option value="<?= $typeChampionnat ?>">
+                        <?= $typeChampionnat ?>
+                    </option>
+                    <?php endforeach; ?>
+                </select>
+            </td>
         </tr>
         <tr>
             <td><label>Nombre de journée</label></td>
