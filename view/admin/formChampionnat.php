@@ -15,9 +15,13 @@
             <td><input type="text" name="typeChampionnat" value="" size="20" /></td>
         </tr>
         <tr>
+            <td><label>Nombre de journée</label></td>
+            <td><input type="number" name="nombreJournee"/></td>
+        </tr>
+        <tr>
             <td><label>Division</label></td>
             <td>
-                <select name="nomDivison" required>
+                <select name="idDivison" required>
                     <?php
                     foreach ($divisions as $division) : ?>
                     <option id="<?= $division->idDivision ?>">
