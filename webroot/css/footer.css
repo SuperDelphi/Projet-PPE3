@@ -18,3 +18,11 @@ footer {
 .link:hover {
     color: #0048BD;
 }
+
+.footer-text {
+    font-size: 0.85em;
+}
+
+.text-uppercase {
+    font-family: "Barlow Condensed", sans-serif;
+}

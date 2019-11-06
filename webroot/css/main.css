@@ -8,3 +8,15 @@ html {
     position: relative;
     min-height: 100%;
 }
+
+.horizontal-sep {
+    height: 2px;
+    width: 25px;
+    background-color: #3a476a;
+    border-radius: 25px;
+    margin: 5px 0;
+}
+
+.text-right {
+    text-align: right;
+}
