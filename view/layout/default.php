@@ -29,7 +29,7 @@
                         <a class="nav-link link" href="#">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="#">Classements</a>
+                        <a class="nav-link link" href="<?php echo BASE_URL . DS . "classement/liste"; ?>">Classements</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link" href="#">Archives</a>
