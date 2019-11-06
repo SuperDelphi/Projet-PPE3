@@ -26,7 +26,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <ul class=" navbar-nav" style="padding-right:50px;">
                     <li class=" nav-item active">
-                        <a class="nav-link link" href="#">Championnats<span class="sr-only">(current)</span></a>
+                        <a class="nav-link link" href="<?php echo BASE_URL . DS . "championnat/liste"; ?>">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link" href="<?php echo BASE_URL . DS . "classement/liste"; ?>">Classements</a>
