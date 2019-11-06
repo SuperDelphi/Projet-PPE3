@@ -24,7 +24,7 @@
                 <select name="idDivision" required>
                     <?php
                     foreach ($divisions as $division) : ?>
-                    <option id="<?= $division->idDivision ?>">
+                    <option value="<?= $division->idDivision ?>">
                         <?= $division->nomDivision ?>
                     </option>
                     <?php endforeach; ?>
