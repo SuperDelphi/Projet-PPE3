@@ -7,4 +7,10 @@ class Security {
 
         return $string;
     }
+
+    static function shorten($string, $length) {
+        $string = substr($string, 0, $length);
+
+        return $string;
+    }
 }
