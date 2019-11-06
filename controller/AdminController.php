@@ -3,8 +3,14 @@
 
 class AdminController extends Controller
 {
+    function listeChampionnat()
+    {
+        $this->render("listeChampionnat");
+    }
+
     function formChampionnat()
     {
-        $this->render("");
+        $division = $this->loadModel()
+        $this->render("formChampionnat");
     }
 }
