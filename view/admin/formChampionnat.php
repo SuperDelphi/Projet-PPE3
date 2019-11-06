@@ -10,7 +10,7 @@
         <tr>
             <td>
                 <label>Type</label><br>
-                <label>(Junior, Senior, ...)</label>
+                <label>(Départemental, régional, ...)</label>
             </td>
             <td><input type="text" name="typeChampionnat" value="" size="20" /></td>
         </tr>
