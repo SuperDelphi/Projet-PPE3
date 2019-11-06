@@ -130,7 +130,7 @@ class Model
     function update($req)
     {
         $info = null;
-        $sql = 'update ' . $this->table . ' set ';
+        $sql = 'UPDATE ' . $this->table . ' SET ';
         // On récupère les données à mettre à jour dans $req['donnees'] ainsi que la clé primaire dans $req['cle']
         // On met des quotes aux chaînes de caractères
         $cond = array();
@@ -175,9 +175,11 @@ class Model
      */
     function insertAI($colonnes, $donnees)
     {
-        $sql = 'insert into ' . $this->table . ' ( ';
+        $singleTable = explode(" ", $this->table)[0];
+
+        $sql = 'INSERT INTO ' . $singleTable . ' ( ';
         $sql .= implode(',', $colonnes);
-        $sql .= ') values(';
+        $sql .= ') VALUES (';
         //on récupère les données à mettre à jour dans $req['donnees'] et la clef primaire dans $req['cle']
         //on met des quotes aux chaines de caractères
         $cond = array();
@@ -205,8 +207,10 @@ class Model
      */
     function insert($colonnes, $donnees)
     {
+        $singleTable = explode(" ", $this->table)[0];
+
         $info = null;
-        $sql = 'insert into ' . $this->table . ' ( ';
+        $sql = 'insert into ' . $singleTable . ' ( ';
         $sql .= implode(',', $colonnes);
         $sql .= ') values(';
 
