@@ -19,7 +19,7 @@ class Model
         try {
             $pdo = new PDO('mysql:host=' . $conf['host'] . ';dbname=' . $conf['database'] . ';', $conf['login'], $conf['password'], array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8')
             );
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERR_NONE);
             Model::$connections[$this->conf] = $pdo;
             $this->db = Model::$connections[$this->conf];
         } catch (PDOException $e) {
@@ -208,6 +208,16 @@ class Model
         $tab1 = $tab->fetchALL(PDO::FETCH_ASSOC);
         $last_id = $tab1[0]['last_id'];
         return $last_id;
+    }
+
+    function getColumnFromTable($table, $column)
+    {
+        $sql = "SHOW COLUMNS FROM " . $table . " WHERE Field = '" . $column . "';";
+        $pre = $this->db->prepare($sql);
+
+        $pre->execute();
+
+        return $pre->fetchAll(PDO::FETCH_BOTH)[0]; // Retourne un tableau associatif
     }
 
     /**
