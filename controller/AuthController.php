@@ -18,13 +18,13 @@ class AuthController extends Controller
 
             if (!$account) {
                 $error = true;
-                $this->render("login");
+                $this->redirect("login");
             } else {
                 Session::login($user, $account["password"], $account["typeCompte"]);
-                $this->render("/admin/listeChampionnat");
+                $this->redirect("/admin/listeChampionnat");
             }
         } else {
-            $this->render("login");
+            $this->redirect("login");
         }
     }
 

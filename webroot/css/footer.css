@@ -3,11 +3,16 @@ footer {
     color: #ffffff;
 }
 
+.page-footer {
+    padding: 50px !important;
+}
+
 .footer-container {
+    background-color: #000f2e;
     position: absolute;
     bottom: 0;
+    padding-top: 30px;
     width: 100%;
-    background: #000000;
     color: #FFFFFF;
 }
 
@@ -17,4 +22,12 @@ footer {
 
 .link:hover {
     color: #0048BD;
+}
+
+.footer-text {
+    font-size: 0.85em;
+}
+
+.text-uppercase {
+    font-family: "Barlow Condensed", sans-serif;
 }

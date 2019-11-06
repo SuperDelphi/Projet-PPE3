@@ -41,8 +41,9 @@
 
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link link" href="<?php echo($_SESSION) ? BASE_URL . DS . "admin/listeChampionnat" : BASE_URL . DS . "auth/login"; ?>">
-                        <?php echo($_SESSION) ? "Mon espace" : "Connexion"; ?></a>
+                    <a class="nav-link link"
+                       href="<?php echo ($_SESSION) ? BASE_URL . DS . "admin/listeChampionnat" : BASE_URL . DS . "auth/login"; ?>">
+                        <?php echo ($_SESSION) ? "Mon espace" : "Connexion"; ?></a>
                 </li>
             </ul>
         </div>
@@ -74,15 +75,17 @@
                     <!-- Links -->
                     <h5 class="text-uppercase">Liens utiles</h5>
 
+                    <div class="horizontal-sep"></div>
+
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" class="link">Plan du site</a>
+                            <a href="#!" class="link footer-text">Plan du site</a>
                         </li>
                         <li>
-                            <a href="#!" class="link">Contact</a>
+                            <a href="#!" class="link footer-text">Contact</a>
                         </li>
                         <li>
-                            <a href="#!" class="link">F.A.Q</a>
+                            <a href="#!" class="link footer-text">F.A.Q</a>
                         </li>
                     </ul>
 
@@ -95,12 +98,14 @@
                     <!-- Links -->
                     <h5 class="text-uppercase">Mentions légales</h5>
 
+                    <div class="horizontal-sep"></div>
+
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" class="link">C.G.U</a>
+                            <a href="#!" class="link footer-text">C.G.U</a>
                         </li>
                         <li>
-                            <a href="#!" class="link">Politique de confidentialité</a>
+                            <a href="#!" class="link footer-text">Politique de confidentialité</a>
                         </li>
                     </ul>
 
@@ -111,7 +116,8 @@
 
                     <!-- Content -->
                     <h5 class="text-uppercase" style="text-align:right;">L'UFOLEP 17 </h5>
-                    <p style="text-align:right;">Résidence Club La Fayette, Avenue de Bourgogne 17401 La Rochelle (CEDEX
+
+                    <p class="footer-text text-right">Résidence Club La Fayette, Avenue de Bourgogne 17401 La Rochelle (CEDEX
                         01)
                         <br>05 46 41 73 13
                         <br>ufolep-usep@laligue17.org</p>
