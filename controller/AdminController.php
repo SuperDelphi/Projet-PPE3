@@ -10,7 +10,9 @@ class AdminController extends Controller
 
     function formChampionnat()
     {
-        $division = $this->loadModel()
+        $divisionModele = $this->loadModel("division");
+        $d["divisions"] = $divisionModele->find();
+        $this->set($d);
         $this->render("formChampionnat");
     }
 }
