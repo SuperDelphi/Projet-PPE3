@@ -21,7 +21,7 @@
         <tr>
             <td><label>Division</label></td>
             <td>
-                <select name="idDivison" required>
+                <select name="idDivision" required>
                     <?php
                     foreach ($divisions as $division) : ?>
                     <option id="<?= $division->idDivision ?>">
