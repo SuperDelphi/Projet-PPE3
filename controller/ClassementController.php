@@ -7,12 +7,12 @@ class ClassementController extends Controller
 
     function liste()
     {
-        /*$this->modArbitre = $this->loadModel('Arbitre');
-        $d['arbitres'] = $this->modArbitre->find(array('conditions' => 1));
-        if (empty($d['arbitres'])) {
+        $this->modClassement = $this->loadModel('Classement');
+        $d['classement'] = $this->modClassement->find(array('conditions' => 1));
+        if (empty($d['classement'])) {
             $this->e404('Page introuvable');
         }
-        $this->set($d);*/
+        $this->set($d);
     }
     
     function tri() {
