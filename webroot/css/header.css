@@ -3,6 +3,10 @@ header {
     color: #ffffff;
 }
 
+.navbar {
+    height: 80px;
+}
+
 .link {
     color: #ffffff;
 }
