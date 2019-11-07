@@ -1,6 +1,5 @@
 <section >
     <h2>Liste des joueurs</h2>
-    <form method="post" action="<?= BASE_URL ?>/joueur/supprimer">
         <table border=1 style="text-align : center">
             <thead>
                 <tr>
@@ -28,5 +27,4 @@
 
             <?php endforeach; ?>
         </table>
-    </form>
 </section>

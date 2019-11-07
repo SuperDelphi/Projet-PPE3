@@ -11,9 +11,11 @@ class ClassementController extends Controller
         $params = array();
         $projection = 'equipe.nomEquipe, equipe.scoreGlobal';
         $orderby = 'equipe.scoreGlobal DESC';
+        $groupby = 'equipe.idEquipe';
         
-        $params = array( 'projection' => $projection, 'orderby'=>$orderby);
+        $params = array( 'projection' => $projection, 'orderby'=>$orderby, 'groupby'=>$groupby);
         $d['classement'] = $this->modClassement->find($params);
+        //var_dump($d);
         if (empty($d['classement'])) {
             $this->e404('Page introuvable');
         }
