@@ -1,5 +1,5 @@
 <section>
-    <h2>Liste des joueurs</h2>
+    <h2>Liste des championnats</h2>
     <form method="post" action="<?= BASE_URL ?>">
         <table border=1 style="text-align : center">
             <thead>
