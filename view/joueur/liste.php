@@ -1,28 +1,22 @@
 <section >
-    <h2>Liste des joueurs</h2>
+    <h2>Classement des joueurs</h2>
         <table border=1 style="text-align : center">
             <thead>
                 <tr>
+                    <th>Place</th>
                     <th>Nom</th>
                     <th>Prénom</th>
-                    <th>Age</th>
-                    <th>Mail</th>
-                    <th>Adresse</th>
-                    <th>Nom du Club</th>
-                    <th>Licence</th>
+                    <th>Score</th>
 
                 </tr>
             </thead>
-            <?php foreach ($joueurs as $j) : ?>
+            <?php $place = 1; foreach ($joueurs as $j) : ?>
                 <tr>
-                    <td><a href="<?php echo BASE_URL . '/joueur/detail/' . $j->nom; ?>" 
+                    <td><?= $place++ ?></td>
+                    <td><a href="<?php echo BASE_URL . '/joueur/detail/' . $j->idJoueur; ?>" 
                            title="Cliquez pour modifier"><?= $j->nom ?></a></td>
                     <td> <?= $j->prenom ?></td>
-                    <td><?= $j->age ?></td>
-                    <td><?= $j->mail ?></td>
-                    <td><?= $j->adresse ?></td>
-                    <td><?= $j->nomEquipe ?></td>
-                    <td><?= $j->licenceJoueur ?></td>
+                    <td><?= $j->scoreGlobal ?></td>
                 </tr>
 
             <?php endforeach; ?>
