@@ -20,3 +20,7 @@ html {
 .text-right {
     text-align: right;
 }
+
+#main-section {
+    min-height: 100vh;
+}
