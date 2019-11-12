@@ -49,7 +49,7 @@
         </div>
     </nav>
 </header>
-<section>
+<section id="main-section">
     <?= $content_for_layout ?>
 </section>
 </body>
