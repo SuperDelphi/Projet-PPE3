@@ -4,7 +4,7 @@ class DefautController extends Controller
 {
     function index()
     {
-        $url = "Location: http://" . SERVER . BASE_URL . "/joueur/liste";
+        $url = "Location: http://" . SERVER . BASE_URL . "/championnat/liste";
         header($url);
     }
 
