@@ -23,14 +23,11 @@ class RencontreController extends Controller {
             $nbrjournee++;
 
         }
-        
         $d['journee'] = $j;
         $d['nbrjournee'] = $nbrjournee;
-
-        //if (empty($d['rencontres'])) {
-        //    $this->e404('Page introuvable');
-        //} 
-
+        if (empty($d['journee'])) {
+            $this->e404('Page introuvable');
+        } 
         $modChamp = $this->loadModel('Championnat');
         $conditions = array('championnat.idChampionnat' => $idChampionnat);
         $params = array('conditions' => $conditions);
@@ -38,7 +35,6 @@ class RencontreController extends Controller {
         
         $modEquipe = $this->loadModel('Equipe');
         $d['equipes'] = $modEquipe->find(array('conditions' => 1));
-        
         //var_dump($d);
         $this->set($d);
     }
