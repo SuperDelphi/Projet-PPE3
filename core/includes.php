@@ -19,4 +19,5 @@ require_once ROOT . DS . 'model' . DS . 'Joueur.php';
 require_once ROOT . DS . 'model' . DS . 'Championnat.php';
 
 // Scripts
+require_once ROOT . DS . 'scripts' . DS . 'Parser.php';
 require_once ROOT . DS . 'scripts' . DS . 'Security.php';
