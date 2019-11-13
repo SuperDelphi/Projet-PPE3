@@ -1,12 +1,13 @@
 <h2><?= $championnat->nomChampionnat.'<br>'. $championnat->typeChampionnat.'<br>'.$championnat->nomDivision;?></h2>
-<?php foreach ($journee as $j) :
+<?php $cpt = 0; foreach ($journee as $j) : 
+    $cpt++;
         foreach ($j as $rencontre) : 
         if (gettype($rencontre) == "string") { ?>
 
         <div style=''>
             <table border='1' style='text-align:center;width: 30%'>
                 <thead>
-                    <th colspan="5"><?= $rencontre ?></th>
+                    <th colspan="5">J<?= $cpt. '<br>' . $rencontre ?></th>
                 </thead>
 
                 <?php 
