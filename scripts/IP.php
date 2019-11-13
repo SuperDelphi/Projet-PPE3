@@ -15,20 +15,12 @@ class IP
         return $ip;
     }
 
-    public static function checkTruncation($ip, $truncation)
+    public static function isIPv6Format($ip) {
+        return count(explode(":", $ip)) > 1;
+    }
+
+    public static function startsWithPrefix($ip, $prefix)
     {
-        $equals = false;
-        while (!$equals) {
-            list($w, $x, $y, $z) = explode('.', $ip);  // Exemple : 192.168.10.3 = w=192, x=168, y=10, z=3
-            $iptronqSession = $w + "." + $x;
-
-            if ($iptronqUser == $iptronqSession)
-                echo("SUCCESSFUL");
-            else
-                echo("FAILED");
-
-            $equals = TRUE;
-        }
-
+        return $prefix === substr($ip, 0, count($prefix));
     }
 }

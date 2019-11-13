@@ -25,18 +25,10 @@ class Session
 
     public static function login($user, $hash, $accountType)
     {
-        $ip = "";
-
-        // Récupère l'IP du client
-        if (isset($_SERVER['HTTP_X_FORWARDED_FOR']))
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        elseif (isset($_SERVER['HTTP_CLIENT_IP']))
-            $ip = $_SERVER['HTTP_CLIENT_IP'];
-        else
-            $ip = $_SERVER['REMOTE_ADDR'];
+        $ip = IP::getUserIP();
 
         // On détermine le format de l'adresse IP (IPv4/v6)
-        if (count(explode(":", $ip)) > 1)
+        if (IP::isIPv6Format($ip))
             $delimiter = ":";
         else
             $delimiter = ".";
