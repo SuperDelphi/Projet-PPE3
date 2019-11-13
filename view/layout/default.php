@@ -37,7 +37,7 @@
                         <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/liste"; ?>">Classements des joueurs</a>
                     </li>
                 </ul>
-                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..."
+                <input id="search-bar" class="mr-sm-2" type="search" placeholder="Rechercher un championnat, joueur..."
                        aria-label="Search">
             </form>
 

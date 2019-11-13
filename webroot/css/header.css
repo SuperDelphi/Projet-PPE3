@@ -35,12 +35,26 @@ li.nav-item:active {
 }
 
 #search-bar {
+    color: white;
+    background-color: #172139;
     min-width: 300px;
     margin: 0 15px !important;
     border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+}
+
+#search-bar:focus {
+    background-color: white;
+    transition: 0.10s background-color;
 }
 
 #search-bar::placeholder {
+    font-size: 0.8em;
+    color: #a3bfe3;
+}
+
+#search-bar:focus::placeholder {
     font-size: 0.8em;
     color: rgba(0, 0, 0, 0.25);
 }
