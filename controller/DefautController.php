@@ -24,12 +24,12 @@ class DefautController extends Controller
         return $ip;
     }
 
-    function currentIPStartsWith()
+    function currentIPStartsWith($ip)
     {
         // TODO À refaire
         $equals = false;
         while (!$equals) {
-            list($w, $x, $y, $z) = explode('.', $_SESSION['ip']);  // Exemple : 192.168.10.3 = w=192, x=168, y=10, z=3
+            list($w, $x, $y, $z) = explode('.', $ip);  // Exemple : 192.168.10.3 = w=192, x=168, y=10, z=3
             $iptronqSession = $w + "." + $x;
 
             if ($iptronqUser == $iptronqSession)

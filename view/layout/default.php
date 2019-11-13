@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto"></ul>
             <form class="form-inline my-2 my-lg-0">
-                <ul class=" navbar-nav" style="padding-right:50px;">
+                <ul class="navbar-nav" style="padding-right:50px;">
                     <li class=" nav-item active">
                         <a class="nav-link link" href="<?= BASE_URL . DS . "championnat/liste"; ?>">Championnats<span class="sr-only">(current)</span></a>
                     </li>
@@ -37,7 +37,7 @@
                         <a class="nav-link link" href="#">Archives</a>
                     </li>
                 </ul>
-                <input class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..."
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..."
                        aria-label="Search">
             </form>
 

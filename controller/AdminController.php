@@ -18,15 +18,48 @@ class AdminController extends Controller
             $nombreJournees = $_POST["nombreJournee"]; // TODO S'occuper de ça
             $idDivision = $_POST["idDivision"];
 
-            $championnatModele->insertAI(
-                ["nomChampionnat", "typeChampionnat", "idDivision"],
-                [$nomChampionnat, $typeChampionnat, $idDivision]
+            $valid1 = filter_var_array(
+                [
+                    "nomChampionnat" => $nomChampionnat,
+                    "typeChampionnat" => $typeChampionnat,
+                    "nombreJournees" => $nombreJournees,
+                    "idDivision" => $idDivision
+                ],
+                [
+                    "nomChampionnat" => FILTER_SANITIZE_STRING,
+                    "typeChampionnat" => FILTER_SANITIZE_STRING,
+                    "nombreJournees" => FILTER_VALIDATE_INT,
+                    "idDivision" => FILTER_VALIDATE_INT
+                ]
             );
+
+            $nomChampionnat = Security::shorten($nomChampionnat, 64);
+
+            $typesChampionnat = Parser::getEnumValuesFromRaw(
+                $championnatModele->getColumnFromTable("championnat", "typeChampionnat")["Type"]
+            );
+
+            $valid2 = in_array($typeChampionnat, $typesChampionnat);
+
+            var_dump($valid1 && $valid2);
+
+            if ($valid1 && $valid2) {
+                $championnatModele->insertAI(
+                    ["nomChampionnat", "typeChampionnat", "idDivision"],
+                    [$nomChampionnat, $typeChampionnat, $idDivision]
+                );
+            }
 
             $this->render("listeChampionnat");
         } else {
+            $championnatModele = $this->loadModel("Championnat");
             $divisionModele = $this->loadModel("division");
+
             $d["divisions"] = $divisionModele->find();
+            $d["typesChampionnat"] = Parser::getEnumValuesFromRaw(
+                $championnatModele->getColumnFromTable("championnat", "typeChampionnat")["Type"]
+            );
+
             $this->set($d);
             $this->render("formChampionnat");
         }

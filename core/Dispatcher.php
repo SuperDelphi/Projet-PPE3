@@ -27,7 +27,7 @@ class Dispatcher
          * Cette fonction permet d'appeler la méthode d'un objet en lui donnant:
          * le nom de l'objet, le nom de la méthode et la liste des paramètres.
          */
-        call_user_func(array($controller, $this->request->action), $this->request->params);
+        $controller->call($this->request->action, $this->request->params);
 
         /*
          * Appelle et remplit la bonne vue.

@@ -1,6 +1,7 @@
 header {
     background-color: #000f2e;
     color: #ffffff;
+    font-weight: 500;
 }
 
 .navbar {
@@ -17,4 +18,22 @@ header {
 
 input::placeholder {
     font-size: 0.6em;
+}
+
+ul.navbar-nav {
+    padding: 0 !important;
+}
+
+li.nav-item {
+    margin: 0 15px;
+}
+
+#search-bar {
+    min-width: 300px;
+    margin: 0 15px !important;
+}
+
+#search-bar::placeholder {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.25);
 }
