@@ -73,7 +73,6 @@ class AdminController extends Controller
 
             $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
             $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
-            var_dump(Security::hardEscape($_SESSION["type"]));
             $validAccountType = Security::hardEscape($_SESSION["type"]) === "GERANT";
 
             if (!($validUser && $validIP && $validAccountType)) {
