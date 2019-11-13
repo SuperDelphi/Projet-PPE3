@@ -64,4 +64,17 @@ class AdminController extends Controller
             $this->render("formChampionnat");
         }
     }
+    
+    function formRencontre1() {
+        
+        
+        
+    }
+    
+    function formRencontre2() {
+        
+        
+        
+    }
+    
 }
