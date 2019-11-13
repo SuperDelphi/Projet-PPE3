@@ -76,7 +76,10 @@ class AdminController extends Controller
             $validAccountType = Security::hardEscape($_SESSION["type"]) === "GERANT";
 
             if (!($validUser && $validIP && $validAccountType)) {
-                $this->redirect("/championnat/liste");
+                var_dump($validUser);
+                var_dump($validIP);
+                var_dump($validAccountType);
+//                $this->redirect("/championnat/liste");
             }
         } else {
             $this->redirect("/championnat/liste");

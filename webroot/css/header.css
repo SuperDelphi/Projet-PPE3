@@ -29,6 +29,10 @@ li.nav-item {
     font-size: 0.9em;
 }
 
+li.nav-item:hover {
+
+}
+
 #search-bar {
     min-width: 300px;
     margin: 0 15px !important;

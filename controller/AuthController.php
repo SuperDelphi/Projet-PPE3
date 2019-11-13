@@ -18,14 +18,12 @@ class AuthController extends Controller
 
             if (!$account) {
                 $error = true;
-//            $this->redirect("/auth/login");
                 $this->render("login");
             } else {
                 Session::login($user, $account["password"], $account["typeCompte"]);
                 $this->redirect("/admin/listeChampionnat");
             }
         } else {
-//            $this->redirect("/auth/login");
             $this->render("login");
         }
     }
@@ -33,7 +31,6 @@ class AuthController extends Controller
     function logout()
     {
         Session::destruct();
-//        $this->redirect("/joueur/liste");
-        $this->render("/joueur/liste");
+        $this->redirect("/championnat/liste");
     }
 }
