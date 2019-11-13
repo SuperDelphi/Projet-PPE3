@@ -17,13 +17,15 @@ class RencontreController extends Controller {
         foreach ($journees as $journee){
             $conditions = array('journee.idJournee' => $journee->idJournee, 'championnat.idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
+            $r['idJournee'] = $journee->idJournee;
             $r['dateprev'] = $journee->datePrev;
             $r['rencontre'] = $this->modRenc->find($params);
             array_push($j, $r);
-            $nbrjournee++;
+            $nbrjournee++;//var_dump($r);
 
         }
         $d['journee'] = $j;
+        
         $d['nbrjournee'] = $nbrjournee;
         if (empty($d['journee'])) {
             $this->e404('Page introuvable');
