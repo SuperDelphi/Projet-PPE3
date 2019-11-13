@@ -41,16 +41,16 @@ class AdminController extends Controller
 
             $valid2 = in_array($typeChampionnat, $typesChampionnat);
 
-            var_dump($valid1 && $valid2);
-
             if ($valid1 && $valid2) {
                 $championnatModele->insertAI(
                     ["nomChampionnat", "typeChampionnat", "idDivision"],
                     [$nomChampionnat, $typeChampionnat, $idDivision]
                 );
+                $this->redirect("/admin/listeChampionnat");
+            } else {
+                $this->redirect("/admin/formChampionnat");
             }
 
-            $this->render("listeChampionnat");
         } else {
             $championnatModele = $this->loadModel("Championnat");
             $divisionModele = $this->loadModel("division");
