@@ -31,10 +31,10 @@
                         <a class="nav-link link" href="<?= BASE_URL . DS . "championnat/liste"; ?>">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="<?= BASE_URL . DS . "classement/liste"; ?>">Classements</a>
+                        <a class="nav-link link" href="<?= BASE_URL . DS . "classement/liste"; ?>">Classements des équipes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="#">Archives</a>
+                        <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/liste"; ?>">Classements des joueurs</a>
                     </li>
                 </ul>
                 <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..."
