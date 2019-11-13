@@ -27,7 +27,52 @@ html {
 
 /* Liens */
 
+a {
+    text-decoration: none;
+    text-decoration-color: currentColor;
+    text-decoration-style: solid;
+    color: unset;
+}
+
 a:hover {
     color: unset !important;
     /*border-bottom: solid 1px #00379a !important;*/
+}
+
+/* Boutons */
+
+.primarybuttonWhite {
+    background: white;
+    color: #0a409e;
+    border: 2px solid #cbd7eb;
+    font-weight: 500;
+    padding: 12px 27px;
+    border-radius: 3px;
+    transform-origin: center center;
+    transition: 0.25s background;
+}
+
+.primarybuttonWhite:hover {
+    background: #F8FCFF;
+    border: 2px solid #0a409e;
+}
+
+.primarybuttonWhite:active {
+    transition-duration: 0s;
+    background: #edf6fd;
+    border: none;
+    color: #b4d8f0;
+    border-radius: 3px;
+    transform: scale(0.98);
+    transition: 0s;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.primarybuttonWhite[disabled=true] {
+    background: #F8F8F8;
+    border: none;
+    color: #dbdbdb;
+    margin-left: 2px;
+    margin-top: 2px;
 }
