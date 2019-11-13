@@ -65,6 +65,19 @@ class AdminController extends Controller
             $this->render("formChampionnat");
         }
     }
+    
+    function formRencontre1() {
+        
+        
+        
+    }
+    
+    function formRencontre2() {
+        
+        
+        
+    }
+    
 
     private function redirectNonAdmins() {
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
@@ -73,11 +86,13 @@ class AdminController extends Controller
 
             $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
             $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
-            var_dump(Security::hardEscape($_SESSION["type"]));
             $validAccountType = Security::hardEscape($_SESSION["type"]) === "GERANT";
 
             if (!($validUser && $validIP && $validAccountType)) {
-                $this->redirect("/championnat/liste");
+                var_dump($validUser);
+                var_dump($validIP);
+                var_dump($validAccountType);
+//                $this->redirect("/championnat/liste");
             }
         } else {
             $this->redirect("/championnat/liste");
