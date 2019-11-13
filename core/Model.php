@@ -218,7 +218,7 @@ class Model
 
         $pre->execute();
 
-        return $pre->fetchAll(PDO::FETCH_BOTH)[0]; // Retourne un tableau associatif
+        return $pre->fetchAll(PDO::FETCH_ASSOC)[0]; // Retourne un tableau associatif
     }
 
     /**
