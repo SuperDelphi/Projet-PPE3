@@ -15,7 +15,8 @@ class IP
         return $ip;
     }
 
-    public static function isIPv6Format($ip) {
+    public static function isIPv6Format($ip)
+    {
         return count(explode(":", $ip)) > 1;
     }
 

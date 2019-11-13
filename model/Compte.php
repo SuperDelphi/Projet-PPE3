@@ -22,4 +22,13 @@ class Compte extends Personne
         return $error ? null : $accounts[0];
     }
 
+    public function userExists($user)
+    {
+        $accounts = $this->find(["conditions" => [
+            "identifiant" => $user
+        ]], "TAB");
+
+        return isset($accounts[0]);
+    }
+
 }
