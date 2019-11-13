@@ -65,6 +65,19 @@ class AdminController extends Controller
             $this->render("formChampionnat");
         }
     }
+    
+    function formRencontre1() {
+        
+        
+        
+    }
+    
+    function formRencontre2() {
+        
+        
+        
+    }
+    
 
     private function redirectNonAdmins() {
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
