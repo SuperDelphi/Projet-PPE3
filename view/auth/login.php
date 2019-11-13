@@ -25,7 +25,7 @@
         <div class="form-group">
             <label class="col-md-2 control-label" for="singlebutton"></label>
             <div class="col-md-4">
-                <button id="singlebutton" name="singlebutton" class="btn btn-info">Connexion</button>
+                <button id="singlebutton" name="singlebutton" class="primarybuttonWhite">Connexion</button>
             </div>
         </div>
 

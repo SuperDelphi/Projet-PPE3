@@ -27,10 +27,11 @@ ul.navbar-nav {
 li.nav-item {
     margin: 0 15px;
     font-size: 0.9em;
+    transition: transform 0.1s;
 }
 
-li.nav-item:hover {
-
+li.nav-item:active {
+    transform: scale(0.97);
 }
 
 #search-bar {

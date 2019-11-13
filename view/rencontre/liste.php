@@ -1,18 +1,24 @@
-<h2><?= $championnat->nomChampionnat.'<br>'. $championnat->typeChampionnat.'<br>'.$championnat->nomDivision;?></h2>
-<?php $cpt = 0; foreach ($journee as $j) : 
+<h2><?= $championnat->nomChampionnat . '<br>' . $championnat->typeChampionnat . '<br>' . $championnat->nomDivision; ?></h2>
+<?php $cpt = 0;
+foreach ($journee as $j) :
     $cpt++;
-        foreach ($j as $rencontre) : 
-        if (gettype($rencontre) == "string") { ?>
-
+foreach ($j as $rencontre) :
+    if ($rencontre > 0 && $rencontre < 10) { ?>
         <div style=''>
             <table border='1' style='text-align:center;width: 30%'>
-                <thead>
-                    <th colspan="5">J<?= $cpt. '<br>' . $rencontre ?></th>
-                </thead>
-
-                <?php 
-                } else {
-                foreach ($rencontre as $r) : ?>
+                
+<?php 
+} else {
+    if (gettype($rencontre) == "string") { ?>
+        <thead>
+            <th colspan="5">J<?= $cpt . '<br>' . $rencontre ?></th>
+        </thead>
+<?php 
+} else {
+    if ($rencontre < 1 && $rencontre > 10) {
+    } else {
+                    //echo $rencontre;
+        foreach ($rencontre as $r) : ?>
 
                 <tr>
                     <td style='width:40%'>
@@ -35,6 +41,9 @@
             </table>
         </div>
 
-                <?php }
-        endforeach;
+                <?php 
+            }
+        }
+    }
+    endforeach;
     endforeach;
