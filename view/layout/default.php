@@ -46,7 +46,7 @@
                         <?php echo ($_SESSION) ? "Mon espace" : "Connexion"; ?></a>
                 </li>
             </ul>
-        </div>
+            
     </nav>
 </header>
 <section id="main-section">
