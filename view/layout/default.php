@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title><?php echo isset($title_for_layout) ? $title_for_layout : ""; ?></title>
-    <link rel="stylesheet" href='<?php echo BASE_SITE . DS . '/bootstrap/css/bootstrap.css' ?>'>
-    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/fonts.css' ?>">
-    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/main.css' ?>">
-    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/header.css' ?>">
-    <link rel="stylesheet" href="<?php echo BASE_SITE . DS . 'css/footer.css' ?>">
+    <title><?= isset($title_for_layout) ? $title_for_layout : ""; ?></title>
+    <link rel="stylesheet" href='<?= BASE_SITE . DS . 'bootstrap/css/bootstrap.css' ?>'>
+    <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/fonts.css' ?>">
+    <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/main.css' ?>">
+    <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/header.css' ?>">
+    <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/footer.css' ?>">
 </head>
 
 <body>
 <header>
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand link" href="<?php echo BASE_URL; ?>">UFOLEP 17</a>
+        <a class="navbar-brand link" href="<?= BASE_URL; ?>">
+            <img id="logo" src="<?= BASE_SITE . DS . "img/logo_site.png" ?>" alt="Logo de l'UFOLEP">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,26 +26,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto"></ul>
             <form class="form-inline my-2 my-lg-0">
-                <ul class=" navbar-nav" style="padding-right:50px;">
+                <ul class="navbar-nav" style="padding-right:50px;">
                     <li class=" nav-item active">
-                        <a class="nav-link link" href="<?php echo BASE_URL . DS . "championnat/liste"; ?>">Championnats<span class="sr-only">(current)</span></a>
+                        <a class="nav-link link" href="<?= BASE_URL . DS . "championnat/liste"; ?>">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="<?php echo BASE_URL . DS . "classement/liste"; ?>">Classements</a>
+                        <a class="nav-link link" href="<?= BASE_URL . DS . "classement/liste"; ?>">Classements</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link" href="#">Archives</a>
                     </li>
                 </ul>
-                <input class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..."
+                <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Recherche championnat, joueur..."
                        aria-label="Search">
             </form>
 
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link link"
-                       href="<?php echo ($_SESSION) ? BASE_URL . DS . "admin/listeChampionnat" : BASE_URL . DS . "auth/login"; ?>">
-                        <?php echo ($_SESSION) ? "Mon espace" : "Connexion"; ?></a>
+                       href="<?= $_SESSION ? BASE_URL . DS . "admin/listeChampionnat" : BASE_URL . DS . "auth/login"; ?>">
+                        <?= $_SESSION ? "Mon espace" : "Connexion"; ?></a>
                 </li>
             </ul>
             

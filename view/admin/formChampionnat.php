@@ -13,7 +13,6 @@
                 <label>(Départemental, régional, ...)</label>
             </td>
             <td>
-                <input type="text" name="typeChampionnat" value="" size="20" />
                 <select name="typeChampionnat" required>
                     <?php
                     foreach ($typesChampionnat as $typeChampionnat) : ?>

@@ -24,3 +24,10 @@ html {
 #main-section {
     min-height: 100vh;
 }
+
+/* Liens */
+
+a:hover {
+    color: unset !important;
+    /*border-bottom: solid 1px #00379a !important;*/
+}

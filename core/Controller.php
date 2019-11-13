@@ -30,6 +30,11 @@ class Controller
         }
     }
 
+    function call($action, $params) {
+        $this->runRoutine($action, $params);
+        call_user_func(array($this, $action), $params);
+    }
+
     /**
      * Gère les erreurs 404
      */
@@ -77,6 +82,11 @@ class Controller
     {
         $url = 'Location: http://' . SERVER . BASE_URL . $page;
         header("$url");
+    }
+
+    function runRoutine($action, $params) {
+//        $isSessionValid =
+        // Instructions à exécuter à chaque appel du contrôleur
     }
 
 }
