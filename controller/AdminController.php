@@ -50,7 +50,6 @@ class AdminController extends Controller
             } else {
                 $this->redirect("/admin/formChampionnat");
             }
-
         } else {
             $championnatModele = $this->loadModel("Championnat");
             $divisionModele = $this->loadModel("division");
