@@ -31,10 +31,10 @@
                         <a class="nav-link link" href="<?= BASE_URL . DS . "championnat/liste"; ?>">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="<?= BASE_URL . DS . "classement/liste"; ?>">Classements des équipes</a>
+                        <a class="nav-link link" href="<?= BASE_URL . DS . "classement/liste"; ?>">Classement des équipes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/liste"; ?>">Classements des joueurs</a>
+                        <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/liste"; ?>">Classement des joueurs</a>
                     </li>
                 </ul>
                 <input id="search-bar" class="mr-sm-2" type="search" placeholder="Rechercher un championnat, joueur..."
@@ -51,7 +51,7 @@
             
     </nav>
 </header>
-<section id="main-section">
+<section id="main-section" class="container-fluid">
     <?= $content_for_layout ?>
 </section>
 </body>

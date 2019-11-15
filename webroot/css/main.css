@@ -9,6 +9,10 @@ html {
     min-height: 100%;
 }
 
+.container-fluid {
+    padding: 0;
+}
+
 .horizontal-sep {
     height: 2px;
     width: 25px;
