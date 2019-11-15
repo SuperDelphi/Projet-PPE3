@@ -40,5 +40,34 @@ class RencontreController extends Controller {
         //var_dump($d);
         $this->set($d);
     }
+
+    function detail($id){
+        $idRencontre = trim($id);
+        $this->modRenc = $this->loadModel('Rencontre');
+        $this->modRenc->table .= "INNER JOIN poule ON championnat.idChampionnat = poule.idChampionnat ";
+        $conditions = array('idRencontre' => $idRencontre);
+        $params = array('conditions' => $conditions);
+        $d['rencontre'] = $this->modRenc->find($params);
+
+        $modJoueur = $this->loadModel('Joueur');
+        $d['joueurs'] = $modJoueur->find(array('conditions' => 1));
+
+        $modEquipe = $this->loadModel('Equipe');
+        $d['equipes'] = $modEquipe->find(array('conditions' => 1));
+
+        $modDivision = $this->loadModel('Division');
+        $d['divisions'] = $modDivision->find(array('conditions' => 1));
+        
+        $modDetailMatch = $this->loadModel('DetailMatch');
+        $conditions = array('idRencontre' => $idRencontre);
+        $params = array('conditions' => $conditions);
+        $d['matchs'] = $modDetailMatch->find($params);
+
+        if (empty($d['matchs'])) {
+            $this->e404('Les résultats de la rencontre seront prochainement publiés.');
+        }
+        //var_dump($d);
+        $this->set($d);
+    }
 }
 ?>
