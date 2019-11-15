@@ -11,8 +11,9 @@ class ChampionnatController extends Controller {
         if (empty($d['championnats'])) {
             $this->e404('Page introuvable');
         }
-        //var_dump($d);
+
         $this->set($d);
+        $this->render("liste");
     }
 }
 ?>
