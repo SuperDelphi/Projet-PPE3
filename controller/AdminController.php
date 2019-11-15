@@ -5,13 +5,13 @@ class AdminController extends Controller
 {
     function listeChampionnat()
     {
-        $this->redirectNonAdmins();
+        $this->redirectNonLogged();
         $this->render("listeChampionnat");
     }
 
     function formChampionnat()
     {
-        $this->redirectNonAdmins();
+        $this->redirectNonLogged();
         if (isset($_POST["creerChampionnat"])) {
             $championnatModele = $this->loadModel("Championnat");
 
@@ -79,20 +79,16 @@ class AdminController extends Controller
     }
     
 
-    private function redirectNonAdmins() {
+    private function redirectNonLogged() {
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
             $compteModele = $this->loadModel("Compte");
             $ip = IP::getUserIP();
 
             $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
             $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
-            $validAccountType = Security::hardEscape($_SESSION["type"]) === "GERANT";
 
-            if (!($validUser && $validIP && $validAccountType)) {
-                var_dump($validUser);
-                var_dump($validIP);
-                var_dump($validAccountType);
-//                $this->redirect("/championnat/liste");
+            if (!($validUser && $validIP)) {
+                $this->redirect("/championnat/liste");
             }
         } else {
             $this->redirect("/championnat/liste");
