@@ -3,7 +3,7 @@
 <html lang="fr">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset=UTF-8">
     <title><?= isset($title_for_layout) ? $title_for_layout : ""; ?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/fonts.css' ?>">
@@ -37,7 +37,7 @@
                         <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/liste"; ?>">Classement des joueurs</a>
                     </li>
                 </ul>
-                <input id="search-bar" class="mr-sm-2" type="search" placeholder="Rechercher un championnat, joueur..."
+                <input id="search-bar" class="mr-sm-2" type="search" placeholder="Rechercher une équipe ou un joueur..."
                        aria-label="Search">
             </form>
 

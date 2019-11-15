@@ -1,5 +1,5 @@
-<div>
-    <div class="col-sm-3" style="background-color: lightblue">
+<div class="row mx-0">
+    <div class="col-lg-2" style="background-color: lightblue">
         <div class="row border border-dark text-center">
             <div class="col">
                 <a href="<?= BASE_URL . DS ?>admin/formChampionnat">Nouveau championnat</a>
@@ -18,8 +18,8 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-9">
-        <h2>Liste des championnats</h2>
+    <div class="col-lg">
+        <h2 class="">Liste des championnats</h2>
         <form method="post" action="<?= BASE_URL ?>">
             <table class="data-table">
                 <thead>
