@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title><?= isset($title_for_layout) ? $title_for_layout : ""; ?></title>
     <link rel="stylesheet" href='<?= BASE_SITE . DS . 'bootstrap/css/bootstrap.css' ?>'>
+    <link rel="stylesheet" href='<?= BASE_SITE . DS . 'bootstrap/js/bootstrap.js' ?>'>
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/fonts.css' ?>">
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/main.css' ?>">
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/header.css' ?>">
