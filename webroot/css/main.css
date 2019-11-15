@@ -29,6 +29,30 @@ html {
     min-height: 100vh;
 }
 
+.data-table tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.data-table td {
+    border: none;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.data-table th {
+    background-color: white;
+    color: #00389a;
+    padding: 10px 20px;
+}
+
+.data-table tr {}
+
+/* Titles */
+
+h1, h2, h3 {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
 /* Liens */
 
 a {
