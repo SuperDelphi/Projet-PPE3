@@ -6,6 +6,13 @@ class AdminController extends Controller
     function listeChampionnat()
     {
         $this->redirectNonLogged();
+        $this->modChamp = $this->loadModel('Championnat');
+        $groupby = "championnat.idChampionnat";
+        $params = array();
+        $params = array('groupby' => $groupby);
+        $d['championnats'] = $this->modChamp->find($params);
+
+        $this->set($d);
         $this->render("listeChampionnat");
     }
 
