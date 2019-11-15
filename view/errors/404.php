@@ -1,2 +1,2 @@
 <?php ?>
-<h3>Erreur : <?= $message ?></h3>
+<h3><?= $message ?></h3>
