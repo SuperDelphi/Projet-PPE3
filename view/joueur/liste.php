@@ -1,6 +1,6 @@
 <section >
     <h2>Classement des joueurs</h2>
-        <table border=1 style="text-align : center">
+        <table class="data-table">
             <thead>
                 <tr>
                     <th>Place</th>

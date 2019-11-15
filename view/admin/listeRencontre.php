@@ -4,7 +4,7 @@
         if (gettype($rencontre) == "string") { ?>
 
             <div style=''>
-                <table border='1' style='text-align:center;width: 30%'>
+                <table class="data-table">
                     <thead>
                         <th colspan="5"><?= $rencontre ?></th>
                     </thead>

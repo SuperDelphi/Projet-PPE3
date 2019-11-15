@@ -28,7 +28,7 @@
             <ul class="navbar-nav mr-auto"></ul>
             <form class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav" style="padding-right:50px;">
-                    <li class=" nav-item active">
+                    <li class="nav-item active">
                         <a class="nav-link link" href="<?= BASE_URL . DS . "championnat/liste"; ?>">Championnats<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">

@@ -1,10 +1,7 @@
-<section >
-    
-    <table border=1 style="text-align : center">
+<section>
+    <h2>Classement des équipes</h2>
+    <table class="data-table">
         <thead>
-            <tr>
-                <th colspan="2">Classement des équipes</th>
-            </tr>
             <tr>
                 <th>Equipes</th>
                 <th>Score</th>
