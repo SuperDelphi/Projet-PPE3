@@ -83,6 +83,8 @@ class AdminController extends Controller
     
 
     private function redirectNonLogged() {
+        $redirectURL = "/auth/login";
+
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
             $compteModele = $this->loadModel("Compte");
             $ip = IP::getUserIP();
@@ -91,10 +93,10 @@ class AdminController extends Controller
             $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
 
             if (!($validUser && $validIP)) {
-                $this->redirect("/championnat/liste");
+                $this->redirect($redirectURL);
             }
         } else {
-            $this->redirect("/championnat/liste");
+            $this->redirect($redirectURL);
         }
     }
 }
