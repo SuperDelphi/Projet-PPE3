@@ -14,7 +14,7 @@
                     <td><?= $place++ ?></td>
                     <td><a href="<?php echo BASE_URL . '/joueur/detail/' . $j->idJoueur; ?>" 
                            title="Cliquez pour modifier"><?= $j->nom . ' '. $j->prenom ?></a></td>
-                    <td><?= $j->scoreGlobal ?></td>
+                    <td><?= $j->scoreGlobale ?></td>
                 </tr>
 
             <?php endforeach; ?>

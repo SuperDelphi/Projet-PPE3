@@ -7,8 +7,8 @@ class JoueurController extends Controller {
     function liste() {
         $this->modJoueur = $this->loadModel('Joueur');
         $params = array();
-        $projection = 'personne.nom, personne.prenom, joueur.idJoueur, joueur.scoreGlobal';
-        $orderby = 'joueur.scoreGlobal desc';
+        $projection = 'personne.nom, personne.prenom, joueur.idJoueur, joueur.scoreGlobale';
+        $orderby = 'joueur.scoreGlobale desc';
         $params = array('projection' => $projection, 'orderby' => $orderby);
         $d['joueurs'] = $this->modJoueur->find($params);
         //var_dump($d);

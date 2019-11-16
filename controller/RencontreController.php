@@ -107,13 +107,24 @@ class RencontreController extends Controller
         $this->modRenc = $this->loadModel('Rencontre');
         $conditions = array('idRencontre' => $idRencontre);
         $params = array('conditions' => $conditions);
-        $d['rencontre'] = $this->modRenc->find($params);
+        $rencontre = $this->modRenc->find($params);
+        $d['rencontre'] = $rencontre;
+
+        $d['typeRencontre'] = array('A-X','B-Y','C-Z','B-X','A-Z','C-Y','B-Z','C-X','A-Y');
+
+        $modEquipe = $this->loadModel('Equipe');
+        $equipes = $modEquipe->find(array('conditions' => 1));
+        $d['equipes'] = $equipes;
+
+        $modPoule = $this->loadModel('Poule');
+        $projection = 'nomPoule';
+        $conditions = array('idChampionnat' => $rencontre[0]->idChampionnat, 'idEquipe' => $equipes[0]->idEquipe);
+        $groupby = 'nomPoule';
+        $params = array('projection' => $projection, 'conditions' => $conditions, 'groupby' => $groupby);
+        $d['poules']= $modPoule->find($params);
 
         $modJoueur = $this->loadModel('Joueur');
         $d['joueurs'] = $modJoueur->find(array('conditions' => 1));
-
-        $modEquipe = $this->loadModel('Equipe');
-        $d['equipes'] = $modEquipe->find(array('conditions' => 1));
 
         $modDivision = $this->loadModel('Division');
         $d['divisions'] = $modDivision->find(array('conditions' => 1));
