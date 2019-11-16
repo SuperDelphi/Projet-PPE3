@@ -19,7 +19,7 @@ $cpt++;
 foreach ($j as $rencontre) :
     if ($rencontre > 0 && $rencontre < 100) { ?>
     <div>
-        <table border='1' style='text-align:center;width: 100%'>
+        <table border='1' style='text-align:center;width: 100%' class="data-table">
 <?php 
 } else {
     if (gettype($rencontre) == "string") { ?>
