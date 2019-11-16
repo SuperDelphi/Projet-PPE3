@@ -1,20 +1,25 @@
-<h2><?= $championnat->nomChampionnat . '<br>' . $championnat->typeChampionnat . '<br>' . $championnat->nomDivision;?></h2>
+<h2><?= $championnat->nomChampionnat . ' ' . $championnat->typeChampionnat . ' ' . $championnat->nomDivision; ?></h2>
+<div>
 <?php
 $cpt = 0;
 $cptP = 0;
-if (!empty($poules)) { echo '<h3>Poule ' . $poules[$cptP]->nomPoule . '</h3>';}
+if (!empty($poules)) {
+    echo '<div style="width:45%"><h3>
+    <a href="' . BASE_URL . '/rencontre/listeEquipePoule/'.$championnat->idChampionnat.'-'.$poules[$cptP]->nomPoule.'">Poule ' . $poules[$cptP]->nomPoule . '</h3><h6>(Voir les équipes)</a></h6>';
+}
 foreach ($journee as $j) :
-    if($cpt >= 10) {
-        $cpt = 0;
-        $cptP++;
-        echo '<h3>Poule ' . $poules[$cptP]->nomPoule .'</h3>';
-        
-    }
+    if ($cpt >= 10) {
+    $cpt = 0;
+    $cptP++;
+    echo '<div><h3>
+    <a href="' . BASE_URL . '/rencontre/listeEquipePoule/'.$championnat->idChampionnat.'-'.$poules[$cptP]->nomPoule.'">Poule ' . $poules[$cptP]->nomPoule . '</h3><h6>(Voir les équipes)</a></h6>';
+
+}
 $cpt++;
 foreach ($j as $rencontre) :
     if ($rencontre > 0 && $rencontre < 100) { ?>
-        <div style=''>
-            <table border='1' style='text-align:center;width: 45%'>
+    <div>
+        <table border='1' style='text-align:center;width: 100%'>
 <?php 
 } else {
     if (gettype($rencontre) == "string") { ?>
@@ -54,3 +59,5 @@ foreach ($j as $rencontre) :
     }
     endforeach;
     endforeach;
+    ?>
+</div>
