@@ -1,9 +1,15 @@
-<h2><?= $championnat->nomChampionnat . '<br>' . $championnat->typeChampionnat . '<br>' . $championnat->nomDivision; ?></h2>
-<?php $cpt = 0;
+<h2><?= $championnat->nomChampionnat . '<br>' . $championnat->typeChampionnat . '<br>' . $championnat->nomDivision;?></h2>
+<?php
+$cpt = 0;
+$cptP = 0;
+if (!empty($poules)) { echo '<h3>Poule ' . $poules[$cptP]->nomPoule . '</h3>';}
 foreach ($journee as $j) :
-    if ($cpt > 10) {
-    $cpt = 0;
-}
+    if($cpt >= 10) {
+        $cpt = 0;
+        $cptP++;
+        echo '<h3>Poule ' . $poules[$cptP]->nomPoule .'</h3>';
+        
+    }
 $cpt++;
 foreach ($j as $rencontre) :
     if ($rencontre > 0 && $rencontre < 100) { ?>
@@ -18,7 +24,7 @@ foreach ($j as $rencontre) :
 <?php 
 } else {
     if ($rencontre < 1 && $rencontre > 100) {
-    } else {
+    } else { //var_dump($rencontre);
         foreach ($rencontre as $r) : ?>
                 <tr>
                     <td style='width:40%'><a href="<?php echo BASE_URL . '/rencontre/detail/' . $r->idRencontre; ?>">

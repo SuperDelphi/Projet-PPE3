@@ -20,14 +20,15 @@ class JoueurController extends Controller {
 
     function detail($id) {
         $idJoueur = trim($id);
+        $visible = 1;
         $this->modJoueur = $this->loadModel('Joueur');
         $params = array();
         $projection = 'personne.nom, personne.prenom, personne.age, personne.mail, personne.adresse, joueur.licenceJoueur, joueur.scoreGlobal, equipe.nomEquipe';
-        $conditions = array('idJoueur' => $idJoueur);
+        $conditions = array('idJoueur' => $idJoueur, 'visible' => $visible);
         $params = array('projection'=>$projection, 'conditions' => $conditions);
         $d['joueur'] = $this->modJoueur->findFirst($params);
         if (empty($d['joueur'])) {
-            $this->e404('Clé invalide');
+            $this->e404('Informations inaccessibles');
         }
         //var_dump($d);
         $this->set($d);
