@@ -47,6 +47,10 @@ html {
 
 .data-table tr {}
 
+.static-content {
+    padding: 100px 0;
+}
+
 /* Titles */
 
 h1, h2, h3 {
@@ -59,7 +63,7 @@ a {
     text-decoration: none;
     text-decoration-color: currentColor;
     text-decoration-style: solid;
-    color: unset;
+    color: #00389a;
 }
 
 a:hover {

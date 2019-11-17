@@ -79,15 +79,15 @@
                     <div class="horizontal-sep"></div>
 
                     <ul class="list-unstyled">
+<!--                        <li>-->
+<!--                            <a href="#!" class="link footer-text">Plan du site</a>-->
+<!--                        </li>-->
                         <li>
-                            <a href="#!" class="link footer-text">Plan du site</a>
+                            <a href="mailto:ufolep-usep@laligue17.org" class="link footer-text">Contact</a>
                         </li>
-                        <li>
-                            <a href="#!" class="link footer-text">Contact</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="link footer-text">F.A.Q</a>
-                        </li>
+<!--                        <li>-->
+<!--                            <a href="#!" class="link footer-text">F.A.Q</a>-->
+<!--                        </li>-->
                     </ul>
 
                 </div>
@@ -103,10 +103,7 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" class="link footer-text">C.G.U</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="link footer-text">Politique de confidentialité</a>
+                            <a href="<?= BASE_URL . DS . "info/rgpd" ?>" class="link footer-text">Politique de confidentialité</a>
                         </li>
                     </ul>
 
