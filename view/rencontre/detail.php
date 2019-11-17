@@ -126,7 +126,7 @@
     <p>
         RESULTATS : <br>Victoire : <br>Equipe : 
         <?php ($rencontre[0]->scoreFinalA < $rencontre[0]->scoreFinalB) ?
-            $idEquipe = $rencontre[0]->idEquipeA : $idEquipe = $rencontre[0]->idEquipeB;
+            $idEquipe = $rencontre[0]->idEquipeB : $idEquipe = $rencontre[0]->idEquipeA;
         foreach ($equipes as $e) {
             if ($e->idEquipe == $idEquipe) {
                 echo $e->nomEquipe;
