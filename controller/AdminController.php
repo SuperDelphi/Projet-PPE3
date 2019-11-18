@@ -6,32 +6,15 @@ class AdminController extends Controller
     function listeChampionnat()
     {
         $this->redirectNonLogged();
-        $this->modChamp = $this->loadModel("Championnat");
+        $this->modChamp = $this->loadModel('Championnat');
         $groupby = "championnat.idChampionnat";
+        $params = array();
         $params = array('groupby' => $groupby);
         $d['championnats'] = $this->modChamp->find($params);
 
         $this->set($d);
         $this->render("listeChampionnat");
     }
-
-//    function listeRencontre($id) {
-//        $this->redirectNonLogged();
-//        $this->modChamp = $this->loadModel("Championnat");
-//        $this->modJournee = $this->loadModel("Journee");
-//        $this->modRencontre = $this->loadModel("Rencontre");
-//
-//        $champ = $this->modChamp->find([
-//            "conditions" =>
-//        ]);
-//
-//        $rencontres = $this->modRencontre->find(array(
-//            "conditions" => ["idRencontre" => $id],
-//            "orderby" => "date ASC"
-//        ));
-//
-//
-//    }
 
     function formChampionnat()
     {
