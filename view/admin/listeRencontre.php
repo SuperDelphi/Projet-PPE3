@@ -30,8 +30,7 @@
                                                     }
                                                 } ?> </td>
                         </tr> <?php endforeach; ?>
-                    <tr><a href="<?php echo BASE_URL . '/admin/listeRencontre/' . $j->idJournee; ?>" 
-                    title="Cliquez pour modifier">Modifier</a></tr>
+                    <tr><a href="<?php echo BASE_URL . '/admin/listeRencontre/' . $j->idJournee; ?>" title="Cliquez pour modifier">Modifier</a></tr>
 
                 </table>
                 <br>

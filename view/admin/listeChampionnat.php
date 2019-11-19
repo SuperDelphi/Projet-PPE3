@@ -14,6 +14,12 @@
         <br>
         <div class="row border border-dark text-center">
             <div class="col">
+                <a href="<?= BASE_URL . DS ?>admin/formJournee">Nouvelle Journée</a>
+            </div>
+        </div>
+        <br>
+        <div class="row border border-dark text-center">
+            <div class="col">
                 <a href="<?= BASE_URL . DS ?>auth/logout">Déconnexion</a>
             </div>
         </div>
@@ -23,16 +29,15 @@
         <form method="post" action="<?= BASE_URL ?>">
             <table class="data-table">
                 <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Type</th>
-                    <th>Division</th>
-                </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Type</th>
+                        <th>Division</th>
+                    </tr>
                 </thead>
                 <?php foreach ($championnats as $c) : ?>
                     <tr>
-                        <td><a href="<?php echo BASE_URL . '/rencontre/liste/' . $c->idChampionnat; ?>"
-                            ><?= $c->nomChampionnat ?></a></td>
+                        <td><a href="<?php echo BASE_URL . '/rencontre/liste/' . $c->idChampionnat; ?>"><?= $c->nomChampionnat ?></a></td>
                         <td> <?= $c->typeChampionnat ?></td>
                         <td> <?= $c->nomDivision ?></td>
                     </tr>

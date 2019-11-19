@@ -2,7 +2,7 @@
 <table>
     <form method="POST" action="<?= BASE_URL . DS ?>admin/formRencontre3">
         <thead>
-        <th><label>Nouvelle Rencontre 2</label></th>
+            <th><label>Nouvelle Rencontre 2</label></th>
         </thead>
         <tr>
             <td><label>Joueur A</label></td>
@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <td><label>Joueur B</label></td>
-            <td><input type="text" name="joueurb" value="" size="20" /></td> 
+            <td><input type="text" name="joueurb" value="" size="20" /></td>
             <td><label>Joueur Y</label></td>
             <td><input type="text" name="joueury" value="" size="20" /></td>
         </tr>
@@ -27,4 +27,3 @@
         </tr>
     </form>
 </table>
-

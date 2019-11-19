@@ -16,16 +16,16 @@
                 <select name="typeChampionnat" required>
                     <?php
                     foreach ($typesChampionnat as $typeChampionnat) : ?>
-                    <option value="<?= $typeChampionnat ?>">
-                        <?= $typeChampionnat ?>
-                    </option>
+                        <option value="<?= $typeChampionnat ?>">
+                            <?= $typeChampionnat ?>
+                        </option>
                     <?php endforeach; ?>
                 </select>
             </td>
         </tr>
         <tr>
             <td><label>Nombre de journée</label></td>
-            <td><input type="number" name="nombreJournee"/></td>
+            <td><input type="number" name="nombreJournee" /></td>
         </tr>
         <tr>
             <td><label>Division</label></td>
@@ -33,9 +33,9 @@
                 <select name="idDivision" required>
                     <?php
                     foreach ($divisions as $division) : ?>
-                    <option value="<?= $division->idDivision ?>">
-                        <?= $division->nomDivision ?>
-                    </option>
+                        <option value="<?= $division->idDivision ?>">
+                            <?= $division->nomDivision ?>
+                        </option>
                     <?php endforeach; ?>
                 </select>
             </td>
