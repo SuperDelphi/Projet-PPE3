@@ -15,23 +15,23 @@ class AdminController extends Controller
         $this->render("listeChampionnat");
     }
 
-//    function listeRencontre($id) {
-//        $this->redirectNonLogged();
-//        $this->modChamp = $this->loadModel("Championnat");
-//        $this->modJournee = $this->loadModel("Journee");
-//        $this->modRencontre = $this->loadModel("Rencontre");
-//
-//        $champ = $this->modChamp->find([
-//            "conditions" =>
-//        ]);
-//
-//        $rencontres = $this->modRencontre->find(array(
-//            "conditions" => ["idRencontre" => $id],
-//            "orderby" => "date ASC"
-//        ));
-//
-//
-//    }
+    //    function listeRencontre($id) {
+    //        $this->redirectNonLogged();
+    //        $this->modChamp = $this->loadModel("Championnat");
+    //        $this->modJournee = $this->loadModel("Journee");
+    //        $this->modRencontre = $this->loadModel("Rencontre");
+    //
+    //        $champ = $this->modChamp->find([
+    //            "conditions" =>
+    //        ]);
+    //
+    //        $rencontres = $this->modRencontre->find(array(
+    //            "conditions" => ["idRencontre" => $id],
+    //            "orderby" => "date ASC"
+    //        ));
+    //
+    //
+    //    }
 
     function formChampionnat()
     {
@@ -89,13 +89,14 @@ class AdminController extends Controller
             $this->render("formChampionnat");
         }
     }
-    
-    function formRencontre() {
 
-    }
-    
+    function formRencontre()
+    { }
+    function formJournee()
+    { }
 
-    private function redirectNonLogged() {
+    private function redirectNonLogged()
+    {
         $redirectURL = "/auth/login";
 
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
