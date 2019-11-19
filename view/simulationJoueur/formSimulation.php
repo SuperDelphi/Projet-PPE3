@@ -23,18 +23,17 @@
         </tr>
         <tr>
             <td>
-                <input type="text" name="whoiswinner" value="" size="20" />
-                <select name="Gagnant" required>
-                    <option value="JoueurA">
+                    <select name="Gagnant" required>
+                    <option value="JoueurA">JoueurA
                     </option>
-                    <option value="JoueurB">
+                    <option value="JoueurB">JoueurB
                     </option>
                 </select>
             </td>
         </tr>
 
         <tr>
-            <td><input type="submit" value="Modifier" name="creerSimulation" /></td>
+            <td><input type="submit" value="Simuler" name="creerSimulation" /></td>
         </tr>
     </form>
 </table>
