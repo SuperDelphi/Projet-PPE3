@@ -21,6 +21,20 @@ html {
     margin: 5px 0;
 }
 
+/* Liens */
+
+a {
+    text-decoration: none;
+    text-decoration-color: currentColor;
+    text-decoration-style: solid;
+    color: #00389a;
+}
+
+a:hover {
+    color: unset;
+    /*border-bottom: solid 1px #00379a !important;*/
+}
+
 .text-right {
     text-align: right;
 }
@@ -65,24 +79,22 @@ html {
     padding: 100px 0;
 }
 
+a.nav-link.link {
+    display: inline-block;
+    padding: 4px 12px;
+}
+
+a.nav-link.link:hover {
+    transition: 125ms;
+    color: #000f2e;
+    background-color: white;
+    border-radius: 5px;
+}
+
 /* Titles */
 
 h1, h2, h3 {
     font-family: "Barlow Condensed", sans-serif;
-}
-
-/* Liens */
-
-a {
-    text-decoration: none;
-    text-decoration-color: currentColor;
-    text-decoration-style: solid;
-    color: #00389a;
-}
-
-a:hover {
-    color: unset !important;
-    /*border-bottom: solid 1px #00379a !important;*/
 }
 
 /* Boutons */
