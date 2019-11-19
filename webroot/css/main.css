@@ -34,11 +34,11 @@ html {
 }
 
 .data-table > tr:hover, .data-table > tbody > tr:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: 100ms;
     z-index: 10;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.13);
-    background-color: #00389a;
+    background-image: linear-gradient(to right, #00389a, #0076bd);
     color: white;
 }
 
