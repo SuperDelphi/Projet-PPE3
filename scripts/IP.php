@@ -22,6 +22,7 @@ class IP
 
     public static function startsWithPrefix($ip, $prefix)
     {
+        var_dump($prefix === substr($ip, 0, count($prefix)));
         return $prefix === substr($ip, 0, count($prefix));
     }
 }

@@ -1,4 +1,4 @@
-<div  style="text-align:center">
+ <div  style="text-align:center">
     <h2><?= $championnat->nomChampionnat . ' ' . $championnat->typeChampionnat . '<br>' . $championnat->nomDivision; ?></h2>
 </div>
 <br>

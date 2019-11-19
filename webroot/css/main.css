@@ -33,6 +33,19 @@ html {
     background-color: #fafafa;
 }
 
+.data-table > tr:hover, .data-table > tbody > tr:hover {
+    transform: scale(1.05);
+    transition: 100ms;
+    z-index: 10;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.13);
+    background-color: #00389a;
+    color: white;
+}
+
+.data-table > tr:hover a, .data-table > tbody > tr:hover a {
+    color: white;
+}
+
 .data-table td {
     border: none;
     text-align: center;
@@ -45,7 +58,8 @@ html {
     padding: 10px 20px;
 }
 
-.data-table tr {}
+.data-table tr {
+}
 
 .static-content {
     padding: 100px 0;
@@ -109,12 +123,12 @@ a:hover {
     margin-top: 2px;
 }
 
-.primarybuttonBlue{
+.primarybuttonBlue {
     font-weight: 500;
     background: #00389A;
     padding: 12px 27px;
     color: white;
-    border:  2px solid #0d357c;
+    border: 2px solid #0d357c;
     border-radius: 3px;
     transform-origin: center center;
     transition: 0.25s background;
