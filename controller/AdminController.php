@@ -91,7 +91,8 @@ class AdminController extends Controller
     }
     
     function formRencontre() {
-
+        
+        
     }
     
 
