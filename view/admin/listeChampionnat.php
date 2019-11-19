@@ -8,7 +8,7 @@
         <br>
         <div class="row border border-dark text-center">
             <div class="col">
-                <a href="<?= BASE_URL . DS ?>admin/formRencontre1">Nouvelle Rencontre</a>
+                <a href="<?= BASE_URL . DS ?>admin/formRencontre">Nouvelle Rencontre</a>
             </div>
         </div>
         <br>
