@@ -4,11 +4,11 @@
         <form method="post" action="<?= BASE_URL ?>">
             <table class="data-table">
                 <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Type</th>
-                    <th>Division</th>
-                </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Type</th>
+                        <th>Division</th>
+                    </tr>
                 </thead>
                 <?php foreach ($championnats as $c) : ?>
                     <tr>
