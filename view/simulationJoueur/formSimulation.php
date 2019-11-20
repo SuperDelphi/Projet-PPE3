@@ -22,6 +22,7 @@
             <td><input type="number" name="ClassementJoueurB" value="" size="20" /></td>
         </tr>
         <tr>
+            <td><label>Gagnant</label></td>
             <td>
                     <select name="Gagnant" required>
                     <option value="JoueurA">JoueurA

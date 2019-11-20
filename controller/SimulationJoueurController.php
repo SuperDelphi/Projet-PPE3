@@ -9,10 +9,10 @@ class SimulationJoueurController extends Controller {
     function formSimulation() {
         if (isset($_POST["creerSimulation"])) {
             $simulationjoueurModele = $this->loadModel("SimulationJoueur");
-
+            //récupération des variables du formulaire avec la méthode post
             $nomJoueurA = $_POST["nomJoueurA"];
             $classementJoueurA = $_POST["ClassementJoueurA"];
-            $nomJoueurB = $_POST["nomJoueurB"]; // TODO S'occuper de ça
+            $nomJoueurB = $_POST["nomJoueurB"];
             $classementJoueurB = $_POST["ClassementJoueurB"];
             $gagnant = $_POST["Gagnant"];
             $perdant = "";
@@ -63,10 +63,6 @@ class SimulationJoueurController extends Controller {
             if ($bool) {
                 $classementJoueurB += $gagnant;
                 $classementJoueurA -= $perdant;
-                echo "Le joueurB gagne " . $gagnant . " points de classement.";
-                echo "<br>";
-                echo "Le joueurA perd " . $perdant . " points de classement.";
-                echo "<br>";
                 if ($classementJoueurA < 500) {
                     $classementJoueurA = 500; //On ne descend pas en dessous de 500
                 } elseif ($classementJoueurA < 500) {
@@ -75,7 +71,6 @@ class SimulationJoueurController extends Controller {
             } else {
                 $classementJoueurA += $gagnant;
                 $classementJoueurB -= $perdant;
-              
                 if ($classementJoueurA < 500) {
                     $classementJoueurA = 500; //On ne descend pas en dessous de 500
                 } elseif ($classementJoueurB < 500) {
@@ -84,15 +79,18 @@ class SimulationJoueurController extends Controller {
             }
 
 
-            //On renvoi les données à la VUE
+
+            //On créer un tableau dans lequel on stock les variables que l'on veut afficher
+
             $d = array();
             $d['nomJoueurA'] = $nomJoueurA;
             $d['nomJoueurB'] = $nomJoueurB;
             $d['classementJoueurA'] = $classementJoueurA;
             $d['classementJoueurB'] = $classementJoueurB;
             $d['gagnant'] = $gagnant;
-            var_dump($d);
+            //On affecte ces variables au tableau
             $this->set($d);
+            //On renvoi les données à la VUE 
             $this->render("listeSimulation");
         }
     }
