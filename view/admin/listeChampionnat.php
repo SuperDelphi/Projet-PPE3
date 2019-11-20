@@ -37,7 +37,7 @@
                 </thead>
                 <?php foreach ($championnats as $c) : ?>
                     <tr>
-                        <td><a href="<?php echo BASE_URL . '/rencontre/liste/' . $c->idChampionnat; ?>"><?= $c->nomChampionnat ?></a></td>
+                        <td><a href="<?php echo BASE_URL . '/admin/listeJournee/' . $c->idChampionnat; ?>"><?= $c->nomChampionnat ?></a></td>
                         <td> <?= $c->typeChampionnat ?></td>
                         <td> <?= $c->nomDivision ?></td>
                     </tr>
