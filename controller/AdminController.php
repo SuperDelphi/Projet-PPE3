@@ -163,9 +163,6 @@ class AdminController extends Controller
             $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
             $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
 
-            var_dump($validUser);
-            var_dump($validIP);
-
             if (!($validUser && $validIP)) {
                 $this->redirect($redirectURL);
             }
@@ -193,7 +190,6 @@ class AdminController extends Controller
             $r['dateprev'] = $journee->datePrev;
             array_push($j, $r);
             $nbrjournee++;
-                //var_dump($r);
         }
 
         $d['journee'] = $j;

@@ -11,9 +11,6 @@ class AuthController extends Controller
 
             $user = Security::hardEscape($_POST["user"]);
             $password = Security::hardEscape($_POST["passwd"]);
-
-            // TODO Ajouter une fonction de filtrage de chaîne de caractères ($user)
-
             $account = $compteModele->getByLogin($user, $password);
 
             if (!$account) {
