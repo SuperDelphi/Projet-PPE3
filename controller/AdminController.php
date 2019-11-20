@@ -163,9 +163,6 @@ class AdminController extends Controller
             $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
             $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
 
-            var_dump($validUser);
-            var_dump($validIP);
-
             if (!($validUser && $validIP)) {
                 $this->redirect($redirectURL);
             }
@@ -193,7 +190,6 @@ class AdminController extends Controller
             $r['dateprev'] = $journee->datePrev;
             array_push($j, $r);
             $nbrjournee++;
-                //var_dump($r);
         }
 
         $d['journee'] = $j;
@@ -209,5 +205,40 @@ class AdminController extends Controller
         $d['championnat'] = $modChamp->findFirst($params);
 
         $this->set($d);
+    }
+
+    function listeRencontre($id){
+        if (isset($id)) {
+            $tmp = explode("-", $id);
+            $idChampionnat = trim($tmp[0]);
+            $idJournee = trim($tmp[1]);
+            $nomPoule = trim($tmp[2]);
+
+            $modRencontre = $this->loadModel('Rencontre');
+            $modRencontre->table .= " INNER JOIN poule ON poule.idChampionnat = championnat.idChampionnat";
+            $conditions = array('journee.idJournee'=>$idJournee, 'nomPoule'=>$nomPoule);
+            $groupby = 'idEquipeA';
+            $params = array('conditions' => $conditions, 'groupby' => $groupby);
+            $rencontres= $modRencontre->find($params);
+            $d['rencontre'] = $rencontres;
+            $r = array();
+            
+            $modEquipe = $this->loadModel('Equipe');
+            foreach($rencontres as $rencontre){
+                $conditions=array('equipe.idEquipe'=>$rencontre->idEquipeA);
+                $params = array('conditions' => $conditions);
+                array_add($r , $modEquipe->find($params));
+                $conditions=array('equipe.idEquipe'=>$rencontre->idEquipeB);
+                $params = array('conditions' => $conditions);
+                $r.= $modEquipe->find($params);
+            }
+            $d['equipes']=$r; 
+            $modChamp = $this->loadModel('Championnat');
+            $conditions = array('championnat.idChampionnat' => $idChampionnat);
+            $params = array('conditions' => $conditions);
+            $d['championnat'] = $modChamp->findFirst($params);
+            var_dump($d);
+            $this->set($d);
+        }
     }
 }
