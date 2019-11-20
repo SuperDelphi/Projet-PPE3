@@ -91,7 +91,64 @@ class AdminController extends Controller
     }
     
     function formRencontre() {
+        $this->redirectNonLogged();
         
+        if (isset($_POST["creerrencontre"])) {
+            $EquipeModele = $this->loadModel("Equipe");
+
+            $EquipeA = $_POST["equipea"];
+            $EquipeB = $_POST["equipeb"];
+            $ScoreA = $_POST["scorea"];
+            $ScoreB = $_POST["scoreb"];
+            $Heure = $_POST["heure"];
+            $Date = $_POST["date"];
+            $Lieu = $_POST["lieu"];
+            $Arbitre = $_POST["arbitre"];
+            $Journee = $_POST["journee"];
+
+
+            /*$valid1 = filter_var_array(
+                [
+                    "lieu" => $Lieu,
+                    "scoreFinalA" => $ScoreA,
+                    "scoreFinalB" => $ScoreB,
+                    "idEquipeA" => $EquipeA,
+                    "idEquipeB" => $EquipeB,
+                    "idJournee" => $Journee,
+                    "idArbitre" => $Arbitre
+                ],
+                [
+                    "lieu" => FILTER_VALIDATE_STRING,
+                    "scoreFinalA" => FILTER_VALIDATE_INT,
+                    "scoreFinalB" => FILTER_VALIDATE_INT,
+                    "idEquipeA" => FILTER_VALIDATE_INT,
+                    "idEquipeB" => FILTER_VALIDATE_INT,
+                    "idJournee" => FILTER_VALIDATE_INT,
+                    "idArbitre" => FILTER_VALIDATE_INT
+                ]
+            );*/
+
+            /*if ($valid1) {*/
+                $EquipeModele->insertAI(
+                    ["heure", "date", "lieu", "scoreFinalA", "scoreFinalB", "idJournee", "idArbitre", "idEquipeA", "idEquipeB"],
+                    [$Heure, $Date, $Lieu, $ScoreA, $ScoreB, $Journee, $Arbitre, $EquipeA, $EquipeB]
+                );
+                $this->redirect("/admin/listeChampionnat");
+            /*} else {
+                $this->redirect("/admin/formRencontre");
+            }*/
+        } else {
+            $EquipeModele = $this->loadModel("Equipe");
+            $ArbitreModele = $this->loadModel("Arbitre");
+            $JourneeModele = $this->loadModel("Journee");
+
+            $d["equipes"] = $EquipeModele->find();
+            $d["arbitres"] = $ArbitreModele->find();
+            $d["journees"] = $JourneeModele->find();
+            
+            $this->set($d);
+            $this->render("formRencontre");
+        }
         
     }
     
@@ -105,9 +162,6 @@ class AdminController extends Controller
 
             $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
             $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
-
-            var_dump($validUser);
-            var_dump($validIP);
 
             if (!($validUser && $validIP)) {
                 $this->redirect($redirectURL);
@@ -136,7 +190,6 @@ class AdminController extends Controller
             $r['dateprev'] = $journee->datePrev;
             array_push($j, $r);
             $nbrjournee++;
-                //var_dump($r);
         }
 
         $d['journee'] = $j;

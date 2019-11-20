@@ -6,10 +6,10 @@ class Arbitre extends Compte
     
     private $mdp;
 
-    public function __construct($nom, $prenom, $age, $mail, $adresse, $mdp, $identifiant)
+    /*public function __construct($nom, $prenom, $age, $mail, $adresse, $mdp, $identifiant)
     {
         parent::__construct($nom, $prenom, $age, $mail, $adresse);
         $this->mdp = $mdp;
         $this->identifiant = $identifiant;
-    }
+    }*/
 }

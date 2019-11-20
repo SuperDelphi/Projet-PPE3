@@ -122,7 +122,7 @@ class RencontreController extends Controller
         $groupby = 'nomPoule';
         $params = array('projection' => $projection, 'conditions' => $conditions, 'groupby' => $groupby);
         $d['poules']= $modPoule->find($params);
-
+ 
         $modJoueur = $this->loadModel('Joueur');
         $d['joueurs'] = $modJoueur->find(array('conditions' => 1));
 
@@ -137,7 +137,7 @@ class RencontreController extends Controller
         if (empty($d['matchs'])) {
             $this->e404('Les résultats de la rencontre seront prochainement publiés.');
         }
-        //var_dump($d);
+
         $this->set($d);
     }
 }

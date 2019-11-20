@@ -48,7 +48,6 @@ a:hover {
 }
 
 .data-table > tr:hover, .data-table > tbody > tr:hover {
-    transform: scale(1.03);
     transition: 100ms;
     z-index: 10;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.13);
@@ -81,7 +80,7 @@ a:hover {
 
 a.nav-link.link {
     display: inline-block;
-    padding: 4px 12px;
+    padding: 4px 14px;
 }
 
 a.nav-link.link:hover {
