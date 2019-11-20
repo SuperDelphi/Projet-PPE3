@@ -116,4 +116,41 @@ class AdminController extends Controller
             $this->redirect($redirectURL);
         }
     }
+
+    function listeJournee($id){
+        $idChampionnat = trim($id);
+
+        $nbrjournee = 0;
+        $j=array();
+        $r=array();
+
+        $modJournee = $this->loadModel('Journee');
+        $conditions = array('idChampionnat' => $idChampionnat);
+        $params = array('conditions' => $conditions);
+        $journees = $modJournee->find($params);
+        foreach ($journees as $journee) {
+            $conditions = array('journee.idJournee' => $journee->idJournee, 'championnat.idChampionnat' => $idChampionnat);
+            $groupby = 'rencontre.idRencontre';
+            $params = array('conditions' => $conditions, 'groupby' => $groupby);
+            $r['idJournee'] = $journee->idJournee;
+            $r['dateprev'] = $journee->datePrev;
+            array_push($j, $r);
+            $nbrjournee++;
+                //var_dump($r);
+        }
+
+        $d['journee'] = $j;
+        $d['nbrjournee'] = $nbrjournee;
+
+        if (empty($d['journee'])) {
+            $this->e404('Le calendrier du championnat sera prochainement publié');
+        }
+
+        $modChamp = $this->loadModel('Championnat');
+        $conditions = array('championnat.idChampionnat' => $idChampionnat);
+        $params = array('conditions' => $conditions);
+        $d['championnat'] = $modChamp->findFirst($params);
+
+        $this->set($d);
+    }
 }
