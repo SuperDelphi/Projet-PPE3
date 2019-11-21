@@ -176,3 +176,10 @@ a.button {
     border: none;
     color: #dbdbdb;
 }
+
+/* Menu administrateur */
+
+.admin-menu {
+    background-color: #fafafa;
+    height: available;
+}
