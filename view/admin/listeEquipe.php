@@ -7,6 +7,8 @@
                         <th>Nom Equipe</th>
                         <th>Club</th>
                         <th>Division</th>
+                        <th><input class="primarybuttonBlue" type="button" value="Nouvelle Equipe" onClick="self.location.href='<?= BASE_URL . DS ?>/admin/formEquipe'"/></th>
+
                     </tr>
                 </thead>
                 <?php foreach ($equipes as $e) : ?>
