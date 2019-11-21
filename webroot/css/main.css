@@ -90,6 +90,10 @@ a.nav-link.link:hover {
     border-radius: 5px;
 }
 
+.text-left {
+    text-align: left;
+}
+
 /* Titles */
 
 h1, h2, h3 {
@@ -103,9 +107,19 @@ button {
     margin: 5px;
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    margin: 5px;
+    display: inline-block;
+}
+
 .primarybuttonWhite {
     background: white;
-    color: #0a409e;
+    color: #0a409e !important;
     border: 2px solid #cbd7eb;
     font-weight: 500;
     padding: 10px 25px;
@@ -136,7 +150,7 @@ button {
     font-weight: 500;
     background: #00389A;
     padding: 10px 25px;
-    color: white;
+    color: white !important;
     border: 2px solid #0d357c;
     border-radius: 3px;
     transform-origin: center center;
