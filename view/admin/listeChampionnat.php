@@ -1,35 +1,5 @@
 <div class="row mx-0">
-    <div class="col-lg-2" style="background-color: lightblue">
-        <div class="row border border-dark text-center">
-            <div class="col">
-                <a href="<?= BASE_URL . DS ?>admin/formChampionnat">Nouveau championnat</a>
-            </div>
-        </div>
-        <br>
-        <div class="row border border-dark text-center">
-            <div class="col">
-                <a href="<?= BASE_URL . DS ?>admin/formRencontre">Nouvelle Rencontre</a>
-            </div>
-        </div>
-        <br>
-         <div class="row border border-dark text-center">
-            <div class="col">
-                <a href="<?= BASE_URL . DS ?>admin/listeEquipe">Equipes</a>
-            </div>
-        </div>
-        <br>
-        <div class="row border border-dark text-center">
-            <div class="col">
-                <a href="<?= BASE_URL . DS ?>admin/formJournee">Nouvelle Journée</a>
-            </div>
-        </div>
-        <br>
-        <div class="row border border-dark text-center">
-            <div class="col">
-                <a href="<?= BASE_URL . DS ?>auth/logout">Déconnexion</a>
-            </div>
-        </div>
-    </div>
+    <?php require_once ROOT . DS . "view\\layout\\admin_menu.php"; ?>
     <div class="col-lg">
         <h2 class="">Liste des championnats</h2>
         <form method="post" action="<?= BASE_URL ?>">
