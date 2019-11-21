@@ -15,23 +15,23 @@ class AdminController extends Controller
         $this->render("listeChampionnat");
     }
 
-//    function listeRencontre($id) {
-//        $this->redirectNonLogged();
-//        $this->modChamp = $this->loadModel("Championnat");
-//        $this->modJournee = $this->loadModel("Journee");
-//        $this->modRencontre = $this->loadModel("Rencontre");
-//
-//        $champ = $this->modChamp->find([
-//            "conditions" =>
-//        ]);
-//
-//        $rencontres = $this->modRencontre->find(array(
-//            "conditions" => ["idRencontre" => $id],
-//            "orderby" => "date ASC"
-//        ));
-//
-//
-//    }
+    //    function listeRencontre($id) {
+    //        $this->redirectNonLogged();
+    //        $this->modChamp = $this->loadModel("Championnat");
+    //        $this->modJournee = $this->loadModel("Journee");
+    //        $this->modRencontre = $this->loadModel("Rencontre");
+    //
+    //        $champ = $this->modChamp->find([
+    //            "conditions" =>
+    //        ]);
+    //
+    //        $rencontres = $this->modRencontre->find(array(
+    //            "conditions" => ["idRencontre" => $id],
+    //            "orderby" => "date ASC"
+    //        ));
+    //
+    //
+    //    }
 
     function formChampionnat()
     {
@@ -89,6 +89,13 @@ class AdminController extends Controller
             $this->render("formChampionnat");
         }
     }
+<<<<<<< HEAD
+
+    function formRencontre()
+    { }
+    function formJournee()
+    { }
+=======
     
     function formRencontre() {
         $this->redirectNonLogged();
@@ -152,8 +159,10 @@ class AdminController extends Controller
         
     }
     
+>>>>>>> d7ad64061e4a46fcf514250452591b1e15a192b1
 
-    private function redirectNonLogged() {
+    private function redirectNonLogged()
+    {
         $redirectURL = "/auth/login";
 
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
@@ -170,6 +179,9 @@ class AdminController extends Controller
             $this->redirect($redirectURL);
         }
     }
+<<<<<<< HEAD
+}
+=======
 
     function listeJournee($id){
         $idChampionnat = trim($id);
@@ -242,3 +254,4 @@ class AdminController extends Controller
         }
     }
 }
+>>>>>>> d7ad64061e4a46fcf514250452591b1e15a192b1
