@@ -56,78 +56,9 @@
 </section>
 
 <!-- Footer -->
-<div class="footer-container">
-    <footer class="page-footer font-small blue pt-4">
+<?php require_once ROOT . DS . "view/layout/footer.php" ?>
+<!-- Footer -->
 
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
-
-            <!-- Grid row -->
-            <div class="row">
-
-
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Liens utiles</h5>
-
-                    <div class="horizontal-sep"></div>
-
-                    <ul class="list-unstyled">
-<!--                        <li>-->
-<!--                            <a href="#!" class="link footer-text">Plan du site</a>-->
-<!--                        </li>-->
-                        <li>
-                            <a href="mailto:ufolep-usep@laligue17.org" class="link footer-text">Contact</a>
-                        </li>
-<!--                        <li>-->
-<!--                            <a href="#!" class="link footer-text">F.A.Q</a>-->
-<!--                        </li>-->
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Mentions légales</h5>
-
-                    <div class="horizontal-sep"></div>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="<?= BASE_URL . DS . "info/rgpd" ?>" class="link footer-text">Politique de confidentialité</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
-
-                    <!-- Content -->
-                    <h5 class="text-uppercase" style="text-align:right;">L'UFOLEP 17 </h5>
-
-                    <p class="footer-text text-right">Résidence Club La Fayette, Avenue de Bourgogne 17401 La Rochelle (CEDEX
-                        01)
-                        <br>05 46 41 73 13
-                        <br>ufolep-usep@laligue17.org</p>
-                    <br>
-                </div>
-            </div>
-            <!-- Grid row -->
-
-        </div>
-        <!-- Footer Links -->
-    </footer>
-    <!-- Footer -->
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
