@@ -12,6 +12,12 @@
             </div>
         </div>
         <br>
+         <div class="row border border-dark text-center">
+            <div class="col">
+                <a href="<?= BASE_URL . DS ?>admin/listeEquipe">Equipes</a>
+            </div>
+        </div>
+        <br>
         <div class="row border border-dark text-center">
             <div class="col">
                 <a href="<?= BASE_URL . DS ?>admin/formJournee">Nouvelle Journée</a>
@@ -38,8 +44,8 @@
                 <?php foreach ($championnats as $c) : ?>
                     <tr>
                         <td><a href="<?php echo BASE_URL . '/admin/listeJournee/' . $c->idChampionnat; ?>"><?= $c->nomChampionnat ?></a></td>
-                        <td> <?= $c->typeChampionnat ?></td>
-                        <td> <?= $c->nomDivision ?></td>
+                        <td><?= $c->typeChampionnat ?></td>
+                        <td><?= $c->nomDivision ?></td>
                     </tr>
                 <?php endforeach; ?>
             </table>

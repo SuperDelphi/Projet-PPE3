@@ -8,12 +8,12 @@ header {
     height: 80px;
 }
 
-.link {
+header .link {
     color: #ffffff;
 }
 
-.link:hover {
-    color: #0048BD;
+header .link:hover {
+    color: #0048BD !important;
 }
 
 input::placeholder {
