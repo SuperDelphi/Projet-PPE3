@@ -21,6 +21,20 @@ html {
     margin: 5px 0;
 }
 
+/* Liens */
+
+a {
+    text-decoration: none;
+    text-decoration-color: currentColor;
+    text-decoration-style: solid;
+    color: #00389a;
+}
+
+a:hover {
+    color: unset;
+    /*border-bottom: solid 1px #00379a !important;*/
+}
+
 .text-right {
     text-align: right;
 }
@@ -31,6 +45,18 @@ html {
 
 .data-table tr:nth-child(odd) {
     background-color: #fafafa;
+}
+
+.data-table > tr:hover, .data-table > tbody > tr:hover {
+    transition: 100ms;
+    z-index: 10;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.13);
+    background-image: linear-gradient(to right, #00389a, #0076bd);
+    color: white;
+}
+
+.data-table > tr:hover a, .data-table > tbody > tr:hover a {
+    color: white;
 }
 
 .data-table td {
@@ -45,30 +71,29 @@ html {
     padding: 10px 20px;
 }
 
-.data-table tr {}
+.data-table tr {
+}
 
 .static-content {
     padding: 100px 0;
+}
+
+a.nav-link.link {
+    display: inline-block;
+    padding: 4px 14px;
+}
+
+a.nav-link.link:hover {
+    transition: 125ms;
+    color: #000f2e;
+    background-color: white;
+    border-radius: 5px;
 }
 
 /* Titles */
 
 h1, h2, h3 {
     font-family: "Barlow Condensed", sans-serif;
-}
-
-/* Liens */
-
-a {
-    text-decoration: none;
-    text-decoration-color: currentColor;
-    text-decoration-style: solid;
-    color: #00389a;
-}
-
-a:hover {
-    color: unset !important;
-    /*border-bottom: solid 1px #00379a !important;*/
 }
 
 /* Boutons */
@@ -109,12 +134,12 @@ a:hover {
     margin-top: 2px;
 }
 
-.primarybuttonBlue{
+.primarybuttonBlue {
     font-weight: 500;
     background: #00389A;
     padding: 12px 27px;
     color: white;
-    border:  2px solid #0d357c;
+    border: 2px solid #0d357c;
     border-radius: 3px;
     transform-origin: center center;
     transition: 0.25s background;

@@ -6,7 +6,7 @@
                     <th>Place</th>
                     <th>Joueurs</th>
                     <th>Score</th>
-
+                    <th><input type="button" value="Simuler" onClick="self.location.href='<?= BASE_URL . DS ?>/simulationJoueur/formSimulation'" /></th>
                 </tr>
             </thead>
             <?php $place = 1; foreach ($joueurs as $j) : ?>

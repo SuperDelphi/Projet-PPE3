@@ -19,7 +19,7 @@ class Model
         try {
             $pdo = new PDO('mysql:host=' . $conf['host'] . ';dbname=' . $conf['database'] . ';', $conf['login'], $conf['password'], array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8')
             );
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERR_NONE);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             Model::$connections[$this->conf] = $pdo;
             $this->db = Model::$connections[$this->conf];
         } catch (PDOException $e) {
