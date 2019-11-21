@@ -22,16 +22,14 @@
                             foreach ($poules as $p): ?>
                                 <tr>
                                     <td class="text-left">
-                                        <a href="">
-                                            <?= $nomChampionnat . " <b>[Poule " . $p->nomPoule . "]</b>" ?>
-                                        </a>
+                                        <?= $nomChampionnat . " <b>[Poule " . $p->nomPoule . "]</b>" ?>
                                     </td>
                                     <td>
                                         <a href="<?php echo BASE_URL .
-                                            "/rencontre/liste?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
+                                            "/rencontre/liste/?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
                                         ?>" class="button primarybuttonBlue">Voir</a>
                                         <a href="<?php echo BASE_URL .
-                                            "/rencontre/listeEquipePoule?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
+                                            "/rencontre/listeEquipePoule/?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
                                         ?>" class="button primarybuttonWhite">Classement</a>
                                     </td>
                                 </tr>
@@ -40,16 +38,14 @@
                             ?>
                                 <tr>
                                     <td class="text-left">
-                                        <a href="<?php echo BASE_URL . '/rencontre/liste/' . $c->idChampionnat; ?>\">
-                                            <?= $nomChampionnat ?>
-                                        </a>
+                                        <?= $nomChampionnat ?>
                                     </td>
                                     <td>
                                         <a href="<?php echo BASE_URL .
-                                            "/rencontre/liste?idChampionnat=$c->idChampionnat"
+                                            "/rencontre/liste/?idChampionnat=$c->idChampionnat"
                                         ?>" class="button primarybuttonBlue">Voir</a>
                                         <a href="<?php echo BASE_URL .
-                                            "/rencontre/listeEquipePoule?idChampionnat=$c->idChampionnat"
+                                            "/rencontre/listeEquipePoule/?idChampionnat=$c->idChampionnat"
                                         ?>" class="button primarybuttonWhite">Classement</a>
                                     </td>
                                 </tr>
