@@ -99,7 +99,7 @@ class AdminController extends Controller
         $this->redirectNonLogged();
 
         if (isset($_POST["creerrencontre"])) {
-            $RencontreModele = $this->loadModel("Rencontre");   
+            $EquipeRencontreModele = $this->loadModel("EquipeRencontre");   
 
             $EquipeA = $_POST["equipea"];
             $EquipeB = $_POST["equipeb"];
@@ -111,7 +111,7 @@ class AdminController extends Controller
             $Arbitre = $_POST["arbitre"];
             $Journee = $_POST["journee"];
 
-            $RencontreModele->insertAI(
+            $EquipeRencontreModele->insertAI(
                 ["heure", "date", "lieu", "scoreFinalA", "scoreFinalB", "idJournee", "idArbitre", "idEquipeA", "idEquipeB"],
                 [$Heure, $Date, $Lieu, $ScoreA, $ScoreB, $Journee, $Arbitre, $EquipeA, $EquipeB]
             );
