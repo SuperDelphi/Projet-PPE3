@@ -2,7 +2,7 @@
 <table>
     <form method="POST" action="">
         <thead>
-            <th><label>Nouvelle Rencontre (Insert non fonctionnel)</label></th>
+            <th><label>Nouvelle Rencontre</label></th>
         </thead>
         <tr>
             <td><label>Heure</label></td>

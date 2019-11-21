@@ -99,7 +99,7 @@ class AdminController extends Controller
         $this->redirectNonLogged();
 
         if (isset($_POST["creerrencontre"])) {
-            $RencontreModele = $this->loadModel("Rencontre");   
+            $EquipeRencontreModele = $this->loadModel("EquipeRencontre");   
 
             $EquipeA = $_POST["equipea"];
             $EquipeB = $_POST["equipeb"];
@@ -111,12 +111,11 @@ class AdminController extends Controller
             $Arbitre = $_POST["arbitre"];
             $Journee = $_POST["journee"];
 
-            $RencontreModele->insertAI(
+            $EquipeRencontreModele->insertAI(
                 ["heure", "date", "lieu", "scoreFinalA", "scoreFinalB", "idJournee", "idArbitre", "idEquipeA", "idEquipeB"],
                 [$Heure, $Date, $Lieu, $ScoreA, $ScoreB, $Journee, $Arbitre, $EquipeA, $EquipeB]
             );
-            /*header('Location: http://localhost/Projet-PPE3/championnat/liste');
-            exit();*/
+            $this->redirect("/admin/listeChampionnat");
         } else {
             $EquipeModele = $this->loadModel("Equipe");
             $ArbitreModele = $this->loadModel("Arbitre");
@@ -199,10 +198,10 @@ class AdminController extends Controller
             foreach ($rencontres as $rencontre) {
                 $conditions = array('equipe.idEquipe' => $rencontre->idEquipeA);
                 $params = array('conditions' => $conditions);
-                array_add($r, $modEquipe->find($params));
+                array_push($r, $modEquipe->find($params));
                 $conditions = array('equipe.idEquipe' => $rencontre->idEquipeB);
                 $params = array('conditions' => $conditions);
-                $r .= $modEquipe->find($params);
+                array_push($r, $modEquipe->find($params));
             }
             $d['equipes'] = $r;
             $modChamp = $this->loadModel('Championnat');

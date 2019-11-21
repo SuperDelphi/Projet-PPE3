@@ -12,6 +12,12 @@
             </div>
         </div>
         <br>
+         <div class="row border border-dark text-center">
+            <div class="col">
+                <a href="<?= BASE_URL . DS ?>admin/listeEquipe">Equipes</a>
+            </div>
+        </div>
+        <br>
         <div class="row border border-dark text-center">
             <div class="col">
                 <a href="<?= BASE_URL . DS ?>admin/formJournee">Nouvelle Journée</a>
