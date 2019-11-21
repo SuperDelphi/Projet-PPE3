@@ -98,12 +98,17 @@ h1, h2, h3 {
 
 /* Boutons */
 
+button {
+    outline: none !important;
+    margin: 5px;
+}
+
 .primarybuttonWhite {
     background: white;
     color: #0a409e;
     border: 2px solid #cbd7eb;
     font-weight: 500;
-    padding: 12px 27px;
+    padding: 10px 25px;
     border-radius: 3px;
     transform-origin: center center;
     transition: 0.25s background;
@@ -115,29 +120,22 @@ h1, h2, h3 {
 }
 
 .primarybuttonWhite:active {
-    transition-duration: 0s;
     background: #edf6fd;
-    border: none;
-    color: #b4d8f0;
+    border: 2px solid rgba(0, 0, 0, 0);
+    color: rgba(0, 116, 240, 0.16);
     border-radius: 3px;
-    transform: scale(0.98);
-    transition: 0s;
-    margin-left: 2px;
-    margin-top: 2px;
 }
 
 .primarybuttonWhite[disabled=true] {
     background: #F8F8F8;
     border: none;
     color: #dbdbdb;
-    margin-left: 2px;
-    margin-top: 2px;
 }
 
 .primarybuttonBlue {
     font-weight: 500;
     background: #00389A;
-    padding: 12px 27px;
+    padding: 10px 25px;
     color: white;
     border: 2px solid #0d357c;
     border-radius: 3px;
@@ -153,19 +151,13 @@ h1, h2, h3 {
 .primarybuttonBlue:active {
     transition-duration: 0s;
     background: #edf6fd;
-    border: none;
-    color: #b4d8f0;
+    border: 2px solid #00000000;
+    color: rgba(0, 116, 240, 0.16);
     border-radius: 3px;
-    transform: scale(0.98);
-    transition: 0s;
-    margin-left: 2px;
-    margin-top: 2px;
 }
 
 .primarybuttonBlue[disabled=true] {
     background: #F8F8F8;
     border: none;
     color: #dbdbdb;
-    margin-left: 2px;
-    margin-top: 2px;
 }

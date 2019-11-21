@@ -15,23 +15,23 @@ class AdminController extends Controller
         $this->render("listeChampionnat");
     }
 
-//    function listeRencontre($id) {
-//        $this->redirectNonLogged();
-//        $this->modChamp = $this->loadModel("Championnat");
-//        $this->modJournee = $this->loadModel("Journee");
-//        $this->modRencontre = $this->loadModel("Rencontre");
-//
-//        $champ = $this->modChamp->find([
-//            "conditions" =>
-//        ]);
-//
-//        $rencontres = $this->modRencontre->find(array(
-//            "conditions" => ["idRencontre" => $id],
-//            "orderby" => "date ASC"
-//        ));
-//
-//
-//    }
+    //    function listeRencontre($id) {
+    //        $this->redirectNonLogged();
+    //        $this->modChamp = $this->loadModel("Championnat");
+    //        $this->modJournee = $this->loadModel("Journee");
+    //        $this->modRencontre = $this->loadModel("Rencontre");
+    //
+    //        $champ = $this->modChamp->find([
+    //            "conditions" =>
+    //        ]);
+    //
+    //        $rencontres = $this->modRencontre->find(array(
+    //            "conditions" => ["idRencontre" => $id],
+    //            "orderby" => "date ASC"
+    //        ));
+    //
+    //
+    //    }
 
     function formChampionnat()
     {
@@ -89,10 +89,15 @@ class AdminController extends Controller
             $this->render("formChampionnat");
         }
     }
-    
-    function formRencontre() {
+
+    function formJournee()
+    { }
+
+
+    function formRencontre()
+    {
         $this->redirectNonLogged();
-        
+
         if (isset($_POST["creerrencontre"])) {
             $RencontreModele = $this->loadModel("Rencontre");   
 
@@ -120,15 +125,14 @@ class AdminController extends Controller
             $d["equipes"] = $EquipeModele->find();
             $d["arbitres"] = $ArbitreModele->find();
             $d["journees"] = $JourneeModele->find();
-            
+
             $this->set($d);
             $this->render("formRencontre");
         }
-        
     }
-    
 
-    private function redirectNonLogged() {
+    private function redirectNonLogged()
+    {
         $redirectURL = "/auth/login";
 
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
@@ -146,29 +150,20 @@ class AdminController extends Controller
         }
     }
 
-    function listeJournee($id){
+
+    function listeJournee($id)
+    {
         $idChampionnat = trim($id);
 
         $nbrjournee = 0;
-        $j=array();
-        $r=array();
+        $j = array();
+        $r = array();
 
         $modJournee = $this->loadModel('Journee');
         $conditions = array('idChampionnat' => $idChampionnat);
         $params = array('conditions' => $conditions);
-        $journees = $modJournee->find($params);
-        foreach ($journees as $journee) {
-            $conditions = array('journee.idJournee' => $journee->idJournee, 'championnat.idChampionnat' => $idChampionnat);
-            $groupby = 'rencontre.idRencontre';
-            $params = array('conditions' => $conditions, 'groupby' => $groupby);
-            $r['idJournee'] = $journee->idJournee;
-            $r['dateprev'] = $journee->datePrev;
-            array_push($j, $r);
-            $nbrjournee++;
-        }
-
-        $d['journee'] = $j;
-        $d['nbrjournee'] = $nbrjournee;
+        $d['journee'] = $modJournee->find($params);
+        
 
         if (empty($d['journee'])) {
             $this->e404('Le calendrier du championnat sera prochainement publié');
@@ -178,11 +173,13 @@ class AdminController extends Controller
         $conditions = array('championnat.idChampionnat' => $idChampionnat);
         $params = array('conditions' => $conditions);
         $d['championnat'] = $modChamp->findFirst($params);
-
+        //var_dump ($d);
         $this->set($d);
+        
     }
 
-    function listeRencontre($id){
+    function listeRencontre($id)
+    {
         if (isset($id)) {
             $tmp = explode("-", $id);
             $idChampionnat = trim($tmp[0]);
@@ -191,23 +188,23 @@ class AdminController extends Controller
 
             $modRencontre = $this->loadModel('Rencontre');
             $modRencontre->table .= " INNER JOIN poule ON poule.idChampionnat = championnat.idChampionnat";
-            $conditions = array('journee.idJournee'=>$idJournee, 'nomPoule'=>$nomPoule);
+            $conditions = array('journee.idJournee' => $idJournee, 'nomPoule' => $nomPoule);
             $groupby = 'idEquipeA';
             $params = array('conditions' => $conditions, 'groupby' => $groupby);
-            $rencontres= $modRencontre->find($params);
+            $rencontres = $modRencontre->find($params);
             $d['rencontre'] = $rencontres;
             $r = array();
-            
+
             $modEquipe = $this->loadModel('Equipe');
-            foreach($rencontres as $rencontre){
-                $conditions=array('equipe.idEquipe'=>$rencontre->idEquipeA);
+            foreach ($rencontres as $rencontre) {
+                $conditions = array('equipe.idEquipe' => $rencontre->idEquipeA);
                 $params = array('conditions' => $conditions);
-                array_add($r , $modEquipe->find($params));
-                $conditions=array('equipe.idEquipe'=>$rencontre->idEquipeB);
+                array_add($r, $modEquipe->find($params));
+                $conditions = array('equipe.idEquipe' => $rencontre->idEquipeB);
                 $params = array('conditions' => $conditions);
-                $r.= $modEquipe->find($params);
+                $r .= $modEquipe->find($params);
             }
-            $d['equipes']=$r; 
+            $d['equipes'] = $r;
             $modChamp = $this->loadModel('Championnat');
             $conditions = array('championnat.idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
