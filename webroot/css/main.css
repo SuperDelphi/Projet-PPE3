@@ -71,7 +71,8 @@ a:hover {
     padding: 10px 20px;
 }
 
-.data-table tr {
+.data-table tr button:hover, .data-table tr .button:hover {
+    box-shadow: 0 0 50px rgba(0, 28, 69, 0.5);
 }
 
 .static-content {
@@ -136,7 +137,7 @@ a.button {
 .primarybuttonWhite:active {
     background: #edf6fd;
     border: 2px solid rgba(0, 0, 0, 0);
-    color: rgba(0, 116, 240, 0.16);
+    color: rgba(0, 116, 240, 0.5) !important;
     border-radius: 3px;
 }
 
@@ -166,7 +167,7 @@ a.button {
     transition-duration: 0s;
     background: #edf6fd;
     border: 2px solid #00000000;
-    color: rgba(0, 116, 240, 0.16);
+    color: rgba(0, 116, 240, 0.5) !important;
     border-radius: 3px;
 }
 
