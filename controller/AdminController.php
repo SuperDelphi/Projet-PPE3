@@ -94,7 +94,7 @@ class AdminController extends Controller
         $this->redirectNonLogged();
         
         if (isset($_POST["creerrencontre"])) {
-            $EquipeModele = $this->loadModel("Equipe");
+            $RencontreModele = $this->loadModel("Rencontre");   
 
             $EquipeA = $_POST["equipea"];
             $EquipeB = $_POST["equipeb"];
@@ -106,37 +106,12 @@ class AdminController extends Controller
             $Arbitre = $_POST["arbitre"];
             $Journee = $_POST["journee"];
 
-
-            /*$valid1 = filter_var_array(
-                [
-                    "lieu" => $Lieu,
-                    "scoreFinalA" => $ScoreA,
-                    "scoreFinalB" => $ScoreB,
-                    "idEquipeA" => $EquipeA,
-                    "idEquipeB" => $EquipeB,
-                    "idJournee" => $Journee,
-                    "idArbitre" => $Arbitre
-                ],
-                [
-                    "lieu" => FILTER_VALIDATE_STRING,
-                    "scoreFinalA" => FILTER_VALIDATE_INT,
-                    "scoreFinalB" => FILTER_VALIDATE_INT,
-                    "idEquipeA" => FILTER_VALIDATE_INT,
-                    "idEquipeB" => FILTER_VALIDATE_INT,
-                    "idJournee" => FILTER_VALIDATE_INT,
-                    "idArbitre" => FILTER_VALIDATE_INT
-                ]
-            );*/
-
-            /*if ($valid1) {*/
-                $EquipeModele->insertAI(
-                    ["heure", "date", "lieu", "scoreFinalA", "scoreFinalB", "idJournee", "idArbitre", "idEquipeA", "idEquipeB"],
-                    [$Heure, $Date, $Lieu, $ScoreA, $ScoreB, $Journee, $Arbitre, $EquipeA, $EquipeB]
-                );
-                $this->redirect("/admin/listeChampionnat");
-            /*} else {
-                $this->redirect("/admin/formRencontre");
-            }*/
+            $RencontreModele->insertAI(
+                ["heure", "date", "lieu", "scoreFinalA", "scoreFinalB", "idJournee", "idArbitre", "idEquipeA", "idEquipeB"],
+                [$Heure, $Date, $Lieu, $ScoreA, $ScoreB, $Journee, $Arbitre, $EquipeA, $EquipeB]
+            );
+            /*header('Location: http://localhost/Projet-PPE3/championnat/liste');
+            exit();*/
         } else {
             $EquipeModele = $this->loadModel("Equipe");
             $ArbitreModele = $this->loadModel("Arbitre");
