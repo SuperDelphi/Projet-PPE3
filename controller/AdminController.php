@@ -115,8 +115,7 @@ class AdminController extends Controller
                 ["heure", "date", "lieu", "scoreFinalA", "scoreFinalB", "idJournee", "idArbitre", "idEquipeA", "idEquipeB"],
                 [$Heure, $Date, $Lieu, $ScoreA, $ScoreB, $Journee, $Arbitre, $EquipeA, $EquipeB]
             );
-            /*header('Location: http://localhost/Projet-PPE3/championnat/liste');
-            exit();*/
+            $this->redirect("/admin/listeChampionnat");
         } else {
             $EquipeModele = $this->loadModel("Equipe");
             $ArbitreModele = $this->loadModel("Arbitre");
