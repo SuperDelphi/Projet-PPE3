@@ -15,11 +15,7 @@ footer {
 }
 
 .link {
-    color: #ffffff;
-}
-
-.link:hover {
-    color: #0048BD;
+    color: #ffffff !important;
 }
 
 .footer-text {

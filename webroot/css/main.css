@@ -71,7 +71,8 @@ a:hover {
     padding: 10px 20px;
 }
 
-.data-table tr {
+.data-table tr button:hover, .data-table tr .button:hover {
+    box-shadow: 0 0 50px rgba(0, 28, 69, 0.5);
 }
 
 .static-content {
@@ -90,6 +91,10 @@ a.nav-link.link:hover {
     border-radius: 5px;
 }
 
+.text-left {
+    text-align: left;
+}
+
 /* Titles */
 
 h1, h2, h3 {
@@ -98,12 +103,27 @@ h1, h2, h3 {
 
 /* Boutons */
 
+button {
+    outline: none !important;
+    margin: 5px;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    margin: 5px;
+    display: inline-block;
+}
+
 .primarybuttonWhite {
     background: white;
-    color: #0a409e;
+    color: #0a409e !important;
     border: 2px solid #cbd7eb;
     font-weight: 500;
-    padding: 12px 27px;
+    padding: 10px 25px;
     border-radius: 3px;
     transform-origin: center center;
     transition: 0.25s background;
@@ -115,30 +135,23 @@ h1, h2, h3 {
 }
 
 .primarybuttonWhite:active {
-    transition-duration: 0s;
     background: #edf6fd;
-    border: none;
-    color: #b4d8f0;
+    border: 2px solid rgba(0, 0, 0, 0);
+    color: rgba(0, 116, 240, 0.5) !important;
     border-radius: 3px;
-    transform: scale(0.98);
-    transition: 0s;
-    margin-left: 2px;
-    margin-top: 2px;
 }
 
 .primarybuttonWhite[disabled=true] {
     background: #F8F8F8;
     border: none;
     color: #dbdbdb;
-    margin-left: 2px;
-    margin-top: 2px;
 }
 
 .primarybuttonBlue {
     font-weight: 500;
     background: #00389A;
-    padding: 12px 27px;
-    color: white;
+    padding: 10px 25px;
+    color: white !important;
     border: 2px solid #0d357c;
     border-radius: 3px;
     transform-origin: center center;
@@ -153,19 +166,13 @@ h1, h2, h3 {
 .primarybuttonBlue:active {
     transition-duration: 0s;
     background: #edf6fd;
-    border: none;
-    color: #b4d8f0;
+    border: 2px solid #00000000;
+    color: rgba(0, 116, 240, 0.5) !important;
     border-radius: 3px;
-    transform: scale(0.98);
-    transition: 0s;
-    margin-left: 2px;
-    margin-top: 2px;
 }
 
 .primarybuttonBlue[disabled=true] {
     background: #F8F8F8;
     border: none;
     color: #dbdbdb;
-    margin-left: 2px;
-    margin-top: 2px;
 }
