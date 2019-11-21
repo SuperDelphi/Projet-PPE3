@@ -89,13 +89,6 @@ class AdminController extends Controller
             $this->render("formChampionnat");
         }
     }
-<<<<<<< HEAD
-
-    function formRencontre()
-    { }
-    function formJournee()
-    { }
-=======
     
     function formRencontre() {
         $this->redirectNonLogged();
@@ -159,7 +152,6 @@ class AdminController extends Controller
         
     }
     
->>>>>>> d7ad64061e4a46fcf514250452591b1e15a192b1
 
     private function redirectNonLogged()
     {
@@ -179,9 +171,6 @@ class AdminController extends Controller
             $this->redirect($redirectURL);
         }
     }
-<<<<<<< HEAD
-}
-=======
 
     function listeJournee($id){
         $idChampionnat = trim($id);
@@ -193,19 +182,8 @@ class AdminController extends Controller
         $modJournee = $this->loadModel('Journee');
         $conditions = array('idChampionnat' => $idChampionnat);
         $params = array('conditions' => $conditions);
-        $journees = $modJournee->find($params);
-        foreach ($journees as $journee) {
-            $conditions = array('journee.idJournee' => $journee->idJournee, 'championnat.idChampionnat' => $idChampionnat);
-            $groupby = 'rencontre.idRencontre';
-            $params = array('conditions' => $conditions, 'groupby' => $groupby);
-            $r['idJournee'] = $journee->idJournee;
-            $r['dateprev'] = $journee->datePrev;
-            array_push($j, $r);
-            $nbrjournee++;
-        }
-
-        $d['journee'] = $j;
-        $d['nbrjournee'] = $nbrjournee;
+        $d['journee'] = $modJournee->find($params);
+        
 
         if (empty($d['journee'])) {
             $this->e404('Le calendrier du championnat sera prochainement publié');
@@ -215,8 +193,9 @@ class AdminController extends Controller
         $conditions = array('championnat.idChampionnat' => $idChampionnat);
         $params = array('conditions' => $conditions);
         $d['championnat'] = $modChamp->findFirst($params);
-
+        //var_dump ($d);
         $this->set($d);
+        
     }
 
     function listeRencontre($id){
@@ -254,4 +233,3 @@ class AdminController extends Controller
         }
     }
 }
->>>>>>> d7ad64061e4a46fcf514250452591b1e15a192b1
