@@ -8,7 +8,7 @@ $idJournee = $rencontres[0]['idJournee'];
 ?>
 
 <div style="text-align:center">
-    <h3><a href="<?= BASE_URL ?>/rencontre/listeEquipePoule/<?= $championnat->idChampionnat . '-' . $nomPoule ?>">Poule <?= $nomPoule ?></h3><h6>(Voir les équipes)</a></h6>
+    <h3><a href="<?= BASE_URL ?>/rencontre/listeEquipePoule/<?php echo $championnat->idChampionnat; if(isset($nomPoule)) { echo '-' . $nomPoule. '">Poule' . $nomPoule; } else { echo '">' ;} ?></h3><h6>(Voir les équipes)</a></h6>
 </div>
 <div>
     <table border='1' style="width:50%" class="data-table">

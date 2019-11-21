@@ -7,44 +7,78 @@ class RencontreController extends Controller
 
     function liste()
     {
-        $idChampionnat = $_GET['idChampionnat'];
-        $nomPoule = $_GET['nomPoule'];
-        $j = array();
-        $de = array();
+        if (isset($_GET['nomPoule'])) {
+            $idChampionnat = $_GET['idChampionnat'];
+            $nomPoule = $_GET['nomPoule'];
+            $j = array();
+            $de = array();
 
-        $modPoule = $this->loadModel('Poule');
-        $conditions = array('idChampionnat' => $idChampionnat, 'nomPoule' => $nomPoule);
-        $params = array('conditions' => $conditions);
-        $equipesPoule = $modPoule->find($params);
-        $d['equipesPoule'] = $equipesPoule;
+            $modPoule = $this->loadModel('Poule');
+            $conditions = array('idChampionnat' => $idChampionnat, 'nomPoule' => $nomPoule);
+            $params = array('conditions' => $conditions);
+            $equipesPoule = $modPoule->find($params);
 
 
-        $this->modRenc = $this->loadModel('Rencontre');
-        $conditions = array('championnat.idChampionnat' => $idChampionnat);
-        $orderby = 'journee.numJournee';
-        $params = array('conditions' => $conditions, 'orderby' => $orderby);
-        $rencontres = $this->modRenc->find($params);
+            $this->modRenc = $this->loadModel('Rencontre');
+            $conditions = array('championnat.idChampionnat' => $idChampionnat);
+            $orderby = 'journee.numJournee';
+            $params = array('conditions' => $conditions, 'orderby' => $orderby);
+            $rencontres = $this->modRenc->find($params);
 
-        //var_dump($rencontres);
-        foreach ($rencontres as $rencontre) {
-            $r = array();
-            foreach ($equipesPoule as $equipePoule) {
-                if ($rencontre->idEquipeA == $equipePoule->idEquipe) {
-                    $de['rencontre'] = $rencontre;
-                    array_push($r, $de);
+            foreach ($rencontres as $rencontre) {
+                $r = array();
+                foreach ($equipesPoule as $equipePoule) {
+                    if ($rencontre->idEquipeA == $equipePoule->idEquipe) {
+                        $de['rencontre'] = $rencontre;
+                        array_push($r, $de);
                     //var_dump($r);
+                    }
+                }
+                if (!empty($r)) {
+                    $r['idJournee'] = $rencontre->idJournee;
+                    $r['datePrev'] = $rencontre->date;
+                    array_push($j, $r);
+                    unset($r);
                 }
             }
-            if (!empty($r)){
-                $r['idJournee'] = $rencontre->idJournee;
-                $r['datePrev'] = $rencontre->date;
-                array_push($j, $r);
-                unset($r);
-            }
-        }
-        $d['rencontres'] = $j;
-        $d['nomPoule'] = $nomPoule;
+            $d['rencontres'] = $j;
+            $d['nomPoule'] = $nomPoule;
         //var_dump($d);
+        } else {
+            $idChampionnat = $_GET['idChampionnat'];
+            $j = array();
+            $de = array();
+
+            $modEnga = $this->loadModel('Engagement');
+            $conditions = array('idChampionnat' => $idChampionnat);
+            $params = array('conditions' => $conditions);
+            $equipesEngagees = $modEnga->find($params);
+
+            $this->modRenc = $this->loadModel('Rencontre');
+            $conditions = array('championnat.idChampionnat' => $idChampionnat);
+            $orderby = 'journee.numJournee';
+            $params = array('conditions' => $conditions, 'orderby' => $orderby);
+            $rencontres = $this->modRenc->find($params);
+
+            foreach ($rencontres as $rencontre) {
+                $r = array();
+                foreach ($equipesEngagees as $equipeEngagee) {
+                    if ($rencontre->idEquipeA == $equipeEngagee->idEquipe) {
+                        $de['rencontre'] = $rencontre;
+                        array_push($r, $de);
+                    //var_dump($r);
+                    }
+                }
+                if (!empty($r)) {
+                    $r['idJournee'] = $rencontre->idJournee;
+                    $r['datePrev'] = $rencontre->date;
+                    array_push($j, $r);
+                    unset($r);
+                }
+            }
+            $d['rencontres'] = $j;
+        }
+
         if (empty($d['rencontres'])) {
             $this->e404('Le calendrier du championnat sera prochainement publié');
         }
@@ -56,7 +90,7 @@ class RencontreController extends Controller
 
         $modEquipe = $this->loadModel('Equipe');
         $d['equipes'] = $modEquipe->find(array('conditions' => 1));
-        
+
         $this->set($d);
     }
 
