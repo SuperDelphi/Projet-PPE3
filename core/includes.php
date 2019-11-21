@@ -25,6 +25,7 @@ require_once ROOT . DS . 'model' . DS . 'Rencontre.php';
 require_once ROOT . DS . 'model' . DS . 'Journee.php';
 
 // Scripts
+require_once ROOT . DS . 'scripts' . DS . 'ArrayWizard.php';
 require_once ROOT . DS . 'scripts' . DS . 'IP.php';
 require_once ROOT . DS . 'scripts' . DS . 'Parser.php';
 require_once ROOT . DS . 'scripts' . DS . 'Security.php';
