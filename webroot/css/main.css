@@ -47,7 +47,8 @@ a:hover {
 }
 
 #admin-body {
-    margin: 25px;
+    padding: 35px;
+    overflow: auto;
 }
 
 .data-table tr:nth-child(odd) {
@@ -175,13 +176,14 @@ a.button {
 /* Menu administrateur */
 
 section#main-section > div {
-    height: 100% !important;
+    min-height: 100% !important;
 }
 
 .admin-menu {
     padding: 50px 35px 50px 0;
-    background-color: #fbfbfb;
+    background-image: linear-gradient(to bottom, #fbfbfb, #fbfbfb, transparent);
     height: 100vh !important;
+    overflow: auto;
 }
 
 .admin-menu a {
