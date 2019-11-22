@@ -1,4 +1,4 @@
-<div  style="text-align:center">
+<div class="text-center">
     <h2><?= $championnat->nomChampionnat . ' ' . $championnat->typeChampionnat . '<br>' . $championnat->nomDivision; ?></h2>
 </div>
 <br>
@@ -7,7 +7,7 @@ $cpt = 1;
 $idJournee = $rencontres[0]['idJournee'];
 ?>
 
-<div style="text-align:center">
+<div class="text-center">
     <h3><a href="<?= BASE_URL ?>/rencontre/listeEquipePoule/?idChampionnat=<?= $championnat->idChampionnat ?>
     <?php if (isset($nomPoule)) {
         echo "&nomPoule=$nomPoule";
@@ -16,8 +16,9 @@ $idJournee = $rencontres[0]['idJournee'];
 </div>
 <br>
 <div>
-    <table border='1' style="width:50%" class="data-table">
-        <thead style="text-align:center">
+    <div class="col-lg-12">
+    <table border='1' style="width:100%" class="data-table">
+        <thead class="text-center">
         <th colspan="5">J<?= $cpt++ . '<br>' . $rencontres[0][0]['rencontre']->datePrev ?></th>
         </thead>
         <tbody>
@@ -52,9 +53,11 @@ $idJournee = $rencontres[0]['idJournee'];
 } else { ?>
                 </tbody>
             </table>
+            </div>
             <br>
-            <table border='1' style="width:50%" class="data-table">
-                <thead style="text-align:center">
+            <div class="col-lg-12">
+            <table border='1' style="width:100%" class="data-table">
+                <thead class="text-center">
                 <th colspan="5">J<?= $cpt++ . '<br>' . $r[0]['rencontre']->datePrev ?></th>
                 </thead>
                 <tbody>
@@ -85,4 +88,6 @@ $idJournee = $rencontres[0]['idJournee'];
             ?>
         </tbody>
     </table>
+    </div>
 </div>
+<br>
