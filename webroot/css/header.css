@@ -59,3 +59,26 @@ li.nav-item:active {
     font-size: 0.8em;
     color: rgba(0, 0, 0, 0.25);
 }
+
+a.nav-link.link {
+    display: inline-block;
+    padding: 4px 10px !important;
+    border: solid transparent 1px;
+    border-radius: 25px;
+}
+
+a.nav-link.link:hover {
+    transition: 125ms;
+    color: #000f2e;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgb(0, 11, 26);
+}
+
+a.nav-link.link:active {
+    transition: 0s;
+    color: white !important;
+    background-color: transparent;
+    border: solid white 1px;
+    border-radius: 25px;
+}
