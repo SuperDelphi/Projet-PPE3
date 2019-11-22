@@ -94,12 +94,13 @@ class RencontreController extends Controller
         $this->set($d);
     }
 
-    function listeEquipePoule($id)
+    function listeEquipePoule()
     {
-        if (isset($id)) {
-            $champPoule = explode("-", $id);
-            $idChampionnat = trim($champPoule[0]);
-            $nomPoule = trim($champPoule[1]);
+        $equipes = array();
+        $equipesPoules = array();
+        if (isset($_GET['nomPoule'])) {
+            $idChampionnat = $_GET['idChampionnat'];
+            $nomPoule = $_GET['nomPoule'];
 
             $modPoule = $this->loadModel('Poule');
             $projection = 'nomPoule';
@@ -114,32 +115,48 @@ class RencontreController extends Controller
             } else {
                 $modEquipe = $this->loadModel('Equipe');
                 $d['equipes'] = $modEquipe->find(array('conditions' => 1));
-                $modEquipe->table .= "INNER JOIN poule ON poule.idEquipe = equipe.IdEquipe";
-                $equipes = array();
-                $equipesPoules = array();
+                $modEquipe->table .= " INNER JOIN poule ON poule.idEquipe = equipe.IdEquipe";
                 $conditions = array('nomPoule' => $poule[0]->nomPoule);
                 $groupby = "equipe.idEquipe";
                 $orderby = "equipe.scoreGlobal desc";
                 $params = array('conditions' => $conditions, 'groupby' => $groupby, 'orderby' => $orderby);
                 $equipes = $modEquipe->find($params);
-            //var_dump($equipes);
-                array_push($equipesPoules, $equipes);
-                $d['equipesPoules'] = $equipesPoules;
-            //var_dump($d);
-                $modChamp = $this->loadModel('Championnat');
-                $conditions = array('championnat.idChampionnat' => $idChampionnat);
-                $params = array('conditions' => $conditions);
-                $d['championnat'] = $modChamp->findFirst($params);
+                //var_dump($equipes);
             }
-            $this->set($d);
+
         } else {
-            $this->e404('Poule introuvable');
+            $idChampionnat = $_GET['idChampionnat'];
+            $modEnga = $this->loadModel('Engagement');
+            $modEnga->table .= " INNER JOIN championnat ON engagement.idChampionnat = championnat.idChampionnat 
+            INNER JOIN equipe ON equipe.idEquipe = engagement.idEquipe";
+            $orderby = "equipe.scoreGlobal desc";
+            $conditions = array('championnat.idChampionnat' => $idChampionnat);
+            $params = array('conditions' => $conditions, 'orderby' => $orderby);
+            $equipes = $modEnga->find($params);
+            if (empty($equipes)) {
+                $this->e404('Equipes Introuvable');
+            }
         }
+        array_push($equipesPoules, $equipes);
+        $d['equipesPoules'] = $equipesPoules;
+
+        $modChamp = $this->loadModel('Championnat');
+        $conditions = array('championnat.idChampionnat' => $idChampionnat);
+        $params = array('conditions' => $conditions);
+        $d['championnat'] = $modChamp->findFirst($params);
+        $this->set($d);
     }
 
-    function detail($id)
+    function detail()
     {
-        $idRencontre = trim($id);
+        if (isset($_GET['nomPoule'])) {
+            $nomPoule = $_GET['nomPoule'];
+        } else {
+            $nomPoule = "";
+        }
+        $d['nomPoule'] = $nomPoule;
+
+        $idRencontre = $_GET['idRencontre'];
         $this->modRenc = $this->loadModel('Rencontre');
         $conditions = array('idRencontre' => $idRencontre);
         $params = array('conditions' => $conditions);

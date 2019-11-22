@@ -8,8 +8,13 @@ $idJournee = $rencontres[0]['idJournee'];
 ?>
 
 <div style="text-align:center">
-    <h3><a href="<?= BASE_URL ?>/rencontre/listeEquipePoule/<?php echo $championnat->idChampionnat; if(isset($nomPoule)) { echo '-' . $nomPoule. '">Poule' . $nomPoule; } else { echo '">' ;} ?></h3><h6>(Voir les équipes)</a></h6>
+    <h3><a href="<?= BASE_URL ?>/rencontre/listeEquipePoule/?idChampionnat=<?= $championnat->idChampionnat ?>
+    <?php if (isset($nomPoule)) {
+        echo "&nomPoule=$nomPoule";
+    }?>"
+    ><?php if(isset($nomPoule)){echo 'Poule'.$nomPoule;} ?></h3><h6>Classement des équipes</a></h6>
 </div>
+<br>
 <div>
     <table border='1' style="width:50%" class="data-table">
         <thead style="text-align:center">
@@ -19,10 +24,10 @@ $idJournee = $rencontres[0]['idJournee'];
             <?php
             foreach ($rencontres as $r) :
                 //var_dump($r);
-                if ($r[0]['rencontre']->idJournee == $idJournee) {
-                    ?>
+            if ($r[0]['rencontre']->idJournee == $idJournee) {
+                ?>
                     <tr>
-                        <td style='width:40%'><a href="<?php echo BASE_URL . '/rencontre/detail/' . $r[0]['rencontre']->idRencontre ?>">
+                        <td style='width:40%'><a href="<?php echo BASE_URL . '/joueur/liste/' . $r[0]['rencontre']->idEquipeA ?>">
                                 <?php
                                 foreach ($equipes as $e) {
                                     if ($e->idEquipe == $r[0]['rencontre']->idEquipeA) {
@@ -31,18 +36,20 @@ $idJournee = $rencontres[0]['idJournee'];
                                 }
                                 ?></a></td>
                         <td style='width:5%'> <?= isset($r[0]['rencontre']->scoreFinalA) ? $r[0]['rencontre']->scoreFinalA : '?' ?> </td>
-                        <td style='width:5%'> - </td>
+                        <td style='width:5%'><a href="<?php echo BASE_URL . '/rencontre/detail/?idRencontre=' . $r[0]['rencontre']->idRencontre;
+                                                        (isset($nomPoule)) ? '&nomPoule=' . $nomPoule : "" ?>"> - </td>
                         <td style='width:5%'> <?= isset($r[0]['rencontre']->scoreFinalB) ? $r[0]['rencontre']->scoreFinalB : '?' ?> </td>
-                        <td style='width:40%'>
+                        <td style='width:40%'><a href="<?php echo BASE_URL . '/joueur/liste/' . $r[0]['rencontre']->idEquipeB ?>">
                             <?php
                             foreach ($equipes as $e) {
                                 if ($e->idEquipe == $r[0]['rencontre']->idEquipeB) {
                                     echo $e->nomEquipe;
                                 }
                             }
-                            ?> </td>
+                            ?></a></td>
                     </tr>
-    <?php } else { ?>
+    <?php 
+} else { ?>
                 </tbody>
             </table>
             <br>
@@ -73,7 +80,7 @@ $idJournee = $rencontres[0]['idJournee'];
                             ?> </td>
                     </tr>
                 <?php $idJournee = $r[0]['rencontre']->idJournee;
-                }
+            }
             endforeach;
             ?>
         </tbody>

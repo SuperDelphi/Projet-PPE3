@@ -7,7 +7,7 @@
             }
         }
         ?>
-    | Poule <?= $poules[0]->nomPoule ?> | J.N°<?= $rencontre[0]->numJournee ?></h3>
+    | Poule <?= $nomPoule ?> | J.N°<?= $rencontre[0]->numJournee ?></h3>
 </div>
 <div>
     <p>Date : <?= $rencontre[0]->date ?> | Heure : <?= $rencontre[0]->heure ?> | Lieu : <?= $rencontre[0]->lieu ?></p>
