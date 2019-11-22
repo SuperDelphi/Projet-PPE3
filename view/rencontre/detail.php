@@ -20,7 +20,7 @@
     </p>
 </div>
 <div>
-    <table style='text-align:center' border='1' class="data-table">
+    <table class="text-center" border='1' class="data-table">
         <thead>
             <tr>
                 <th colspan=4>Equipe <?php
@@ -73,7 +73,7 @@
 </div>
 <br>
 <div>
-    <table style='text-align:center' border='1'class="data-table">
+    <table class="text-center" border='1'class="data-table">
         <thead>
             <th></th>
             <th>Noms</th>
