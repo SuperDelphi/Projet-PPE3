@@ -6,6 +6,7 @@ class AdminController extends Controller
     function listeChampionnat()
     {
         $this->redirectNonLogged();
+
         $this->modChamp = $this->loadModel("Championnat");
         $groupby = "championnat.idChampionnat";
         $params = array('groupby' => $groupby);
@@ -15,27 +16,10 @@ class AdminController extends Controller
         $this->render("listeChampionnat");
     }
 
-    //    function listeRencontre($id) {
-    //        $this->redirectNonLogged();
-    //        $this->modChamp = $this->loadModel("Championnat");
-    //        $this->modJournee = $this->loadModel("Journee");
-    //        $this->modRencontre = $this->loadModel("Rencontre");
-    //
-    //        $champ = $this->modChamp->find([
-    //            "conditions" =>
-    //        ]);
-    //
-    //        $rencontres = $this->modRencontre->find(array(
-    //            "conditions" => ["idRencontre" => $id],
-    //            "orderby" => "date ASC"
-    //        ));
-    //
-    //
-    //    }
-
     function formChampionnat()
     {
         $this->redirectNonLogged();
+
         if (isset($_POST["creerChampionnat"])) {
             $championnatModele = $this->loadModel("Championnat");
 
@@ -135,6 +119,7 @@ class AdminController extends Controller
     function listeJournee($id)
     {
         $this->redirectNonLogged();
+
         $idChampionnat = trim($id);
 
         $nbrjournee = 0;
@@ -163,6 +148,7 @@ class AdminController extends Controller
     function listeRencontre($id)
     {
         $this->redirectNonLogged();
+
         if (isset($id)) {
             $tmp = explode("-", $id);
             $idChampionnat = trim($tmp[0]);
@@ -197,6 +183,14 @@ class AdminController extends Controller
         }
     }
 
+    public function listeUtilisateurs()
+    {
+        $this->redirectNonLogged();
+
+
+    }
+
+    // Méthode de redirection
     private function redirectNonLogged()
     {
         $redirectURL = "/auth/login";
