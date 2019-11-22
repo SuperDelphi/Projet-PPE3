@@ -31,7 +31,7 @@ a {
     text-decoration: none;
     text-decoration-color: currentColor;
     text-decoration-style: solid;
-    color: #00389a;
+    color: #00379a;
 }
 
 a:hover {
@@ -47,6 +47,10 @@ a:hover {
     min-height: 100vh;
 }
 
+#admin-body {
+    margin: 25px;
+}
+
 .data-table tr:nth-child(odd) {
     background-color: #fafafa;
 }
@@ -55,7 +59,7 @@ a:hover {
     transition: 100ms;
     z-index: 10;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.13);
-    background-image: linear-gradient(to right, #00389a, #0076bd);
+    background-image: linear-gradient(to right, #00379a, #0076bd);
     color: white;
 }
 
@@ -71,7 +75,7 @@ a:hover {
 
 .data-table th {
     background-color: white;
-    color: #00389a;
+    color: #00379a;
     padding: 10px 20px;
 }
 
@@ -81,18 +85,6 @@ a:hover {
 
 .static-content {
     padding: 100px 0;
-}
-
-a.nav-link.link {
-    display: inline-block;
-    padding: 4px 14px;
-}
-
-a.nav-link.link:hover {
-    transition: 125ms;
-    color: #000f2e;
-    background-color: white;
-    border-radius: 5px;
 }
 
 .text-left {
@@ -153,7 +145,7 @@ a.button {
 
 .primarybuttonBlue {
     font-weight: 500;
-    background: #00389A;
+    background: #00379a;
     padding: 10px 25px;
     color: white !important;
     border: 2px solid #0d357c;
@@ -183,7 +175,27 @@ a.button {
 
 /* Menu administrateur */
 
+section#main-section > div {
+    height: 100% !important;
+}
+
 .admin-menu {
-    background-color: #fafafa;
-    height: available;
+    padding: 50px 0;
+    background-color: #fbfbfb;
+    height: 100vh !important;
+}
+
+.admin-menu .nav-item {
+    padding: 15px 30px;
+}
+
+.admin-menu .nav-item a {
+    color: #00379a;
+    font-size: 1.1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.disconnect-link a {
+    color: #d63340 !important;
 }
