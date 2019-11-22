@@ -13,6 +13,10 @@ html {
     outline: none !important;
 }
 
+h4 {
+    font-size: 1em;
+}
+
 .container-fluid {
     padding: 0;
 }
@@ -210,4 +214,9 @@ section#main-section > div {
     background-color: #d63340 !important;
     color: #fbfbfb !important;
     transition: 50ms;
+}
+
+.admin-menu-title {
+    color: #b2b4b7;
+    padding: 0 30px;
 }
