@@ -35,7 +35,7 @@
                         <a class="nav-link link" href="<?= BASE_URL . DS . "classement/liste"; ?>">Classement des équipes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/liste"; ?>">Classement des joueurs</a>
+                        <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/listeGenerale"; ?>">Classement des joueurs</a>
                     </li>
                 </ul>
                 <input id="search-bar" class="mr-sm-2" type="search" placeholder="Rechercher une équipe ou un joueur..."

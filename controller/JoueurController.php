@@ -20,6 +20,19 @@ class JoueurController extends Controller {
         $this->set($d);
     }
 
+    function listeGenerale() {
+        $this->modJoueur = $this->loadModel('Joueur');
+        $projection = 'personne.nom, personne.prenom, joueur.idJoueur, joueur.scoreGlobale';
+        $orderby = 'joueur.scoreGlobale desc';
+        $params = array('conditions' => 1, 'projection' => $projection, 'orderby' => $orderby);
+        $d['joueurs'] = $this->modJoueur->find($params);
+        //var_dump($d);
+        if (empty($d['joueurs'])) {
+            $this->e404('Page introuvable');
+        }
+        $this->set($d);
+    }
+
     function detail($id) {
         $idJoueur = trim($id);
         $visible = 1;
