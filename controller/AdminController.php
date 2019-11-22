@@ -91,7 +91,9 @@ class AdminController extends Controller
     }
 
     function formJournee()
-    { }
+    {
+        $this->redirectNonLogged();
+    }
 
 
     function formRencontre()
@@ -130,28 +132,9 @@ class AdminController extends Controller
         }
     }
 
-    private function redirectNonLogged()
-    {
-        $redirectURL = "/auth/login";
-
-        if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
-            $compteModele = $this->loadModel("Compte");
-            $ip = IP::getUserIP();
-
-            $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
-            $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
-
-            if (!($validUser && $validIP)) {
-                $this->redirect($redirectURL);
-            }
-        } else {
-            $this->redirect($redirectURL);
-        }
-    }
-
-
     function listeJournee($id)
     {
+        $this->redirectNonLogged();
         $idChampionnat = trim($id);
 
         $nbrjournee = 0;
@@ -179,6 +162,7 @@ class AdminController extends Controller
 
     function listeRencontre($id)
     {
+        $this->redirectNonLogged();
         if (isset($id)) {
             $tmp = explode("-", $id);
             $idChampionnat = trim($tmp[0]);
@@ -210,6 +194,25 @@ class AdminController extends Controller
             $d['championnat'] = $modChamp->findFirst($params);
             var_dump($d);
             $this->set($d);
+        }
+    }
+
+    private function redirectNonLogged()
+    {
+        $redirectURL = "/auth/login";
+
+        if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
+            $compteModele = $this->loadModel("Compte");
+            $ip = IP::getUserIP();
+
+            $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
+            $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
+
+            if (!($validUser && $validIP)) {
+                $this->redirect($redirectURL);
+            }
+        } else {
+            $this->redirect($redirectURL);
         }
     }
 }
