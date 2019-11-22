@@ -36,7 +36,6 @@ a {
 
 a:hover {
     color: unset;
-    /*border-bottom: solid 1px #00379a !important;*/
 }
 
 .text-right {
@@ -180,22 +179,34 @@ section#main-section > div {
 }
 
 .admin-menu {
-    padding: 50px 0;
+    padding: 50px 25px 50px 0;
     background-color: #fbfbfb;
     height: 100vh !important;
 }
 
-.admin-menu .nav-item {
+.admin-menu a {
+    border-radius: 0 50px 50px 0;
     padding: 15px 30px;
-}
-
-.admin-menu .nav-item a {
     color: #00379a;
     font-size: 1.1em;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
+    text-decoration: none;
+    display: block;
 }
 
-.disconnect-link a {
+.admin-menu a:hover {
+    background-color: #00379a;
+    color: #fbfbfb !important;
+    transition: 50ms;
+}
+
+.disconnect-link {
     color: #d63340 !important;
+}
+
+.disconnect-link:hover {
+    background-color: #d63340 !important;
+    color: #fbfbfb !important;
+    transition: 50ms;
 }

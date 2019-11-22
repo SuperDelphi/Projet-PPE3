@@ -1,39 +1,39 @@
 <div class="container-fluid admin-menu col-lg-2">
-    <div class="row mx-0">
-        <div class="col nav-item">
-            <a href="<?= BASE_URL . DS ?>admin/formChampionnat">Nouveau championnat</a>
+    <a href="<?= BASE_URL . DS ?>admin/formChampionnat">
+        <div class="row mx-0">
+            <div class="col nav-item">Nouveau championnat</div>
         </div>
-    </div>
-    <div class="row mx-0">
-        <div class="col nav-item">
-            <a href="<?= BASE_URL . DS ?>admin/formRencontre">Nouvelle Rencontre</a>
+    </a>
+    <a href="<?= BASE_URL . DS ?>admin/formRencontre">
+        <div class="row mx-0">
+            <div class="col nav-item">Nouvelle rencontre</div>
         </div>
-    </div>
-    <div class="row mx-0">
-        <div class="col nav-item">
-            <a href="<?= BASE_URL . DS ?>admin/formJournee">Nouvelle Journée</a>
+    </a>
+    <a href="<?= BASE_URL . DS ?>admin/formJournee">
+        <div class="row mx-0">
+            <div class="col nav-item">Nouvelle journée</div>
         </div>
-    </div>
+    </a>
     <br>
-    <div class="row mx-0">
-        <div class="col nav-item">
-            <a href="<?= BASE_URL . DS ?>auth/logout">Équipes</a>
+    <a href="<?= BASE_URL . DS ?>auth/logout">
+        <div class="row mx-0">
+            <div class="col nav-item">Équipes</div>
         </div>
-    </div>
-    <div class="row mx-0">
-        <div class="col nav-item">
-            <a href="<?= BASE_URL . DS ?>auth/logout">Joueurs</a>
+    </a>
+    <a href="<?= BASE_URL . DS ?>auth/logout">
+        <div class="row mx-0">
+            <div class="col nav-item">Joueurs</div>
         </div>
-    </div>
-    <div class="row mx-0">
-        <div class="col nav-item">
-            <a href="<?= BASE_URL . DS ?>auth/logout">Utilisateurs</a>
+    </a>
+    <a href="<?= BASE_URL . DS ?>auth/logout">
+        <div class="row mx-0">
+            <div class="col nav-item">Utilisateurs</div>
         </div>
-    </div>
+    </a>
     <br>
-    <div class="row mx-0">
-        <div class="col nav-item disconnect-link">
-            <a href="<?= BASE_URL . DS ?>auth/logout">Déconnexion</a>
+    <a class="disconnect-link" href="<?= BASE_URL . DS ?>auth/logout">
+        <div class="row mx-0">
+            <div class="col nav-item">Déconnexion</div>
         </div>
-    </div>
+    </a>
 </div>
