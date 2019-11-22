@@ -1,7 +1,7 @@
 <table>
     <form action="" method="POST">
         <thead>
-            <th><label>Création d'un Championnat</label></th>
+            <th><label>Ajout d'une Equipe</label></th>
         </thead>
         <tr>
             <td><label>Nom Equipe</label></td>

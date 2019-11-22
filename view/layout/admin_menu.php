@@ -15,6 +15,11 @@
             <div class="col nav-item">Nouvelle journée</div>
         </div>
     </a>
+     <a href="<?= BASE_URL . DS ?>admin/formEquipe">
+        <div class="row mx-0">
+            <div class="col nav-item">Nouvelle équipe</div>
+        </div>
+    </a>
     <hr>
     <a href="<?= BASE_URL . DS ?>auth/logout">
         <div class="row mx-0">
