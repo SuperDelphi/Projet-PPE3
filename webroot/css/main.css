@@ -9,6 +9,10 @@ html {
     min-height: 100%;
 }
 
+* {
+    outline: none !important;
+}
+
 .container-fluid {
     padding: 0;
 }
