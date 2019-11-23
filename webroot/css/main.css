@@ -232,6 +232,10 @@ section#main-section > div {
     min-width: 300px;
 }
 
+section#main-section form label {
+    font-weight: 500;
+}
+
 section#main-section input::placeholder {
     font-size: 1em !important;
 }
