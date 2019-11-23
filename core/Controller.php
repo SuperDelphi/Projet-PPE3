@@ -85,7 +85,6 @@ class Controller
     }
 
     function runRoutine($action, $params) {
-//        $isSessionValid =
         // Instructions à exécuter à chaque appel du contrôleur
     }
 

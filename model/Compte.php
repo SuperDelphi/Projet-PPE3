@@ -7,7 +7,7 @@ class Compte extends Personne
     var $table = "compte INNER JOIN personne ON compte.idCompte = personne.idPersonne";
 
     // Retourne un tableau associatif, sinon null. Ne pas confondre le mot de passe ($mdp) et le hash correspondant ($hash).
-    public function getByLogin($user, $mdp)
+    public function getByLogin($user, $mdp, $hashMode=false)
     {
         $error = false;
         $accounts = $this->find(["conditions" => [
@@ -16,8 +16,11 @@ class Compte extends Personne
 
         if (!$accounts)
             $error = true;
-        elseif (!password_verify($mdp, $accounts[0]["password"]))
+        elseif (!$hashMode && !password_verify($mdp, $accounts[0]["password"])) {
             $error = true;
+        } elseif ($hashMode && !($mdp === $accounts[0]["password"])) {
+            $error = true;
+        }
 
         return $error ? null : $accounts[0];
     }

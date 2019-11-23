@@ -5,7 +5,7 @@ class AdminController extends Controller
 {
     function listeChampionnat()
     {
-        $this->redirectNonLogged();
+        $this->redirectNonAuthAndGetUser();
 
         $this->modChamp = $this->loadModel("Championnat");
         $groupby = "championnat.idChampionnat";
@@ -18,7 +18,7 @@ class AdminController extends Controller
 
     function formChampionnat()
     {
-        $this->redirectNonLogged();
+        $this->redirectNonAuthAndGetUser();
 
         if (isset($_POST["creerChampionnat"])) {
             $championnatModele = $this->loadModel("Championnat");
@@ -90,7 +90,7 @@ class AdminController extends Controller
     }
 
     function formEquipe() {
-        $this->redirectNonLogged();
+        $this->redirectNonAuthAndGetUser();
         if (isset($_POST["creerEquipe"])) {
             $equipeModele = $this->loadModel("Equipe");
             $nomEquipe = $_POST["nomEquipe"];
@@ -117,13 +117,13 @@ class AdminController extends Controller
 
     function formJournee()
     {
-        $this->redirectNonLogged();
+        $this->redirectNonAuthAndGetUser();
     }
 
 
     function formRencontre()
     {
-        $this->redirectNonLogged();
+        $this->redirectNonAuthAndGetUser();
 
         if (isset($_POST["creerrencontre"])) {
             $EquipeRencontreModele = $this->loadModel("EquipeRencontre");   
@@ -159,7 +159,7 @@ class AdminController extends Controller
 
     function listeJournee($id)
     {
-        $this->redirectNonLogged();
+        $this->redirectNonAuthAndGetUser();
 
         $idChampionnat = trim($id);
 
@@ -188,7 +188,7 @@ class AdminController extends Controller
 
     function listeRencontre($id)
     {
-        $this->redirectNonLogged();
+        $this->redirectNonAuthAndGetUser();
 
         if (isset($id)) {
             $tmp = explode("-", $id);
@@ -226,18 +226,18 @@ class AdminController extends Controller
 
     public function listeUtilisateurs()
     {
-        $this->redirectNonLogged();
+        $this->redirectNonAuthAndGetUser();
 
 
     }
 
     // Méthode de redirection
-    private function redirectNonLogged()
+    private function redirectNonAuthAndGetUser()
     {
+        $compteModele = $this->loadModel("Compte");
         $redirectURL = "/auth/login";
 
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
-            $compteModele = $this->loadModel("Compte");
             $ip = IP::getUserIP();
 
             $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
@@ -249,5 +249,10 @@ class AdminController extends Controller
         } else {
             $this->redirect($redirectURL);
         }
+
+        $d["user"] = $compteModele->getByLogin($_SESSION["identifiant"], $_SESSION["hash"], true);
+        $this->set($d);
+
+        return $d["user"];
     }
 }
