@@ -21,7 +21,7 @@
             <div class="col nav-item">Équipes</div>
         </div>
     </a>
-    <a href="<?= BASE_URL . DS ?>admin/listeJoueur">
+    <a href="<?= BASE_URL . DS ?>joueur/listeGenerale">
         <div class="row mx-0">
             <div class="nav-item"><i class="fas fa-table-tennis"></i></div>
             <div class="col nav-item">Joueurs</div>
