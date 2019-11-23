@@ -183,7 +183,7 @@ section#main-section > div {
     min-height: 100% !important;
 }
 
-.admin-menu {
+#admin-menu {
     padding: 50px 50px 50px 0;
     /*background-image: linear-gradient(to bottom, #fbfbfb, #fbfbfb, transparent);*/
     background-color: #fbfbfb;
@@ -191,7 +191,7 @@ section#main-section > div {
     overflow: auto;
 }
 
-.admin-menu a {
+#admin-menu a {
     border-radius: 0 50px 50px 0;
     padding: 15px 30px;
     color: #00379a;
@@ -201,7 +201,7 @@ section#main-section > div {
     display: block;
 }
 
-.admin-menu a:hover {
+#admin-menu a:hover {
     background-color: #00379a;
     color: #fbfbfb !important;
     transition: 50ms;
@@ -252,7 +252,10 @@ section#main-section input::placeholder {
 /* Breakpoints */
 
 @media (max-width: 768px) {
-    .admin-menu {
+    #admin-menu {
         height: auto !important;
+    }
+    #admin-body {
+
     }
 }
