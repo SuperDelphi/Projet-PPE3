@@ -1,11 +1,13 @@
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
+
+<h2>Nouveau championnat</h2>
+<hr>
+
 <table>
     <form action="" method="POST">
-        <thead>
-            <th><label>Création d'un Championnat</label></th>
-        </thead>
         <tr>
             <td><label>Nom</label></td>
-            <td><input type="text" name="nomChampionnat" value="" size="20" /></td>
+            <td><input class="form-control" type="text" name="nomChampionnat" value="" size="20" required/></td>
         </tr>
         <tr>
             <td>
@@ -13,7 +15,7 @@
                 <label>(Départemental, régional, ...)</label>
             </td>
             <td>
-                <select name="typeChampionnat" required>
+                <select class="form-control" name="typeChampionnat" required>
                     <?php
                     foreach ($typesChampionnat as $typeChampionnat) : ?>
                         <option value="<?= $typeChampionnat ?>">
@@ -25,12 +27,12 @@
         </tr>
         <tr>
             <td><label>Nombre de journée</label></td>
-            <td><input type="number" name="nombreJournee" /></td>
+            <td><input class="form-control" type="number" name="nombreJournee" required/></td>
         </tr>
         <tr>
             <td><label>Division</label></td>
             <td>
-                <select name="idDivision" required>
+                <select class="form-control" name="idDivision" required>
                     <?php
                     foreach ($divisions as $division) : ?>
                         <option value="<?= $division->idDivision ?>">
@@ -41,7 +43,9 @@
             </td>
         </tr>
         <tr>
-            <td><input type="submit" value="Créer" name="creerChampionnat" /></td>
+            <td><input class="primarybuttonBlue" type="submit" value="Créer" name="creerChampionnat" /></td>
         </tr>
     </form>
 </table>
+
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_bottom.php"; ?>

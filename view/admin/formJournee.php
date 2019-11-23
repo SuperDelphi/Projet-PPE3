@@ -1,23 +1,24 @@
-<br>
-<table>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
+
+    <h2>Nouvelle journée</h2>
+    <hr>
+
     <form method="POST" action="<?= BASE_URL . DS ?>admin/">
-        <thead>
-            <th><label>Nouvelle Journée</label></th>
-        </thead>
-        <tr>
-            <td><label>Numéro de la journée : </label></td>
-            <td><select>
-                    <?php
-                    for ($i = 1; $i <= 10; $i++) {
-                        echo '<option value="' . $i . '">' . $i . '</option>';
-                    }
-                    ?>
-                </select></td>
-            <td><label>Date prévisionnel de la journée : </label></td>
-            <td><input type="date" id="date-previsionnel" name="date-previsionnel"></td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Créer" name="Créer" /></td>
-        </tr>
+
+        <label>Numéro</label>
+        <select class="form-control" required>
+            <?php
+            for ($i = 1; $i <= 10; $i++) {
+                echo '<option value="' . $i . '">' . $i . '</option>';
+            }
+            ?>
+        </select>
+        <br>
+        <label>Date prévisionnelle</label>
+        <input class="form-control" type="date" id="date-previsionnel" name="date-previsionnel" required>
+        <br>
+        <input class="primarybuttonBlue" type="submit" value="Enregistrer" name="Enregistrer"/>
+
     </form>
-</table>
+
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_bottom.php"; ?>

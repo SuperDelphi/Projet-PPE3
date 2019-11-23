@@ -1,4 +1,7 @@
-<h2><?= $championnat->nomChampionnat . '<br>' . $championnat->typeChampionnat . '<br>' . $championnat->nomDivision; ?></h2>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
+
+<h2><?= $championnat->nomChampionnat . " " . $championnat->typeChampionnat . " " . $championnat->nomDivision; ?></h2>
+<hr>
 
 <?php
 $cpt = 0;
@@ -24,10 +27,12 @@ foreach ($rencontre as $r) :
                             echo $e->nomEquipe;
                         }
                     }
-                    ?> </td>
+                    ?></td>
 
         </tr>
     </table>
 <?php
 
 endforeach;
+
+require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_bottom.php";

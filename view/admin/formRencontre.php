@@ -1,21 +1,22 @@
-<br>
-<table>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
+
+<h2>Nouvelle rencontre</h2>
+<hr>
+
+<table class="form-table" ">
     <form method="POST" action="">
-        <thead>
-            <th><label>Nouvelle Rencontre</label></th>
-        </thead>
         <tr>
             <td><label>Heure</label></td>
-            <td><input type="time" name="heure" value="" size="20" /></td>
+            <td><input class="form-control" type="time" name="heure" value="" size="20" required/></td>
             <td><label>Date</label></td>
-            <td><input type="date" name="date" value="" size="20" /></td> 
+            <td><input class="form-control" type="date" name="date" value="" size="20" required/></td>
             <td><label>Lieu</label></td>
-            <td><input type="text" name="lieu" value="" size="20" /></td> 
+            <td><input class="form-control" type="text" name="lieu" value="" size="20" required/></td>
         </tr>  
         <tr>
-            <td><label>Equipe A</label></td>
+            <td><label>Équipe A</label></td>
             <td>
-                <select name="equipea" required>
+                <select class="form-control" name="equipea" required>
                     <?php
                     foreach ($equipes as $equipe) : ?>
                         <option value="<?= $equipe->idEquipe ?>">
@@ -24,9 +25,9 @@
                     <?php endforeach; ?>
                 </select>
             </td>
-            <td><label>Equipe B</label></td>
+            <td><label>Équipe B</label></td>
             <td>
-                <select name="equipeb" required>
+                <select class="form-control" name="equipeb" required>
                     <?php
                     foreach ($equipes as $equipe) : ?>
                         <option value="<?= $equipe->idEquipe ?>">
@@ -37,15 +38,15 @@
             </td>
         </tr>
         <tr>
-            <td><label>Score Equipe A</label></td>
-            <td><input type="number" name="scorea" value="" size="20" /></td>
-            <td><label>Score Equipe B</label></td>
-            <td><input type="number" name="scoreb" value="" size="20" /></td> 
+            <td><label>Score de l'équipe A</label></td>
+            <td><input class="form-control" type="number" name="scorea" value="" size="20" required/></td>
+            <td><label>Score de l'équipe B</label></td>
+            <td><input class="form-control" type="number" name="scoreb" value="" size="20" required/></td>
         </tr>
         <tr>
-            <td><label>Journee</label></td>
+            <td><label>Journée</label></td>
             <td>
-            <select name="journee" required>
+            <select class="form-control" name="journee" required>
                     <?php
                     foreach ($journees as $journee) : ?>
                         <option value="<?= $journee->idJournee ?>">
@@ -56,7 +57,7 @@
             </td>
             <td><label>Arbitre</label></td>
             <td>
-            <select name="arbitre" required>
+            <select class="form-control" name="arbitre" required>
                     <?php
                     foreach ($arbitres as $arbitre) : ?>
                         <option value="<?= $arbitre->idArbitre ?>">
@@ -67,7 +68,9 @@
             </td>
         </tr>
         <tr>
-            <td><input type="submit" value="Terminer" name="creerrencontre" /></td>
+            <td><input class="primarybuttonBlue" type="submit" value="Enregistrer" name="creerrencontre"/></td>
         </tr>
     </form>
 </table>
+
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_bottom.php"; ?>
