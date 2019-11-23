@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/main.css' ?>">
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/header.css' ?>">
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/footer.css' ?>">
+    <script src="https://kit.fontawesome.com/165449b566.js" crossorigin="anonymous"></script>
 </head>
 
 <body style="background-image: url('https://i.postimg.cc/NfDHNhWL/grid-pattern.jpg');background-repeat: repeat">
