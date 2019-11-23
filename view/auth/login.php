@@ -11,7 +11,7 @@
                     <label class="col control-label" for="textinput">Identifiant</label>
                     <div class="col">
                         <input id="user" name="user" class="form-control input-md" type="text"
-                               value="<?= (isset($compte->user) ? $compte->user : '') ?>" required>
+                               value="<?= (isset($compte->user) ? $compte->user : '') ?>" autofocus required>
                     </div>
                 </div>
 
