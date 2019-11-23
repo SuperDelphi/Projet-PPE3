@@ -8,9 +8,23 @@ class AdminController extends Controller
         $this->redirectNonAuthAndGetUser();
 
         $this->modChamp = $this->loadModel("Championnat");
+        $this->modPoule = $this->loadModel("Poule");
+
         $groupby = "championnat.idChampionnat";
-        $params = array('groupby' => $groupby);
-        $d['championnats'] = $this->modChamp->find($params);
+
+        $d["championnats"] = $this->modChamp->find([
+            "groupby" => $groupby,
+            "orderby" => "idChampionnat"
+        ]);
+
+        if (empty($d['championnats'])) {
+            $this->e404('Page introuvable');
+        }
+
+        $d["poules"] = $this->modPoule->find([
+            "groupby" => "idChampionnat, nomPoule",
+            "orderby" => "nomPoule"
+        ]);
 
         $this->set($d);
         $this->render("listeChampionnat");
@@ -73,9 +87,10 @@ class AdminController extends Controller
             $this->render("formChampionnat");
         }
     }
-     private $modEquipe = null;
 
-    function listeEquipe() {
+    function listeEquipe(){
+        $this->redirectNonAuthAndGetUser();
+
         $this->modEquipe = $this->loadModel('Equipe');
         $groupby = "equipe.idEquipe";
         $params = array();
@@ -89,8 +104,9 @@ class AdminController extends Controller
         $this->render("listeEquipe");
     }
 
-    function formEquipe() {
+    function formEquipe(){
         $this->redirectNonAuthAndGetUser();
+
         if (isset($_POST["creerEquipe"])) {
             $equipeModele = $this->loadModel("Equipe");
             $nomEquipe = $_POST["nomEquipe"];

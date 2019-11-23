@@ -1,25 +1,83 @@
-<div class="row mx-0">
-    <?php require_once ROOT . DS . "view". DS ."layout".DS."admin_menu.php"; ?>
-    <div id="admin-body" class="col">
-        <h2 class="">Liste des championnats</h2>
-        <a href="<?php echo BASE_URL . DS . "admin" . DS . "formChampionnat" ?>" class="button primarybuttonBlue">Nouveau</a>
-        <form method="post" action="<?= BASE_URL ?>">
-            <table class="data-table">
-                <thead>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
+
+<h2 class="">Liste des championnats</h2>
+<a href="<?php echo BASE_URL . DS . "admin" . DS . "formChampionnat" ?>" class="button primarybuttonBlue">Nouveau</a>
+<form method="post" action="<?= BASE_URL ?>">
+    <table class="data-table">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Type</th>
+            <th>Division</th>
+        </tr>
+        </thead>
+        <?php foreach ($championnats as $c) : ?>
+            <tr>
+                <td>
+                    <a href="<?php echo BASE_URL . DS . "admin" . DS . "listeJournee/" . $c->idChampionnat; ?>"><?= $c->nomChampionnat ?></a>
+                </td>
+                <td><?= $c->typeChampionnat ?></td>
+                <td><?= $c->nomDivision ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</form>
+<div>
+    <h2>Liste des championnats</h2>
+    <form method="post" action="<?= BASE_URL ?>">
+        <table class="data-table">
+            <?php foreach ($championnats as $c) : ?>
+                <?php
+                $isPoules = false;
+                $nomChampionnat = ArrayWizard::getFirstElementWhere(
+                        $championnats,
+                        "idChampionnat",
+                        $c->idChampionnat
+                    )->nomChampionnat . " " . $c->typeChampionnat . " " . $c->nomDivision;
+
+                foreach ($poules as $p) {
+                    if ($p->idChampionnat === $c->idChampionnat) {
+                        $isPoules = true;
+                    }
+                }
+
+                if ($isPoules) {
+                    foreach ($poules as $p): ?>
+                        <tr>
+                            <td class="text-left">
+                                <?= $nomChampionnat . " <b>[Poule " . $p->nomPoule . "]</b>" ?>
+                            </td>
+                            <td>
+                                <a href="<?php echo BASE_URL .
+                                    "/rencontre/liste/?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
+                                ?>" class="button primarybuttonBlue">Voir</a>
+                                <a href="<?php echo BASE_URL .
+                                    "/rencontre/listeEquipePoule/?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
+                                ?>" class="button primarybuttonWhite">Classement</a>
+                            </td>
+                        </tr>
+                    <?php endforeach;
+                } else {
+                    ?>
                     <tr>
-                        <th>Nom</th>
-                        <th>Type</th>
-                        <th>Division</th>
+                        <td class="text-left">
+                            <?= $nomChampionnat ?>
+                        </td>
+                        <td>
+                            <a href="<?php echo BASE_URL .
+                                "/rencontre/liste/?idChampionnat=$c->idChampionnat"
+                            ?>" class="button primarybuttonBlue">Voir</a>
+                            <a href="<?php echo BASE_URL .
+                                "/rencontre/listeEquipePoule/?idChampionnat=$c->idChampionnat"
+                            ?>" class="button primarybuttonWhite">Classement</a>
+                        </td>
                     </tr>
-                </thead>
-                <?php foreach ($championnats as $c) : ?>
-                    <tr>
-                        <td><a href="<?php echo BASE_URL . DS . "admin" . DS . "listeJournee/" . $c->idChampionnat; ?>"><?= $c->nomChampionnat ?></a></td>
-                        <td><?= $c->typeChampionnat ?></td>
-                        <td><?= $c->nomDivision ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </table>
-        </form>
-    </div>
+                    <?php
+                }
+                ?>
+            <?php endforeach; ?>
+        </table>
+    </form>
 </div>
+
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_bottom.php"; ?>

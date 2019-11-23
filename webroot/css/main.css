@@ -185,7 +185,6 @@ section#main-section > div {
 
 #admin-menu {
     padding: 50px 50px 50px 0;
-    /*background-image: linear-gradient(to bottom, #fbfbfb, #fbfbfb, transparent);*/
     background-color: #fbfbfb;
     height: 100vh !important;
     overflow: auto;
