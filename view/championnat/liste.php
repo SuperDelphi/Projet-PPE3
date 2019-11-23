@@ -1,4 +1,5 @@
-<section>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_top.php"; ?>
+
     <div>
         <h2>Liste des championnats</h2>
         <hr>
@@ -58,4 +59,5 @@
             </table>
         </form>
     </div>
-</section>
+
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_bottom.php"; ?>

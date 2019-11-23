@@ -322,6 +322,12 @@ section#main-section input::placeholder {
     right: 0px;
 }
 
+/* Guest */
+
+#main-section > section {
+    padding: 100px 0 0 0;
+}
+
 /* Breakpoints */
 
 @media (max-width: 768px) {

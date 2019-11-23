@@ -1,10 +1,11 @@
-<section>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_top.php"; ?>
+
     <h2>Classement des joueurs</h2>
     <hr>
 
     <a href="<?= BASE_URL . DS . "/simulationJoueur/formSimulation" ?>" class="button primarybuttonBlue">
         <i class="fas fa-sort-amount-up-alt"></i>
-        Faire une simulation
+        &nbspFaire une simulation
     </a>
 
         <table class="data-table">
@@ -26,4 +27,5 @@
 
             <?php endforeach; ?>
         </table>
-</section>
+
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_bottom.php"; ?>

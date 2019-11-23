@@ -4,7 +4,7 @@
     <hr>
 
     <a href="<?php echo BASE_URL . DS . "admin" . DS . "formEquipe" ?>"
-       class="button primarybuttonBlue"><i class="fas fa-plus fa-sm"></i> Nouvelle équipe</a>
+       class="button primarybuttonBlue"><i class="fas fa-plus fa-sm"></i>&nbsp Nouvelle équipe</a>
 
     <table class="data-table">
         <thead>

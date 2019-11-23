@@ -4,7 +4,7 @@
 <hr>
 
     <a href="<?php echo BASE_URL . DS . "admin" . DS . "formJoueur" ?>"
-       class="button primarybuttonBlue"><i class="fas fa-plus fa-sm"></i> Nouveau joueur</a>
+       class="button primarybuttonBlue"><i class="fas fa-plus fa-sm"></i>&nbsp Nouveau joueur</a>
 
 <table class="data-table">
     <thead>
