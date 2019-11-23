@@ -55,8 +55,8 @@ a:hover {
     overflow: auto;
 }
 
-.data-table tr:nth-child(odd) {
-    background-color: #fafafa;
+.data-table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.01);
 }
 
 .data-table > tr:hover, .data-table > tbody > tr:hover {
@@ -78,7 +78,7 @@ a:hover {
 }
 
 .data-table th {
-    background-color: white;
+    background-color: transparent;
     color: #00379a;
     padding: 10px 20px;
 }
@@ -219,4 +219,19 @@ section#main-section > div {
 .admin-menu-title {
     color: #b2b4b7;
     padding: 0 30px;
+}
+
+/* Formulaire d'authentification */
+
+.form-container {
+    background-color: rgba(255, 255, 255);
+    border: solid rgba(0, 0, 0, 0.10) 1px;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 100px;
+    min-width: 300px;
+}
+
+input::placeholder {
+    font-size: 1em !important;
 }
