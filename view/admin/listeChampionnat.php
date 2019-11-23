@@ -1,31 +1,10 @@
 <?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
 
-<h2 class="">Liste des championnats</h2>
-<a href="<?php echo BASE_URL . DS . "admin" . DS . "formChampionnat" ?>" class="button primarybuttonBlue">Nouveau</a>
-<form method="post" action="<?= BASE_URL ?>">
-    <table class="data-table">
-        <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Type</th>
-            <th>Division</th>
-        </tr>
-        </thead>
-        <?php foreach ($championnats as $c) : ?>
-            <tr>
-                <td>
-                    <a href="<?php echo BASE_URL . DS . "admin" . DS . "listeJournee/" . $c->idChampionnat; ?>"><?= $c->nomChampionnat ?></a>
-                </td>
-                <td><?= $c->typeChampionnat ?></td>
-                <td><?= $c->nomDivision ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-</form>
-<div>
-    <h2>Liste des championnats</h2>
+    <h2 class="">Liste des championnats</h2>
+    <a href="<?php echo BASE_URL . DS . "admin" . DS . "formChampionnat" ?>"
+       class="button primarybuttonBlue">Nouveau</a>
     <form method="post" action="<?= BASE_URL ?>">
-        <table class="data-table">
+        <table class="data-table sober">
             <?php foreach ($championnats as $c) : ?>
                 <?php
                 $isPoules = false;
@@ -48,12 +27,8 @@
                                 <?= $nomChampionnat . " <b>[Poule " . $p->nomPoule . "]</b>" ?>
                             </td>
                             <td>
-                                <a href="<?php echo BASE_URL .
-                                    "/rencontre/liste/?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
+                                <a href="<?= BASE_URL . DS . "admin" . DS . "listeJournee/" . $c->idChampionnat
                                 ?>" class="button primarybuttonBlue">Voir</a>
-                                <a href="<?php echo BASE_URL .
-                                    "/rencontre/listeEquipePoule/?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
-                                ?>" class="button primarybuttonWhite">Classement</a>
                             </td>
                         </tr>
                     <?php endforeach;
@@ -64,12 +39,8 @@
                             <?= $nomChampionnat ?>
                         </td>
                         <td>
-                            <a href="<?php echo BASE_URL .
-                                "/rencontre/liste/?idChampionnat=$c->idChampionnat"
+                            <a href="<?= BASE_URL . DS . "admin" . DS . "listeJournee/" . $c->idChampionnat
                             ?>" class="button primarybuttonBlue">Voir</a>
-                            <a href="<?php echo BASE_URL .
-                                "/rencontre/listeEquipePoule/?idChampionnat=$c->idChampionnat"
-                            ?>" class="button primarybuttonWhite">Classement</a>
                         </td>
                     </tr>
                     <?php
@@ -78,6 +49,5 @@
             <?php endforeach; ?>
         </table>
     </form>
-</div>
 
 <?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_bottom.php"; ?>

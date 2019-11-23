@@ -8,14 +8,9 @@
             <?= $user["typeCompte"] === "GERANT" ? "que <b style='color: #00ced1'>Gérant$genderSuffix</b>" : "qu'<b>Arbitre</b>" ?>.</span>
     </div>
     <h4 class="admin-menu-title">Panel de gestion</h4>
-    <a href="<?= BASE_URL . DS ?>admin/formRencontre">
+    <a href="<?= BASE_URL . DS ?>admin/listeChampionnat">
         <div class="row mx-0">
-            <div class="col nav-item">Nouvelle rencontre</div>
-        </div>
-    </a>
-    <a href="<?= BASE_URL . DS ?>admin/formJournee">
-        <div class="row mx-0">
-            <div class="col nav-item">Nouvelle journée</div>
+            <div class="col nav-item">Tableau de bord</div>
         </div>
     </a>
     <hr>
@@ -32,7 +27,7 @@
     <hr>
     <a href="<?= BASE_URL . DS ?>admin/listeUtilisateur">
         <div class="row mx-0">
-            <div class="col nav-item">Utilisateurs</div>
+            <div class="col nav-item">Gestion des utilisateurs</div>
         </div>
     </a>
     <hr>
