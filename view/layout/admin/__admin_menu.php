@@ -36,14 +36,14 @@
                 <div class="col nav-item">Gestion des utilisateurs</div>
             </div>
         </a>
-        <a href="<?= BASE_URL . DS ?>admin/settings">
-            <div class="row mx-0">
-                <div class="nav-item icon-container"><i class="fas fa-user-circle"></i></div>
-                <div class="col nav-item">Mon compte</div>
-            </div>
-        </a>
-        <hr>
     <?php endif; ?>
+    <a href="<?= BASE_URL . DS ?>admin/settings">
+        <div class="row mx-0">
+            <div class="nav-item icon-container"><i class="fas fa-user-circle"></i></div>
+            <div class="col nav-item">Mon compte</div>
+        </div>
+    </a>
+    <hr>
     <a class="disconnect-link" href="<?= BASE_URL . DS ?>auth/logout">
         <div class="row mx-0">
             <div class="nav-item icon-container"><i class="fas fa-power-off"></i></div>

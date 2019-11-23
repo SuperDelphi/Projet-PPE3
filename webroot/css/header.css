@@ -25,6 +25,10 @@ input::placeholder {
     font-size: 0.9em !important;
 }
 
+header .special-link {
+    border: solid 1px rgba(255, 255, 255, 0.25) !important;
+}
+
 ul.navbar-nav {
     padding: 0 !important;
 }

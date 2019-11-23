@@ -325,7 +325,7 @@ section#main-section input::placeholder {
 /* Guest */
 
 #main-section > section {
-    padding: 100px 0 0 0;
+    padding: 100px 0;
 }
 
 /* Breakpoints */

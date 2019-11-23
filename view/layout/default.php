@@ -45,7 +45,7 @@
 
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link link"
+                    <a class="nav-link link special-link"
                        href="<?= $_SESSION ? BASE_URL . DS . "admin/listeChampionnat" : BASE_URL . DS . "auth/login"; ?>">
                         <?= $_SESSION ? "Mon espace" : "Connexion"; ?></a>
                 </li>

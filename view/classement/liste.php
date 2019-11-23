@@ -1,10 +1,13 @@
-<section>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_top.php"; ?>
+
     <h2>Classement des équipes</h2>
+    <hr>
+
     <table class="data-table">
         <thead>
             <tr>
                 <th>Place</th>
-                <th>Equipes</th>
+                <th>Équipes</th>
                 <th>Score</th>
             </tr>
         </thead>
@@ -16,5 +19,5 @@
             </tr>
         <?php endforeach; ?>
     </table>
-</section>
 
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_bottom.php"; ?>
