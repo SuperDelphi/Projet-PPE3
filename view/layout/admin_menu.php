@@ -1,4 +1,4 @@
-<div class="container-fluid admin-menu col-lg-3">
+<div class="container-fluid admin-menu col-lg-3 col-md-4">
     <h4 class="admin-menu-title">Panel de gestion</h4>
     <a href="<?= BASE_URL . DS ?>admin/formChampionnat">
         <div class="row mx-0">

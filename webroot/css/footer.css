@@ -3,6 +3,10 @@ footer {
     color: #ffffff;
 }
 
+footer hr {
+    background: rgba(255, 255, 255, 0.15);
+}
+
 .page-footer {
     padding: 50px !important;
 }

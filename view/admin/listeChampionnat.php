@@ -1,6 +1,6 @@
 <div class="row mx-0">
     <?php require_once ROOT . DS . "view". DS ."layout".DS."admin_menu.php"; ?>
-    <div id="admin-body" class="col-lg-9">
+    <div id="admin-body" class="col">
         <h2 class="">Liste des championnats</h2>
         <form method="post" action="<?= BASE_URL ?>">
             <table class="data-table">

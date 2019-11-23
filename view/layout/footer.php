@@ -7,19 +7,14 @@
             <!-- Grid row -->
             <div class="row">
 
-
                 <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
+                <div class="col-md-2 mb-md-0 mb-3">
 
                     <!-- Links -->
                     <h5 class="text-uppercase">Liens utiles</h5>
 
-                    <div class="horizontal-sep"></div>
-
+<!--                    <div class="horizontal-sep"></div>-->
+<hr class="">
                     <ul class="list-unstyled">
                         <li>
                             <a href="mailto:ufolep-usep@laligue17.org" class="link footer-text">Contact</a>
@@ -34,12 +29,13 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
+                <div class="col-md-2 mb-md-0 mb-3">
 
                     <!-- Links -->
                     <h5 class="text-uppercase">Plan du site</h5>
 
-                    <div class="horizontal-sep"></div>
+<!--                    <div class="horizontal-sep"></div>-->
+                    <hr>
 
                     <ul class="list-unstyled">
                         <li>
@@ -56,7 +52,7 @@
                 </div>
                 <!-- Grid column -->
                 <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
+                <div class="col-md-8 mt-md-0 mt-3">
 
                     <!-- Content -->
                     <h5 class="text-uppercase" style="text-align:right;">L'UFOLEP 17 </h5>

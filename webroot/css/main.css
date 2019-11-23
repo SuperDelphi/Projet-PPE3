@@ -239,3 +239,11 @@ section#main-section form label {
 section#main-section input::placeholder {
     font-size: 1em !important;
 }
+
+/* Breakpoints */
+
+@media (max-width: 768px) {
+    .admin-menu {
+        height: auto !important;
+    }
+}
