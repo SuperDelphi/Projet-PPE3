@@ -29,7 +29,7 @@
                 </td>
                 <td>
                     <a href="<?= BASE_URL . DS . "admin" . DS . "listeJournee/" . $c->idChampionnat
-                    ?>" class="button primarybuttonBlue">Voir</a>
+                    ?>" class="button primarybuttonBlue">Gérer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

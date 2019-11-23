@@ -2,11 +2,10 @@ header {
     background-color: #000f2e;
     color: #ffffff;
     font-weight: 500;
-    overflow: hidden;
 }
 
 .navbar {
-    height: 80px;
+    min-height: 80px;
 }
 
 header .link {
@@ -15,6 +14,10 @@ header .link {
 
 header .link:hover {
     color: #0048BD !important;
+}
+
+header button.navbar-toggler i {
+    color: white;
 }
 
 input::placeholder {
@@ -26,7 +29,7 @@ ul.navbar-nav {
 }
 
 li.nav-item {
-    margin: 0 10px;
+    margin: 5px 10px;
     font-size: 0.9em;
     transition: transform 0.1s;
 }
