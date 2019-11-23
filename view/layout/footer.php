@@ -46,7 +46,7 @@
                             <a href="<?= BASE_URL . DS . "championnat/liste" ?>" class="link footer-text">Championnats</a>
                         </li>
                         <li>
-                            <a href="<?= BASE_URL . DS . "joueur/liste" ?>" class="link footer-text">Classement des joueurs</a>
+                            <a href="<?= BASE_URL . DS . "joueur/listeGenerale" ?>" class="link footer-text">Classement des joueurs</a>
                         </li>
                         <li>
                             <a href="<?= BASE_URL . DS . "auth/login" ?>" class="link footer-text">Connexion</a>
