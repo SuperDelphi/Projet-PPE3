@@ -29,15 +29,15 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav" style="padding-right:50px;">
+                <li class="nav-item">
+                    <a class="nav-link link" href="<?= BASE_URL . DS . "championnat/liste"; ?>">Championnats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/listeGenerale"; ?>">Classement individuel</a>
+                </li>
+            </ul>
             <form class="form-inline">
-                <ul class="navbar-nav" style="padding-right:50px;">
-                    <li class="nav-item">
-                        <a class="nav-link link" href="<?= BASE_URL . DS . "championnat/liste"; ?>">Championnats</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="<?= BASE_URL . DS . "joueur/listeGenerale"; ?>">Classement individuel</a>
-                    </li>
-                </ul>
                 <input id="search-bar" class="mr-sm-2" type="search" placeholder="Rechercher un joueur..."
                        aria-label="Search">
             </form>
