@@ -1,6 +1,8 @@
 <section>
     <div>
         <h2>Liste des championnats</h2>
+        <hr>
+
         <form method="post" action="<?= BASE_URL ?>">
             <table class="data-table sober">
                 <?php foreach ($championnats as $c) : ?>

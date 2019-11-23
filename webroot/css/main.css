@@ -255,6 +255,14 @@ section#main-section > div {
     border-radius: 5px;
 }
 
+.icon-container {
+    width: 1em;
+}
+
+.form-table td {
+    padding: 8px 15px;
+}
+
 /* Formulaire d'authentification */
 
 .form-container {

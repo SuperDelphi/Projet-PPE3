@@ -1,12 +1,19 @@
 <section>
     <h2>Classement des joueurs</h2>
+    <hr>
+
+    <a href="<?= BASE_URL . DS . "/simulationJoueur/formSimulation" ?>" class="button primarybuttonBlue">
+        <i class="fas fa-sort-amount-up-alt"></i>
+        Faire une simulation
+    </a>
+
         <table class="data-table">
             <thead>
                 <tr>
                     <th>Place</th>
                     <th>Joueurs</th>
                     <th>Score</th>
-                    <th><input class="primarybuttonBlue" type="button" value="Simuler" onClick="self.location.href='<?= BASE_URL . DS ?>/simulationJoueur/formSimulation'"/></th>
+                    <th></th>
                 </tr>
             </thead>
             <?php $place = 1; foreach ($joueurs as $j) : ?>

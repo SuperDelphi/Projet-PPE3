@@ -30,6 +30,22 @@ class AdminController extends Controller
         $this->render("listeChampionnat");
     }
 
+    function listeJoueur()
+    {
+        $this->redirectNonAuthAndGetUser();
+
+        $this->modJoueur = $this->loadModel('Joueur');
+        $projection = 'personne.nom, personne.prenom, joueur.idJoueur, joueur.scoreGlobale';
+        $orderby = 'joueur.scoreGlobale desc';
+        $params = array('conditions' => 1, 'projection' => $projection, 'orderby' => $orderby);
+        $d['joueurs'] = $this->modJoueur->find($params);
+
+        if (empty($d['joueurs'])) {
+            $this->e404('Page introuvable');
+        }
+        $this->set($d);
+    }
+
     function formChampionnat()
     {
         $this->redirectNonAuthAndGetUser();
