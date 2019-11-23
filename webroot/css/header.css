@@ -18,7 +18,7 @@ header .link:hover {
 }
 
 input::placeholder {
-    font-size: 0.6em;
+    font-size: 0.9em !important;
 }
 
 ul.navbar-nav {

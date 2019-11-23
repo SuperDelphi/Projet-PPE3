@@ -232,6 +232,6 @@ section#main-section > div {
     min-width: 300px;
 }
 
-input::placeholder {
+section#main-section input::placeholder {
     font-size: 1em !important;
 }

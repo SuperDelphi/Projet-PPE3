@@ -4,9 +4,9 @@
             <fieldset>
 
                 <!-- Form Name -->
-                <legend>Connectez-vous !</legend>
+                <h2>Connectez-vous !</h2>
                 <!-- Text input-->
-                <hr>
+                <br>
                 <div class="form-group">
                     <label class="col control-label" for="textinput">Identifiant</label>
                     <div class="col">
@@ -27,7 +27,7 @@
                 <div class="form-group">
                     <label class="col control-label" for="singlebutton"></label>
                     <div class="col">
-                        <button id="singlebutton" name="singlebutton" class="primarybuttonWhite">Connexion</button>
+                        <button id="singlebutton" name="singlebutton" class="primarybuttonBlue">Connexion</button>
                     </div>
                 </div>
 
