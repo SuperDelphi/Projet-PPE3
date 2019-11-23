@@ -1,3 +1,24 @@
+@keyframes signing-heart {
+    0% {
+        background-color: rgb(255, 79, 79);
+    }
+    20% {
+        background-color: rgb(210, 255, 47);
+    }
+    40% {
+        background-color: rgb(75, 177, 121);
+    }
+    60% {
+        background-color: rgb(75, 123, 255);
+    }
+    80% {
+        background-color: rgb(255, 107, 223);
+    }
+    100% {
+        background-color: rgb(255, 79, 79);
+    }
+}
+
 body {
     font-family: "Roboto", sans-serif;
 }
@@ -253,12 +274,53 @@ section#main-section input::placeholder {
     font-size: 1em !important;
 }
 
+/* Signature */
+
+.heart-shape {
+    margin: 0 5px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: white;
+    animation: signing-heart 10s infinite;
+}
+
+.heart-shape:before,
+.heart-shape:after {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    content: '';
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: white;
+    animation: signing-heart 10s infinite;
+}
+
+.heart-shape:before {
+    bottom: 0px;
+    left: -5px;
+}
+
+.heart-shape:after {
+    top: -5px;
+    right: 0px;
+}
+
 /* Breakpoints */
 
 @media (max-width: 768px) {
     #admin-menu {
         height: auto !important;
     }
+
     #admin-body {
         padding: 80px;
     }
