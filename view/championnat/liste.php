@@ -27,13 +27,13 @@
                                     <td class="text-left">
                                         <?= $nomChampionnat . " <b>[Poule " . $p->nomPoule . "]</b>" ?>
                                     </td>
-                                    <td>
+                                    <td class="row">
                                         <a href="<?php echo BASE_URL .
                                             "/rencontre/liste/?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
-                                        ?>" class="button primarybuttonBlue">Voir</a>
+                                        ?>" class="button primarybuttonBlue col-lg text-center">Voir</a>
                                         <a href="<?php echo BASE_URL .
                                             "/rencontre/listeEquipePoule/?idChampionnat=$c->idChampionnat&nomPoule=$p->nomPoule"
-                                        ?>" class="button primarybuttonWhite">Classement</a>
+                                        ?>" class="button primarybuttonWhite col-lg text-center">Classement</a>
                                     </td>
                                 </tr>
                             <?php endforeach;
@@ -43,13 +43,13 @@
                                     <td class="text-left">
                                         <?= $nomChampionnat ?>
                                     </td>
-                                    <td>
+                                    <td class="row">
                                         <a href="<?php echo BASE_URL .
                                             "/rencontre/liste/?idChampionnat=$c->idChampionnat"
-                                        ?>" class="button primarybuttonBlue">Voir</a>
+                                        ?>" class="button primarybuttonBlue col-lg text-center">Voir</a>
                                         <a href="<?php echo BASE_URL .
                                             "/rencontre/listeEquipePoule/?idChampionnat=$c->idChampionnat"
-                                        ?>" class="button primarybuttonWhite">Classement</a>
+                                        ?>" class="button primarybuttonWhite col-lg text-center">Classement</a>
                                     </td>
                                 </tr>
                             <?php
