@@ -149,6 +149,7 @@ a.button {
 }
 
 .primarybuttonWhite {
+    border: solid 1px #00379a;
     background: white;
     color: #0a409e !important;
     font-weight: 500;
@@ -174,6 +175,7 @@ a.button {
 }
 
 .primarybuttonBlue {
+    border: solid 1px #00379a;
     font-weight: 500;
     background: #00379a;
     padding: 10px 25px;
@@ -184,11 +186,13 @@ a.button {
 }
 
 .primarybuttonBlue:hover {
+    border: solid 1px #0049BD;
     background: #0049BD;
 }
 
 .primarybuttonBlue:active {
     transition-duration: 0s;
+    border: solid 1px #edf6fd;
     background: #edf6fd;
     color: rgba(0, 116, 240, 0.5) !important;
     border-radius: 3px;
@@ -196,12 +200,13 @@ a.button {
 }
 
 .primarybuttonBlue[disabled=true] {
+    border: solid 1px #eeeeee;
     background: #eeeeee;
-    border: none;
     color: #cccccc !important;
 }
 
 .dangerbutton {
+    border: solid 1px #d63340;
     font-weight: 500;
     background-color: #d63340;
     color: white !important;
@@ -211,10 +216,12 @@ a.button {
 }
 
 .dangerbutton:hover {
+    border: solid 1px #ef3441;
     background-color: #ef3441;
 }
 
 .dangerbutton:active {
+    border: solid 1px rgba(239, 52, 65, 0.5);
     transition-duration: 0s;
     transform: scale(0.95);
     background: #fde8e6;
@@ -252,6 +259,7 @@ section#main-section > div {
 
 #admin-body {
     padding: 35px;
+    overflow: auto;
 }
 
 .disconnect-link {

@@ -1,6 +1,6 @@
 <?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_top.php"; ?>
 
-    <h2>Classement des joueurs</h2>
+    <h2>Classement général</h2>
     <hr>
 
     <a href="<?= BASE_URL . DS . "/simulationJoueur/formSimulation" ?>" class="button primarybuttonBlue">
