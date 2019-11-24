@@ -22,9 +22,6 @@ class AuthController extends Controller
                 Session::login($user, $account["password"], $account["typeCompte"]);
                 $this->redirect("/admin/listeChampionnat");
             }
-        } else {
-            $this->set(["info" => "Veuillez saisir votre identifiant et votre mot de passe."]);
-            $this->render("login");
         }
     }
 

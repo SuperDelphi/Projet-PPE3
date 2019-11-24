@@ -3,9 +3,15 @@
 
 class AdminController extends Controller
 {
+    private $auth_levels = [
+        "GUEST" => 0,
+        "ARBITRE" => 1,
+        "GERANT" => 2
+    ];
+
     function listeChampionnat()
     {
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser();
 
         $this->modChamp = $this->loadModel("Championnat");
         $this->modPoule = $this->loadModel("Poule");
@@ -32,7 +38,7 @@ class AdminController extends Controller
 
     function listeJoueur()
     {
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser();
 
         $this->modJoueur = $this->loadModel('Joueur');
         $projection = 'personne.nom, personne.prenom, joueur.idJoueur, joueur.scoreGlobale';
@@ -48,7 +54,7 @@ class AdminController extends Controller
 
     function formChampionnat()
     {
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser(2);
 
         if (isset($_POST["creerChampionnat"])) {
             $championnatModele = $this->loadModel("Championnat");
@@ -105,7 +111,7 @@ class AdminController extends Controller
     }
 
     function listeEquipe(){
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser();
 
         $this->modEquipe = $this->loadModel('Equipe');
         $groupby = "equipe.idEquipe";
@@ -121,7 +127,7 @@ class AdminController extends Controller
     }
 
     function formEquipe(){
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser();
 
         if (isset($_POST["creerEquipe"])) {
             $equipeModele = $this->loadModel("Equipe");
@@ -149,13 +155,13 @@ class AdminController extends Controller
 
     function formJournee()
     {
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser();
     }
 
 
     function formRencontre()
     {
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser();
 
         if (isset($_POST["creerrencontre"])) {
             $EquipeRencontreModele = $this->loadModel("EquipeRencontre");   
@@ -191,7 +197,7 @@ class AdminController extends Controller
 
     function listeJournee($id)
     {
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser();
 
         $idChampionnat = trim($id);
 
@@ -220,7 +226,7 @@ class AdminController extends Controller
 
     function listeRencontre($id)
     {
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser();
 
         if (isset($id)) {
             $tmp = explode("-", $id);
@@ -258,7 +264,7 @@ class AdminController extends Controller
 
     public function listeUtilisateur()
     {
-        $this->redirectNonAuthAndGetUser();
+        $this->filterAndGetUser(2);
 
         $compteModele = $this->loadModel("Compte");
 
@@ -273,7 +279,7 @@ class AdminController extends Controller
 
     public function deleteUtilisateur($id)
     {
-        $c_user = $this->redirectNonAuthAndGetUser();
+        $c_user = $this->filterAndGetUser(2);
 
         $compteModele = $this->loadModel("Compte");
 
@@ -318,22 +324,36 @@ class AdminController extends Controller
         }
     }
 
-    // Méthode de redirection
-    private function redirectNonAuthAndGetUser()
+    public function formUtilisateur()
+    {
+
+    }
+
+    // Méthode de filtrage
+    private function filterAndGetUser($minAuthLevel=1)
     {
         $compteModele = $this->loadModel("Compte");
         $redirectURL = "/auth/login";
-
+        
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
             $ip = IP::getUserIP();
+            $accountType = $_SESSION["type"];
 
             $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
             $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
 
-            if (!($validUser && $validIP)) {
+            if (isset($this->auth_levels["$accountType"])) {
+                $validAuthorization = $this->auth_levels["$accountType"] >= $minAuthLevel;
+            } else {
+                $validAuthorization = false;
+            }
+
+            if (!($validUser && $validIP && $validAuthorization)) {
+                Session::destruct();
                 $this->redirect($redirectURL);
             }
         } else {
+            Session::destruct();
             $this->redirect($redirectURL);
         }
 
