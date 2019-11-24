@@ -131,6 +131,13 @@ h1, h2, h3 {
     font-family: "Barlow Condensed", sans-serif;
 }
 
+/* Erreur */
+
+.erreur {
+    text-align:center;
+    padding-top:5%;
+}
+
 /* Boutons */
 
 button {

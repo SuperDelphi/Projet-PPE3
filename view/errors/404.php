@@ -1,2 +1,2 @@
 <?php ?>
-<h3><?= $message ?></h3>
+<h3 class="erreur"><?= $message ?><br>Merci de votre compréhension</h3>
