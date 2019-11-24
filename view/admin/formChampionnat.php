@@ -3,16 +3,15 @@
 <h2>Nouveau championnat</h2>
 <hr>
 
-<table>
-    <form action="" method="POST">
+<table class="form-table">
+    <form method="POST">
         <tr>
             <td><label>Nom</label></td>
             <td><input class="form-control" type="text" name="nomChampionnat" value="" size="20" required/></td>
         </tr>
         <tr>
             <td>
-                <label>Type</label><br>
-                <label>(Départemental, régional, ...)</label>
+                <label>Type (Départemental, régional, etc.)</label>
             </td>
             <td>
                 <select class="form-control" name="typeChampionnat" required>
@@ -26,7 +25,7 @@
             </td>
         </tr>
         <tr>
-            <td><label>Nombre de journée</label></td>
+            <td><label>Nombre de journées</label></td>
             <td><input class="form-control" type="number" name="nombreJournee" required/></td>
         </tr>
         <tr>
@@ -43,7 +42,10 @@
             </td>
         </tr>
         <tr>
-            <td><input class="primarybuttonBlue" type="submit" value="Créer" name="creerChampionnat" /></td>
+            <td>
+                <a class="button primarybuttonWhite" href="<?= BASE_URL . DS . "admin/listeChampionnat" ?>">Annuler</a>
+                <input class="primarybuttonBlue" type="submit" value="Enregistrer" name="creerChampionnat" />
+            </td>
         </tr>
     </form>
 </table>

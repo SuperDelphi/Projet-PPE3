@@ -17,6 +17,7 @@
         <label>Date prévisionnelle</label>
         <input class="form-control" type="date" id="date-previsionnel" name="date-previsionnel" required>
         <br>
+        <a class="button primarybuttonWhite" href="<?= BASE_URL . DS . "admin/listeChampionnat" ?>">Annuler</a>
         <input class="primarybuttonBlue" type="submit" value="Enregistrer" name="Enregistrer"/>
 
     </form>

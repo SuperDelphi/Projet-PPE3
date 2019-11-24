@@ -337,6 +337,14 @@ section#main-section input::placeholder {
     padding: 100px 0;
 }
 
+/* Décorations */
+
+#bg-decoration-1 {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
 /* Breakpoints */
 
 @media (max-width: 768px) {

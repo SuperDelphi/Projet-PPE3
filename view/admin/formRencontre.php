@@ -68,7 +68,10 @@
             </td>
         </tr>
         <tr>
-            <td><input class="primarybuttonBlue" type="submit" value="Enregistrer" name="creerrencontre"/></td>
+            <td>
+                <a class="button primarybuttonWhite" href="<?= BASE_URL . DS . "admin/listeChampionnat" ?>">Annuler</a>
+                <input class="primarybuttonBlue" type="submit" value="Enregistrer" name="creerrencontre"/>
+            </td>
         </tr>
     </form>
 </table>

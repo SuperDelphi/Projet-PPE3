@@ -16,6 +16,10 @@
 
 <body style="background-image: url('https://i.postimg.cc/NfDHNhWL/grid-pattern.jpg');background-repeat: repeat">
 
+<div id="bg-decoration-1">
+   <img src="<?= BASE_SITE . DS . "img/bg_decoration_1.svg" ?>">
+</div>
+
 <header>
     <nav class="navbar navbar-expand-lg justify-content-between">
         <a class="navbar-brand link" href="<?= BASE_URL; ?>">

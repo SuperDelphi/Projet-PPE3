@@ -31,6 +31,7 @@
 
     <br>
 
+    <a class="button primarybuttonWhite" href="<?= BASE_URL . DS . "admin/listeEquipe" ?>">Annuler</a>
     <input class="primarybuttonBlue" type="submit" value="Enregistrer" name="creerEquipe"/>
 
 </form>
