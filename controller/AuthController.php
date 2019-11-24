@@ -15,12 +15,15 @@ class AuthController extends Controller
 
             if (!$account) {
                 $error = true;
+
+                $this->set(["info" => "Identifiants incorrects."]);
                 $this->render("login");
             } else {
                 Session::login($user, $account["password"], $account["typeCompte"]);
                 $this->redirect("/admin/listeChampionnat");
             }
         } else {
+            $this->set(["info" => "Veuillez saisir votre identifiant et votre mot de passe."]);
             $this->render("login");
         }
     }

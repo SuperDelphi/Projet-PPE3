@@ -271,6 +271,53 @@ class AdminController extends Controller
         $this->render("listeUtilisateur");
     }
 
+    public function deleteUtilisateur($id)
+    {
+        $c_user = $this->redirectNonAuthAndGetUser();
+
+        $compteModele = $this->loadModel("Compte");
+
+        $user = $compteModele->find([
+            "conditions" => ["idCompte" => $id]
+        ], "TAB");
+
+        if (!$user) {
+            $this->e404("Cet utilisateur n'existe pas.");
+        } elseif ($user[0]["idCompte"] === $c_user["idCompte"]) {
+            $this->e404("Vous ne pouvez pas supprimer votre propre compte.");
+        }
+
+        $user = $user[0];
+
+        $this->set(["user" => $user]);
+
+        if (isset($_POST["passwd"])) {
+            $password = Security::hardEscape($_POST["passwd"]);
+
+            $validUser = $compteModele->getByLogin($_SESSION["identifiant"], $password);
+
+            if (!$validUser) {
+                $this->set(["info" => "Mot de passe incorrect."]);
+            } else {
+                // Suppression de l'utilisateur
+
+                $arbitreModele = $this->loadModel("Arbitre");
+
+                if ($user["typeCompte"] === "ARBITRE") {
+                    $arbitreModele->delete([
+                        "conditions" => ["idArbitre" => $id]
+                    ]);
+                }
+
+                $compteModele->delete([
+                    "conditions" => ["idCompte" => $id]
+                ]);
+
+                $this->redirect("/admin/listeUtilisateur");
+            }
+        }
+    }
+
     // Méthode de redirection
     private function redirectNonAuthAndGetUser()
     {
@@ -290,9 +337,9 @@ class AdminController extends Controller
             $this->redirect($redirectURL);
         }
 
-        $d["user"] = $compteModele->getByLogin($_SESSION["identifiant"], $_SESSION["hash"], true);
+        $d["c_user"] = $compteModele->getByLogin($_SESSION["identifiant"], $_SESSION["hash"], true);
         $this->set($d);
 
-        return $d["user"];
+        return $d["c_user"];
     }
 }

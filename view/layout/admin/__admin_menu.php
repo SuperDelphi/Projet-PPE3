@@ -1,12 +1,12 @@
-<?php $genderSuffix = $user["sexe"] === "M" ? "" : "e" ?>
+<?php $genderSuffix = $c_user["sexe"] === "M" ? "" : "e" ?>
 
 <div id="admin-menu" class="container-fluid col-lg-3">
     <div class="welcome-container">
         <span class="welcome-message">Session de <b
-                    style='color: #00379a'><?= ucfirst(strtolower($user["prenom"])) . " " . ucfirst(strtolower($user["nom"])) ?></b></span>
+                    style='color: #00379a'><?= ucfirst(strtolower($c_user["prenom"])) . " " . ucfirst(strtolower($c_user["nom"])) ?></b></span>
         <br>
         <span>Vous êtes connecté<?= $genderSuffix ?> en tant
-            <?= $user["typeCompte"] === "GERANT" ? "que <b style='color: #ffa500'>Gérant$genderSuffix</b>" : "qu'<b style='color: #00a800'>Arbitre</b>" ?>.</span>
+            <?= $c_user["typeCompte"] === "GERANT" ? "que <b style='color: #ffa500'>Gérant$genderSuffix</b>" : "qu'<b style='color: #00a800'>Arbitre</b>" ?>.</span>
     </div>
     <h4 class="admin-menu-title">Panel de gestion</h4>
     <a href="<?= BASE_URL . DS ?>admin/listeChampionnat">
@@ -29,7 +29,7 @@
         </div>
     </a>
     <hr>
-    <?php if ($user["typeCompte"] === "GERANT"): ?>
+    <?php if ($c_user["typeCompte"] === "GERANT"): ?>
         <a href="<?= BASE_URL . DS ?>admin/listeUtilisateur">
             <div class="row mx-0">
                 <div class="nav-item icon-container"><i class="fas fa-users-cog"></i></div>

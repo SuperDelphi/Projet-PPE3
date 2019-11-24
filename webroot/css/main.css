@@ -163,6 +163,7 @@ a.button {
 }
 
 .primarybuttonWhite:active {
+    border: solid 1px #edf6fd;
     background: #edf6fd;
     color: rgba(0, 116, 240, 0.5) !important;
     border-radius: 3px;
@@ -312,13 +313,17 @@ section#main-section > div {
     background-color: rgba(255, 255, 255, 1);
     border: solid rgba(0, 0, 0, 0.10) 1px;
     border-radius: 10px;
-    padding: 30px;
+    padding: 45px;
     margin: 100px 60px;
     min-width: 300px;
 }
 
-.form-container h2 {
-    margin: 15px 0 0 15px;
+.alert-info {
+    display: inline-block;
+    background-color: rgba(214, 138, 75, 0.25);
+    color: #d67822;
+    padding: 10px 20px;
+    border-radius: 50px;
 }
 
 .form .form-control:focus {

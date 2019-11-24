@@ -1,26 +1,20 @@
 <section class="row d-flex justify-content-center mx-0">
     <div class="form-container col-lg-4 col-md-7 col-sm-9">
 
-        <form class="form-horizontal" method="post" action="<?= BASE_URL . DS ?>auth/login">
+        <form class="form-horizontal" method="POST">
             <fieldset>
 
                 <!-- Form Name -->
-                <h2>Connectez-vous !</h2>
+                <h2>Supprimer cet utilisateur ?</h2>
+                <h6>Vous vous apprêtez à supprimer l'utilisateur <b><?= $user["identifiant"] ?></b>. Cette action est irréversible.</h6>
                 <!-- Text input-->
                 <br>
-                <div class="form-group">
-                    <label class="control-label" for="textinput">Identifiant</label>
-                    <div>
-                        <input id="user" name="user" class="form-control input-md" type="text"
-                               value="<?= (isset($compte->user) ? $compte->user : '') ?>" autofocus required>
-                    </div>
-                </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="textinput">Mot de passe</label>
+                    <label class="control-label" for="textinput">Saisissez votre mot de passe :</label>
                     <div>
                         <input id="password" name="passwd" placeholder="••••••••" class="form-control input-md"
-                               type="password" value="<?= (isset($compte->password) ? $compte->password : '') ?>" required>
+                               type="password" value="<?= (isset($compte->password) ? $compte->password : '') ?>" autofocus required>
                     </div>
                 </div>
 
@@ -30,7 +24,8 @@
                 <div class="form-group">
                     <label class="control-label" for="singlebutton"></label>
                     <div>
-                        <button id="singlebutton" name="singlebutton" class="primarybuttonBlue">Connexion</button>
+                        <a id="singlebutton" href="<?= BASE_URL . DS . "admin/listeUtilisateur" ?>" class="button primarybuttonWhite">Annuler</a>
+                        <button id="singlebutton" name="singlebutton" class="dangerbutton">Supprimer</button>
                     </div>
                 </div>
 

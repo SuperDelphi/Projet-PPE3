@@ -19,7 +19,7 @@
         </thead>
         <tbody>
         <?php foreach ($users as $u): ?>
-        <?php $isMyAccount = $user["idCompte"] === $u["idCompte"]; ?>
+        <?php $isMyAccount = $c_user["idCompte"] === $u["idCompte"]; ?>
             <tr <?= $isMyAccount ? "class=\"highlighted\"" : "" ?>>
                 <td><?= $u["identifiant"] ?></td>
                 <td><?= $u["typeCompte"] === "GERANT" ?
@@ -29,7 +29,7 @@
                 <td class="row">
                     <a class="button primarybuttonBlue col-lg text-center" href="<?= BASE_URL . DS . "admin" . DS . "formUtilisateur" ?>">Gérer</a>
                     <a class="button dangerbutton col-lg text-center" <?= $isMyAccount ? "disabled=\"true\"" : "" ?>
-                       href="<?= !$isMyAccount ? BASE_URL . DS . "admin" . DS . "deleteUtilisateur" : "#" ?>">Supprimer</a>
+                       href="<?= !$isMyAccount ? BASE_URL . DS . "admin" . DS . "deleteUtilisateur/" . $u["idCompte"] : "#" ?>">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

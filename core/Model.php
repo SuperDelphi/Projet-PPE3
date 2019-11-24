@@ -108,7 +108,8 @@ class Model
 
     function delete($req)
     {
-        $sql = 'DELETE FROM ' . $this->table . ' ';
+        $singleTable = explode(" ", $this->table)[0];
+        $sql = 'DELETE FROM ' . $singleTable . ' ';
 
         // On construit la condition
         if (isset($req['conditions'])) {
@@ -126,13 +127,16 @@ class Model
                 $sql .= implode(' AND ', $cond);
             }
         }
+
         $info = null;
+
         try {
             $pre = $this->db->prepare($sql);
             $pre->execute();
         } catch (PDOException $e) {
             $info = $e->getMessage();
         }
+
         return $info;
     }
 
