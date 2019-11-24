@@ -38,6 +38,10 @@ h4 {
     font-size: 1em;
 }
 
+h6 {
+    font-weight: 400;
+}
+
 .container-fluid {
     padding: 0;
 }
@@ -68,7 +72,7 @@ a:hover {
 }
 
 #main-section {
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .data-table tr:nth-child(even) {
@@ -335,14 +339,6 @@ section#main-section input::placeholder {
 
 #main-section > section {
     padding: 100px 0;
-}
-
-/* Décorations */
-
-#bg-decoration-1 {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
 }
 
 /* Breakpoints */

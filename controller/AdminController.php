@@ -256,11 +256,11 @@ class AdminController extends Controller
         }
     }
 
-    public function listeUtilisateurs()
+    public function listeUtilisateur()
     {
         $this->redirectNonAuthAndGetUser();
 
-
+        $this->render("listeUtilisateur");
     }
 
     // Méthode de redirection
