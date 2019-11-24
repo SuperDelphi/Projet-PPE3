@@ -1,5 +1,5 @@
-<section class="row d-flex justify-content-center">
-    <div class="form-container col-lg-4 col-md-7 col-sm-9 col-xs">
+<section class="row d-flex justify-content-center mx-0">
+    <div class="form-container col-lg-4 col-md-7 col-sm-9">
         <form class="form-horizontal" method="post" action="<?= BASE_URL . DS ?>auth/login">
             <fieldset>
 

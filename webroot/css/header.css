@@ -18,7 +18,7 @@ header .link:hover {
 }
 
 header button.navbar-toggler i {
-    color: white;
+    color: white !important;
 }
 
 input::placeholder {

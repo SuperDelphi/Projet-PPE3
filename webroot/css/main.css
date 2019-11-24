@@ -166,6 +166,7 @@ a.button {
     background: #edf6fd;
     color: rgba(0, 116, 240, 0.5) !important;
     border-radius: 3px;
+    transform: scale(0.95);
 }
 
 .primarybuttonWhite[disabled=true] {
@@ -200,9 +201,15 @@ a.button {
 }
 
 .primarybuttonBlue[disabled=true] {
-    border: solid 1px #eeeeee;
-    background: #eeeeee;
-    color: #cccccc !important;
+    border: solid 1px rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.10);
+    color: rgba(0, 0, 0, 0.35) !important;
+}
+
+.primarybuttonWhite[disabled=true] {
+    border: solid 1px rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.10);
+    color: rgba(0, 0, 0, 0.35) !important;
 }
 
 .dangerbutton {
@@ -221,11 +228,17 @@ a.button {
 }
 
 .dangerbutton:active {
-    border: solid 1px rgba(239, 52, 65, 0.5);
+    border: solid 1px #fde8e6;
     transition-duration: 0s;
     transform: scale(0.95);
     background: #fde8e6;
     color: rgba(239, 52, 65, 0.5) !important;
+}
+
+.dangerbutton[disabled=true] {
+    border: solid 1px rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.10);
+    color: rgba(0, 0, 0, 0.35) !important;
 }
 
 /* Menu administrateur */
@@ -388,6 +401,11 @@ section#main-section input::placeholder {
     background-color: rgba(0, 168, 0, 0.08);
 }
 
+.highlighted {
+    border: dotted 2px rgb(255, 165, 0);
+    background-color: rgba(255, 165, 0, 0.05) !important;
+}
+
 /* Breakpoints */
 
 @media (max-width: 992px) {
@@ -397,5 +415,9 @@ section#main-section input::placeholder {
 
     #admin-body {
         padding: 80px;
+    }
+
+    .form-container {
+        margin: 30px 30px !important;
     }
 }
