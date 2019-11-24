@@ -1,12 +1,12 @@
 <?php $genderSuffix = $user["sexe"] === "M" ? "" : "e" ?>
 
-<div id="admin-menu" class="container-fluid col-lg-3 col-md-4">
+<div id="admin-menu" class="container-fluid col-lg-3">
     <div class="welcome-container">
         <span class="welcome-message">Session de <b
                     style='color: #00379a'><?= ucfirst(strtolower($user["prenom"])) . " " . ucfirst(strtolower($user["nom"])) ?></b></span>
         <br>
         <span>Vous êtes connecté<?= $genderSuffix ?> en tant
-            <?= $user["typeCompte"] === "GERANT" ? "que <b style='color: #00ced1'>Gérant$genderSuffix</b>" : "qu'<b style='color: #00ced1'>Arbitre</b>" ?>.</span>
+            <?= $user["typeCompte"] === "GERANT" ? "que <b style='color: #ffa500'>Gérant$genderSuffix</b>" : "qu'<b style='color: #00a800'>Arbitre</b>" ?>.</span>
     </div>
     <h4 class="admin-menu-title">Panel de gestion</h4>
     <a href="<?= BASE_URL . DS ?>admin/listeChampionnat">
