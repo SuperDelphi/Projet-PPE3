@@ -7,8 +7,7 @@
     <title><?= isset($title_for_layout) ? $title_for_layout : "SANA - Tennis de table 17"; ?></title>
     <script src="https://kit.fontawesome.com/165449b566.js" crossorigin="anonymous"></script>
     <link rel="icon" href="<?= BASE_SITE . DS . "img/favicon.ico" ?>" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= BASE_SITE . DS . 'bootstrap/bootstrap.css' ?>">
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/fonts.css' ?>">
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/main.css' ?>">
     <link rel="stylesheet" href="<?= BASE_SITE . DS . 'css/header.css' ?>">

@@ -274,6 +274,15 @@ section#main-section > div {
     min-width: 300px;
 }
 
+.form-container h2 {
+    margin: 15px 0 0 15px;
+}
+
+.form .form-control:focus {
+    border: none !important;
+    border-image: none !important;
+}
+
 section#main-section form label {
     font-weight: 500;
 }
