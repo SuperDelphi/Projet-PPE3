@@ -2,30 +2,32 @@
 
     <h2><?= $championnat->nomChampionnat . " " . $championnat->typeChampionnat . " " . $championnat->nomDivision; ?></h2>
     <hr>
-
+    <table class="data-table sober">
 <?php
 
 $cpt = 1;
 $nomPoule = "";
 
+echo '';
 foreach ($journee as $j) :
     if ($cpt == 1) {
-        echo "Poule A";
+        echo "<tr><td colspan=2>Poule A</td></tr>";
         $nomPoule = "A";
     } elseif ($cpt == 11) {
-        echo "Poule B";
+        echo "<tr><td colspan=2>Poule B</td></tr>";
         $nomPoule = "B";
     }
     ?>
-    <div style=''>
-
-        <a href=" <?= BASE_URL . "/admin/listeRencontre/" . $championnat->idChampionnat . "-" . $j->idJournee . "-" . $nomPoule ?>"
-           colspan="5">J<?= $cpt++ . " " . $j->datePrev ?></a>
-
-    </div>
-
+    <tr>
+        <td>J<?= $cpt++ . " : " . $j->datePrev ?></td>
+        <td class="row">
+            <a href="<?php echo BASE_URL .
+                "/admin/listeRencontre/" . $championnat->idChampionnat . "-" . $j->idJournee . "-" . $nomPoule
+            ?>" class="button primarybuttonBlue col-lg text-center">Voir</a>
+        </td>
+    </tr>
 <?php
 
 endforeach;
-
+echo '</table>';
 require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_bottom.php";
