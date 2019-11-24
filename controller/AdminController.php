@@ -326,6 +326,18 @@ class AdminController extends Controller
 
     public function formUtilisateur()
     {
+        $c_user = $this->filterAndGetUser(2);
+
+        $compteModele = $this->loadModel("Compte");
+
+        $user = $compteModele->find([
+            "conditions" => ["idCompte" => $id]
+        ], "TAB");
+
+        if (!$user) {
+            $this->e404("Cet utilisateur n'existe pas.");
+        }
+
 
     }
 
@@ -334,7 +346,7 @@ class AdminController extends Controller
     {
         $compteModele = $this->loadModel("Compte");
         $redirectURL = "/auth/login";
-        
+
         if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
             $ip = IP::getUserIP();
             $accountType = $_SESSION["type"];
