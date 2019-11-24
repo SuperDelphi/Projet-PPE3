@@ -113,6 +113,10 @@ a:hover {
     color: unset;
 }
 
+.data-table.left td {
+    text-align: left !important;
+}
+
 .static-content {
     padding: 100px 0;
 }

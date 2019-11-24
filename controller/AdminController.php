@@ -260,6 +260,14 @@ class AdminController extends Controller
     {
         $this->redirectNonAuthAndGetUser();
 
+        $compteModele = $this->loadModel("Compte");
+
+        $users = $compteModele->find([
+            "orderby" => "compte.identifiant"
+        ], "TAB");
+
+        $this->set(["users" => $users]);
+
         $this->render("listeUtilisateur");
     }
 

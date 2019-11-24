@@ -3,7 +3,7 @@
 <h2>Nouvelle équipe</h2>
 <hr>
 
-<form action="" method="POST">
+<form method="POST">
 
     <label>Nom de l'équipe</label>
     <input class="form-control" type="text" name="nomEquipe" value="" size="20" required/>
