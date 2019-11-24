@@ -8,7 +8,7 @@ $cpt = 0;
 foreach ($rencontre as $r) :
     ?>
         <tr>
-            <td style='width:40%'>
+            <td style='width:30%'>
                     <?php
                         foreach ($equipes as $e) {
                             if ($e[0]->idEquipe === $r->idEquipeA) {
@@ -19,7 +19,7 @@ foreach ($rencontre as $r) :
             <td style='width:5%'> <?= isset($r->scoreFinalA) ? $r->scoreFinalA : '?' ?> </td>
             <td style='width:5%'> - </td>
             <td style='width:5%'> <?= isset($r->scoreFinalB) ? $r->scoreFinalB : '?' ?> </td>
-            <td style='width:40%'>
+            <td style='width:30%'>
                 <?php
                     foreach ($equipes as $e) {
                         if ($e[0]->idEquipe == $r->idEquipeB) {
@@ -27,6 +27,13 @@ foreach ($rencontre as $r) :
                         }
                     }
                     ?></td>
+            <td style='width:5%'>
+                <a href="<?php echo BASE_URL .
+                "/admin/formRencontre"?>" class="button primarybuttonBlue col-lg text-center">Scores</a>
+            </td>
+            <td style='width:20%'>
+                <a href="" class="button primarybuttonWhite col-lg text-center">Feuille de Match</a>
+            </td>
         </tr>
 <?php
 
