@@ -9,7 +9,7 @@
     <table class="data-table">
         <thead>
         <tr>
-            <th>Nom Equipe</th>
+            <th>Nom de l'équipe</th>
             <th>Club</th>
             <th>Division</th>
 
