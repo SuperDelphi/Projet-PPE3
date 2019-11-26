@@ -110,7 +110,8 @@ class AdminController extends Controller
         }
     }
 
-    function listeEquipe(){
+    function listeEquipe()
+    {
         $this->filterAndGetUser();
 
         $this->modEquipe = $this->loadModel('Equipe');
@@ -126,7 +127,8 @@ class AdminController extends Controller
         $this->render("listeEquipe");
     }
 
-    function formEquipe(){
+    function formEquipe()
+    {
         $this->filterAndGetUser();
 
         if (isset($_POST["creerEquipe"])) {
@@ -136,22 +138,58 @@ class AdminController extends Controller
             $idDivision = $_POST["idDivision"];
 
             $equipeModele->insertAI(
-                    ["nomEquipe", "idClub", "idDivision"], [$nomEquipe, $idClub, $idDivision]
+                ["nomEquipe", "idClub", "idDivision"],
+                [$nomEquipe, $idClub, $idDivision]
             );
             $this->redirect("/admin/listeEquipe");
         } else {
             $clubModele = $this->loadModel("Club");
             $divisionModele = $this->loadModel("Division");
-            
+
             $d["clubs"] = $clubModele->find();
             $d["divisions"] = $divisionModele->find();
-            
-            
+
+
 
             $this->set($d);
             $this->render("formEquipe");
         }
-}
+    }
+
+    function formJoueur()
+    {
+        $this->filterAndGetUser();
+
+        if (isset($_POST["creerJoueur"])) {
+            $joueurModele = $this->loadModel("Joueur");
+            $joueurModele->table = "joueur";
+            $personneModele = $this->loadModel("Personne");
+            $nom = $_POST["nom"];
+            $prenom = $_POST['prenom'];
+            $sexe = $_POST['sexe'];
+            $licence = $_POST['licence'];
+            $scoreGlobale = $_POST['scoreGlobale'];
+            $idEquipe = $_POST["idEquipe"];
+
+            $idPersonne = $personneModele->insertAI(
+                ["nom", "prenom", "sexe"],
+                [$nom, $prenom, $sexe]
+            );
+
+            $joueurModele->insertAI(
+                ["idJoueur", "licenceJoueur", "visible", "idEquipe", "scoreGlobale"],
+                [$idPersonne, $licence, 1, $idEquipe, $scoreGlobale]
+            );
+            $this->redirect("/admin/listeJoueur");
+        } else {
+            $equipeModele = $this->loadModel("equipe");
+
+            $d["equipes"] = $equipeModele->find();
+
+            $this->set($d);
+            $this->render("formJoueur");
+        }
+    }
 
     function formJournee()
     {
@@ -164,7 +202,7 @@ class AdminController extends Controller
         $this->filterAndGetUser();
 
         if (isset($_POST["creerrencontre"])) {
-            $EquipeRencontreModele = $this->loadModel("EquipeRencontre");   
+            $EquipeRencontreModele = $this->loadModel("EquipeRencontre");
 
             $EquipeA = $_POST["equipea"];
             $EquipeB = $_POST["equipeb"];
@@ -209,7 +247,7 @@ class AdminController extends Controller
         $conditions = array('idChampionnat' => $idChampionnat);
         $params = array('conditions' => $conditions);
         $d['journee'] = $modJournee->find($params);
-        
+
 
         if (empty($d['journee'])) {
             $this->e404('Le calendrier du championnat sera prochainement publié');
@@ -221,7 +259,7 @@ class AdminController extends Controller
         $d['championnat'] = $modChamp->findFirst($params);
         //var_dump ($d);
         $this->set($d);
-        
+
     }
 
     function listeRencontre($id)
@@ -445,7 +483,7 @@ class AdminController extends Controller
     }
 
     // Méthode de filtrage
-    private function filterAndGetUser($minAuthLevel=1)
+    private function filterAndGetUser($minAuthLevel = 1)
     {
         $compteModele = $this->loadModel("Compte");
         $redirectURL = "/auth/login";
