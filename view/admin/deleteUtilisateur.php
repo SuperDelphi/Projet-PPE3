@@ -25,7 +25,7 @@
                     <label class="control-label" for="singlebutton"></label>
                     <div>
                         <a id="singlebutton" href="<?= BASE_URL . DS . "admin/listeUtilisateur" ?>" class="button primarybuttonWhite">Annuler</a>
-                        <button id="singlebutton" name="singlebutton" class="dangerbutton">Supprimer</button>
+                        <button id="singlebutton" name="singlebutton" class="dangerbutton"><i class="fas fa-exclamation-triangle"></i>&nbsp Supprimer</button>
                     </div>
                 </div>
 

@@ -6,7 +6,7 @@ class AdminController extends Controller
     private $auth_levels = [
         "GUEST" => 0,
         "ARBITRE" => 1,
-        "GERANT" => 2
+        "GÉRANT" => 2
     ];
 
     function listeChampionnat()
@@ -324,21 +324,37 @@ class AdminController extends Controller
         }
     }
 
-    public function formUtilisateur()
+    public function formUtilisateur($id)
     {
         $c_user = $this->filterAndGetUser(2);
 
         $compteModele = $this->loadModel("Compte");
 
-        $user = $compteModele->find([
-            "conditions" => ["idCompte" => $id]
-        ], "TAB");
+        $newForm = !isset($id);
+        $types = Parser::getEnumValuesFromRaw($compteModele->getColumnFromTable("compte", "typeCompte")["Type"]);
 
-        if (!$user) {
-            $this->e404("Cet utilisateur n'existe pas.");
+        $d["newForm"] = $newForm;
+        $d["types"] = $types;
+
+        if ($newForm) {
+            // Nouvel utilisateur
+
+        } else {
+            // Mise à jour d'un utilisateur
+            $user = $compteModele->find([
+                "conditions" => ["idCompte" => $id]
+            ], "TAB");
+
+            if (!$user) {
+                $this->e404("Cet utilisateur n'existe pas.");
+            }
+
+            $d["user"] = $user;
         }
 
+        $this->set($d);
 
+        $this->render("formUtilisateur");
     }
 
     // Méthode de filtrage
