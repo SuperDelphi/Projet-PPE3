@@ -39,7 +39,7 @@
             </div>
         </a>
     <?php endif; ?>
-    <a href="<?= BASE_URL . DS ?>admin/settings">
+    <a href="<?= BASE_URL . DS . "admin/formUtilisateur/" . $c_user["idCompte"] ?>">
         <div class="row mx-0">
             <div class="nav-item icon-container"><i class="fas fa-user-circle"></i></div>
             <div class="col nav-item">Mon compte</div>
