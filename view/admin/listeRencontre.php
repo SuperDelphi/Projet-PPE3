@@ -29,7 +29,7 @@ foreach ($rencontre as $r) :
                     ?></td>
             <td style='width:5%'>
                 <a href="<?php echo BASE_URL .
-                "/admin/formRencontre"?>" class="button primarybuttonBlue col-lg text-center">Scores</a>
+                "/admin/formRencontre/?idRencontre=".$r->idRencontre?>" class="button primarybuttonBlue col-lg text-center">Scores</a>
             </td>
             <td style='width:20%'>
                 <a href="" class="button primarybuttonWhite col-lg text-center">Feuille de Match</a>

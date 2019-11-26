@@ -219,13 +219,52 @@ class AdminController extends Controller
                 [$Heure, $Date, $Lieu, $ScoreA, $ScoreB, $Journee, $Arbitre, $EquipeA, $EquipeB]
             );
             $this->redirect("/admin/listeChampionnat");
-        } else {
+        } elseif (isset($_POST["modifierrencontre"])) {
+            $RencontreModele = $this->loadModel("Rencontre");
+            $RencontreModele->table = "rencontre";
+
+            $idRencontre = $_GET['idRencontre'];
+            $EquipeA = $_POST["equipea"];
+            $EquipeB = $_POST["equipeb"];
+            $ScoreA = $_POST["scorea"];
+            $ScoreB = $_POST["scoreb"];
+            $Heure = $_POST["heure"];
+            $Date = $_POST["date"];
+            $Lieu = $_POST["lieu"];
+            $Arbitre = $_POST["arbitre"];
+            $Journee = $_POST["journee"];
+
+            $donnees = array("heure" => $Heure, "date" => $Date, "lieu" => $Lieu, "scoreFinalA" => $ScoreA, "scoreFinalB" => $ScoreB, "idJournee" => $Journee, "idArbitre" => $Arbitre, "idEquipeA" => $EquipeA, "idEquipeB" => $EquipeB);
+            $conditions = array('idRencontre' => $idRencontre);
+            $params = array('donnees' => $donnees, 'conditions' => $conditions);
+            echo 'ok';
+            $RencontreModele->update($params);
+            $this->redirect("/admin/listeChampionnat");
+        } elseif (isset($_GET['idRencontre'])) {
+            $idRencontre = $_GET['idRencontre'];
+            $this->modRenc = $this->loadModel('Rencontre');
+            $conditions = array('idRencontre' => $idRencontre);
+            $params = array('conditions' => $conditions);
+            $rencontre = $this->modRenc->find($params);
+            $d['rencontre'] = $rencontre;
+
             $EquipeModele = $this->loadModel("Equipe");
-            $ArbitreModele = $this->loadModel("Arbitre");
+            $JoueurModele = $this->loadModel("Joueur");
             $JourneeModele = $this->loadModel("Journee");
 
             $d["equipes"] = $EquipeModele->find();
-            $d["arbitres"] = $ArbitreModele->find();
+            $d["joueurs"] = $JoueurModele->find();
+            $d["journees"] = $JourneeModele->find();
+
+            $this->set($d);
+            $this->render("formRencontre");
+        } else {
+            $EquipeModele = $this->loadModel("Equipe");
+            $JoueurModele = $this->loadModel("Joueur");
+            $JourneeModele = $this->loadModel("Journee");
+
+            $d["equipes"] = $EquipeModele->find();
+            $d["joueurs"] = $JoueurModele->find();
             $d["journees"] = $JourneeModele->find();
 
             $this->set($d);
@@ -295,8 +334,10 @@ class AdminController extends Controller
             $conditions = array('championnat.idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
             $d['championnat'] = $modChamp->findFirst($params);
-            var_dump($d);
+            //var_dump($d);
             $this->set($d);
+        } else {
+            $this->e404('Aucune rencontre trouvée. Nous nous execusons de cet incident.');
         }
     }
 
