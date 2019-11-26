@@ -405,7 +405,7 @@ class AdminController extends Controller
                     "typeCompte" => $typeCompte
                 ];
 
-                if (isset($_POST["password"])) {
+                if (isset($_POST["password"]) && strlen($_POST["password"]) > 0) {
                     $password = Security::shorten($_POST["password"], 128);
                     if (preg_match("/\W+/", $password)) {
                         $this->redirect("admin/listeUtilisateur");
