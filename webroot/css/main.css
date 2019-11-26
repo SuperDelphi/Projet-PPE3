@@ -137,6 +137,10 @@ a:hover {
     text-align: left;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* Titles */
 
 h1, h2, h3 {
