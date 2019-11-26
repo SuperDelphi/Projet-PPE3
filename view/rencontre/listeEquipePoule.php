@@ -1,9 +1,11 @@
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_top.php"; ?>
 <h2><?= $championnat->nomChampionnat . ' ' . $championnat->typeChampionnat . ' ' . $championnat->nomDivision; ?></h2>
-<h3>Classement des équipes</h3>
-<div>
+<h3>Classement des équipes
 <?php if (isset($poule)) {
-    echo '<h3>Poule ' . $poule[0]->nomPoule . '</h3>';
+    echo ' Poule ' . $poule[0]->nomPoule;
 } ?>
+</h3>
+<div>
     <table border=1 class="data-table">
     <thead>
         <th>Place</th>
@@ -19,3 +21,4 @@
     ?>
     </table>
 </div>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_bottom.php"; ?>
