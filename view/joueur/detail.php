@@ -1,3 +1,4 @@
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_top.php"; ?>
 <section >
     <h2><?= $joueur->nom .' '. $joueur->prenom ?></h2>
     <div>
@@ -22,7 +23,8 @@
         <label><?= $joueur->licenceJoueur ?></label>
     </div>
     <div>
-        <label>Score :</label>
-        <label><?= $joueur->scoreGlobal ?></label>
+        <label>Classement :</label>
+        <label><?= $joueur->scoreGlobale ?></label>
     </div>
 </section>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_bottom.php"; ?>

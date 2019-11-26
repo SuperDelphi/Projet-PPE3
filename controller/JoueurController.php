@@ -22,7 +22,7 @@ class JoueurController extends Controller {
         $visible = 1;
         $this->modJoueur = $this->loadModel('Joueur');
         $params = array();
-        $projection = 'personne.nom, personne.prenom, personne.age, personne.mail, personne.adresse, joueur.licenceJoueur, joueur.scoreGlobal, equipe.nomEquipe';
+        $projection = 'personne.nom, personne.prenom, personne.age, personne.mail, personne.adresse, joueur.licenceJoueur, joueur.scoreGlobale, equipe.nomEquipe';
         $conditions = array('idJoueur' => $idJoueur, 'visible' => $visible);
         $params = array('projection'=>$projection, 'conditions' => $conditions);
         $d['joueur'] = $this->modJoueur->findFirst($params);
