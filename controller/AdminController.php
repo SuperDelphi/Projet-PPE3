@@ -326,30 +326,117 @@ class AdminController extends Controller
 
     public function formUtilisateur($id)
     {
-        $c_user = $this->filterAndGetUser(2);
+        $this->filterAndGetUser(2);
 
+        $personneModele = $this->loadModel("Personne");
         $compteModele = $this->loadModel("Compte");
+        $arbitreModele = $this->loadModel("Arbitre");
+
+        $comptes = $compteModele->find([], "TAB");
+
+        $personnes = $personneModele->find([
+            "orderby" => "personne.prenom ASC"
+        ], "TAB");
 
         $newForm = !isset($id);
         $types = Parser::getEnumValuesFromRaw($compteModele->getColumnFromTable("compte", "typeCompte")["Type"]);
 
+        $filteredPersonnes = [];
+
+        foreach ($personnes as $p) {
+            $alreadyHasAnAccount = false;
+            foreach ($comptes as $c) {
+                if ($p["idPersonne"] === $c["idCompte"]) {
+                    if (!(!$newForm && ($id === $p["idPersonne"]))) $alreadyHasAnAccount = true;
+                }
+            }
+            if (!$alreadyHasAnAccount) array_push($filteredPersonnes, $p);
+        }
+
         $d["newForm"] = $newForm;
         $d["types"] = $types;
+        $d["personnes"] = $filteredPersonnes;
 
         if ($newForm) {
             // Nouvel utilisateur
+            if (isset($_POST["identifiant"], $_POST["password"], $_POST["typeCompte"], $_POST["idPersonne"])) {
+                $identifiant = Security::shorten(Security::hardEscape($_POST["identifiant"]), 32);
+                $password = Security::shorten($_POST["password"], 72);
 
+                if (preg_match("/\W+/", $password))
+                    $this->redirect("admin/listeUtilisateur");
+
+                $typeCompte = $_POST["typeCompte"];
+                $idPersonne = $_POST["idPersonne"];
+
+                $compteModele->insert(
+                    ["idCompte", "identifiant", "password", "typeCompte"],
+                    [$idPersonne, $identifiant, Security::hash($password), $typeCompte]
+                );
+
+                if ($typeCompte === "ARBITRE") {
+                    // Création d'une occurrence Arbitre
+                    $arbitreModele->insert(["idArbitre"], [$idPersonne]);
+                }
+
+                $this->redirect("/admin/listeUtilisateur");
+            }
         } else {
             // Mise à jour d'un utilisateur
             $user = $compteModele->find([
                 "conditions" => ["idCompte" => $id]
             ], "TAB");
 
-            if (!$user) {
+            if (!$user)
                 $this->e404("Cet utilisateur n'existe pas.");
-            }
+            elseif (!$personnes)
+                $this->e404("Il n'existe aucune personne dans la base de données.");
 
-            $d["user"] = $user;
+            $d["user"] = $user[0];
+
+            if (isset($_POST["identifiant"], $_POST["typeCompte"], $_POST["idPersonne"])) {
+                $identifiant = Security::shorten(Security::hardEscape($_POST["identifiant"]), 32);
+                $typeCompte = $_POST["typeCompte"];
+                $idPersonne = $_POST["idPersonne"];
+
+                $donneesCompte = [
+                    "idCompte" => $idPersonne,
+                    "identifiant" => $identifiant,
+                    "typeCompte" => $typeCompte
+                ];
+
+                if (isset($_POST["password"])) {
+                    $password = Security::shorten($_POST["password"], 128);
+                    if (preg_match("/\W+/", $password)) {
+                        $this->redirect("admin/listeUtilisateur");
+                    } else
+                        $donneesCompte["password"] = Security::hash($password);
+                }
+
+                if ($typeCompte === "ARBITRE" && $idPersonne !== $id) {
+                    $arbitreModele->update([
+                        "donnees" => [
+                            "idArbitre" => $idPersonne
+                        ],
+                        "conditions" => [
+                            "idArbitre" => $id
+                        ]
+                    ]);
+                } else {
+                    $arbitreModele->delete([
+                        "conditions" => ["idArbitre" => $id]
+                    ]);
+                }
+
+                $compteModele->update([
+                    "donnees" => $donneesCompte,
+                    "conditions" => [
+                        "idCompte" => $id
+                    ]
+                ]);
+
+                $this->redirect("/admin/listeUtilisateur");
+            }
         }
 
         $this->set($d);

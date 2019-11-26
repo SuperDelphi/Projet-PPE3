@@ -142,8 +142,9 @@ class Model
 
     function update($req)
     {
+        $singleTable = explode(" ", $this->table)[0];
         $info = null;
-        $sql = 'UPDATE ' . $this->table . ' SET ';
+        $sql = 'UPDATE ' . $singleTable . ' SET ';
         // On récupère les données à mettre à jour dans $req['donnees'] ainsi que la clé primaire dans $req['cle']
         // On met des quotes aux chaînes de caractères
         $cond = array();

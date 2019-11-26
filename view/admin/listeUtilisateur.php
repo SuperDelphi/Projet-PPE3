@@ -24,7 +24,7 @@
                 <td><?= $u["identifiant"] ?></td>
                 <td><?= $u["typeCompte"] === "GÉRANT" ?
                         "<b class='label-gerant'>Gérant</b>" : "<b class='label-arbitre'>Arbitre</b>" ?></td>
-                <td><?= ucfirst(strtolower($u["prenom"])) . " " . ucfirst(strtolower($u["nom"])) ?></td>
+                <td><?= ucfirst(mb_strtolower($u["prenom"])) . " " . ucfirst(mb_strtolower($u["nom"])) ?></td>
                 <td><?= $u["mail"] ? $u["mail"] : "Aucune" ?></td>
                 <td class="row">
                     <a class="button primarybuttonBlue col-lg text-center" href="<?= BASE_URL . DS . "admin" . DS . "formUtilisateur/" . $u["idCompte"] ?>">Gérer</a>
