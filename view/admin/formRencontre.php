@@ -50,7 +50,7 @@
                     <?php
                     foreach ($journees as $journee) : ?>
                         <option value="<?= $journee->idJournee ?>"<?php if ($rencontre[0]->idJournee == $journee->idJournee) { echo " selected"; } ?>>
-                            <?= $journee->idJournee ?>
+                            <?= $journee->numJournee ?>
                         </option>
                     <?php endforeach; ?>
                 </select>
