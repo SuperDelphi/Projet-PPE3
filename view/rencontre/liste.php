@@ -1,6 +1,6 @@
 <?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_top.php"; ?>
 
-    <div class="text-center">
+    <div>
         <h2><?= $championnat->nomChampionnat . ' ' . $championnat->typeChampionnat . ' ' . $championnat->nomDivision; ?></h2>
     </div>
     <hr>
@@ -10,7 +10,7 @@
     $idJournee = $rencontres[0]['idJournee'];
     ?>
 
-    <div class="text-center">
+    <div>
         <h3><a href="<?= BASE_URL ?>/rencontre/listeEquipePoule/?idChampionnat=<?= $championnat->idChampionnat ?>
     <?php if (isset($nomPoule)) {
                 echo "&nomPoule=$nomPoule";

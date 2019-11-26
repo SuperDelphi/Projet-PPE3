@@ -5,6 +5,7 @@
     echo ' Poule ' . $poule[0]->nomPoule;
 } ?>
 </h3>
+<hr>
 <div>
     <table border=1 class="data-table">
     <thead>

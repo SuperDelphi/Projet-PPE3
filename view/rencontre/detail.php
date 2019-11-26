@@ -10,6 +10,7 @@
         ?>
     | Poule <?= $nomPoule ?> | J.N° <?= $rencontre[0]->numJournee ?></h3>
 </div>
+<hr>
 <div>
     <table border=1 class="data-table sober">
         <tr>
