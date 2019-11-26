@@ -1,5 +1,6 @@
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_top.php"; ?>
 <div>
-    <h2><?= $rencontre[0]->nomChampionnat . ' ' . $rencontre[0]->typeChampionnat ?></h2>
+    <h1><?= $rencontre[0]->nomChampionnat . ' ' . $rencontre[0]->typeChampionnat ?></h1>
     <h3><?php
         foreach ($divisions as $d) {
             if ($d->idDivision == $rencontre[0]->idDivision) {
@@ -7,21 +8,29 @@
             }
         }
         ?>
-    | Poule <?= $nomPoule ?> | J.N°<?= $rencontre[0]->numJournee ?></h3>
+    | Poule <?= $nomPoule ?> | J.N° <?= $rencontre[0]->numJournee ?></h3>
 </div>
 <div>
-    <p>Date : <?= $rencontre[0]->date ?> | Heure : <?= $rencontre[0]->heure ?> | Lieu : <?= $rencontre[0]->lieu ?></p>
-    <p>Nom et adresse du Juge Arbitre : 
+    <table border=1 class="data-table sober">
+        <tr>
+            <td>Date : <?= $rencontre[0]->date ?></td>
+            <td>Heure : <?= $rencontre[0]->heure ?></td>
+            <td>Lieu : <?= $rencontre[0]->lieu ?></td>
+        </tr>
+        <tr>
+            <td colspan="3">Nom et adresse du Juge Arbitre : 
     <?php foreach ($joueurs as $j) {
         if ($j->idJoueur == $rencontre[0]->idArbitre) {
             echo $j->nom . ' ' . $j->prenom;
         }
-    } ?>
-    </p>
+    } ?></td>
+        </tr>
+    </table>
 </div>
+<br>
 <div>
-    <table class="text-center" border='1' class="data-table">
-        <thead>
+    <table border=1 class="data-table sober">
+        <thead class="text-center">
             <tr>
                 <th colspan=4>Equipe <?php
                                     foreach ($equipes as $e) {
@@ -42,38 +51,50 @@
                 <th></th>
                 <th>NOMS PRENOMS</th>
                 <th>Licence</th>
-                <th>Class</th>
+                <th>Classement</th>
                 <th></th>
                 <th>NOMS PRENOMS</th>
                 <th>Licence</th>
-                <th>Class</th>
+                <th>Classement</th>
             </tr>
         </thead>
         <tr>
-        <?php for($cpt = 0; $cpt < 3; $cpt++) : ?>
-            <td><?php if($cpt == 0) {echo 'A';} elseif ($cpt == 1) {echo 'B';} else {echo 'C';} ?></td>
+        <?php for ($cpt = 0; $cpt < 3; $cpt++) : ?>
+            <td><?php if ($cpt == 0) {
+                    echo 'A';
+                } elseif ($cpt == 1) {
+                    echo 'B';
+                } else {
+                    echo 'C';
+                } ?></td>
             <?php foreach ($joueurs as $j) {
-                    if ($j->idJoueur == $matchs[$cpt]->idJoueurA) {
-                        echo '<td>'.$j->nom.' '.$j->prenom.'</td>';
-                        echo '<td>'.$j->licenceJoueur.'</td>';
-                        echo '<td>'.$j->scoreGlobale.'</td>';
-                    }
-                } ?>
-            <td><?php if($cpt == 0) {echo 'X';} elseif ($cpt == 1) {echo 'Y';} else {echo 'Z';} ?></td>
+                if ($j->idJoueur == $matchs[$cpt]->idJoueurA) {
+                    echo '<td>' . $j->nom . ' ' . $j->prenom . '</td>';
+                    echo '<td>' . $j->licenceJoueur . '</td>';
+                    echo '<td>' . $j->scoreGlobale . '</td>';
+                }
+            } ?>
+            <td><?php if ($cpt == 0) {
+                    echo 'X';
+                } elseif ($cpt == 1) {
+                    echo 'Y';
+                } else {
+                    echo 'Z';
+                } ?></td>
             <?php foreach ($joueurs as $j) {
-                    if ($j->idJoueur == $matchs[$cpt]->idJoueurB) {
-                        echo '<td>'.$j->nom.' '.$j->prenom.'</td>';
-                        echo '<td>'.$j->licenceJoueur.'</td>';
-                        echo '<td>'.$j->scoreGlobale.'</td>';
-                    }
-                } ?>
+                if ($j->idJoueur == $matchs[$cpt]->idJoueurB) {
+                    echo '<td>' . $j->nom . ' ' . $j->prenom . '</td>';
+                    echo '<td>' . $j->licenceJoueur . '</td>';
+                    echo '<td>' . $j->scoreGlobale . '</td>';
+                }
+            } ?>
         </tr>
             <?php endfor; ?>
     </table>
 </div>
 <br>
 <div>
-    <table class="text-center" border='1'class="data-table">
+    <table border='1'class="data-table sober">
         <thead>
             <th></th>
             <th>Noms</th>
@@ -123,17 +144,38 @@
 </div>
 <br>
 <div>
-    <p>
-        RESULTATS : <br>Victoire : <br>Equipe : 
-        <?php ($rencontre[0]->scoreFinalA < $rencontre[0]->scoreFinalB) ?
-            $idEquipe = $rencontre[0]->idEquipeB : $idEquipe = $rencontre[0]->idEquipeA;
-        foreach ($equipes as $e) {
-            if ($e->idEquipe == $idEquipe) {
-                echo $e->nomEquipe;
-                echo '<br>Score : ' . $rencontre[0]->scoreFinalA . '/' . $rencontre[0]->scoreFinalB;
-            }
-        }
-        ?>
-        <?= ($rencontre[0]->scoreFinalA == $rencontre[0]->scoreFinalB) ? '| Match Nul' : ''; ?>
-    </p>
+    <table border=1 class="data-table sober">
+        <thead  class="text-center">
+            <th colspan=3>Résultats</th>
+        </thead>
+    <?php ($rencontre[0]->scoreFinalA < $rencontre[0]->scoreFinalB) ?
+            $idEquipe = $rencontre[0]->idEquipeB : $idEquipe = $rencontre[0]->idEquipeA; ?>
+    <tbody>
+        <tr>
+            <?php  if($rencontre[0]->scoreFinalA == $rencontre[0]->scoreFinalB) {
+            echo "<td>Match Nul</td>";
+            } else {?>
+                <td>Victoire de l'équipe : </td>
+                <td>
+                    <?php
+                    foreach ($equipes as $e) {
+                        if ($e->idEquipe == $idEquipe) {
+                            echo $e->nomEquipe;
+                        }
+                    }
+                    ?>
+                </td>
+            <?php } ?>
+        </tr>
+        <tr>
+            <td>Score : </td>
+            <td><?php if ($rencontre[0]->scoreFinalA > $rencontre[0]->scoreFinalB) 
+            {echo $rencontre[0]->scoreFinalA . ' / ' . $rencontre[0]->scoreFinalB;}
+            else {echo $rencontre[0]->scoreFinalB . ' / ' . $rencontre[0]->scoreFinalA;} ?></td>
+        </tr>
+        
+    </tbody>
+    </table>
 </div>
+<br>
+<?php require_once ROOT . DS . "view" . DS . "layout" . DS . "guest" . DS . "_guest_bottom.php"; ?>

@@ -16,7 +16,7 @@
                 echo "&nomPoule=$nomPoule";
             } ?>"
             ><?php if (isset($nomPoule)) {
-                echo 'Poule' . $nomPoule;
+                echo 'Poule ' . $nomPoule;
             } ?></h3><h6>Classement des équipes</a></h6>
     </div>
     <br>
@@ -47,7 +47,7 @@
                         <td style='width:5%'> <?= isset($r[0]['rencontre']->scoreFinalA) ? $r[0]['rencontre']->scoreFinalA : '?' ?> </td>
                         <td style='width:5%'><a
                                     href="<?php echo BASE_URL . '/rencontre/detail/?idRencontre=' . $r[0]['rencontre']->idRencontre;
-                                    (isset($nomPoule)) ? '&nomPoule=' . $nomPoule : "" ?>"><i class="far fa-list-alt"></i></a></td>
+                                    if (isset($nomPoule)) {echo '&nomPoule=' . $nomPoule; } ?>"><i class="far fa-list-alt"></i></a></td>
                         <td style='width:5%'> <?= isset($r[0]['rencontre']->scoreFinalB) ? $r[0]['rencontre']->scoreFinalB : '?' ?> </td>
                         <td style='width:40%'><a
                                     href="<?php echo BASE_URL . '/joueur/liste/' . $r[0]['rencontre']->idEquipeB ?>">
