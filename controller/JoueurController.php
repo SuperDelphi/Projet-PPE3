@@ -30,7 +30,6 @@ class JoueurController extends Controller {
         if (empty($d['joueur'])) {
             $this->e404('Informations inaccessibles');
         }
-        //var_dump($d);
         $this->set($d);
     }
 }

@@ -30,4 +30,3 @@ class ClassementController extends Controller
     }
     
 }
-
