@@ -22,7 +22,7 @@ foreach ($journee as $j) :
         <td>J<?= $cpt++ . " : " . $j->datePrev ?></td>
         <td class="row">
             <a href="<?php echo BASE_URL .
-                "/admin/listeRencontre/" . $championnat->idChampionnat . "-" . $j->idJournee . "-" . $nomPoule
+                "/admin/listeRencontre/?idchampionnat=" . $championnat->idChampionnat . "&idjournee=" . $j->idJournee . "&nompoule=" . $nomPoule
             ?>" class="button primarybuttonBlue col-lg text-center">Voir</a>
         </td>
     </tr>

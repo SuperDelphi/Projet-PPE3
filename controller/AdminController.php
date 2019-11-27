@@ -239,7 +239,7 @@ class AdminController extends Controller
             $params = array('donnees' => $donnees, 'conditions' => $conditions);
             echo 'ok';
             $RencontreModele->update($params);
-            $this->redirect("/admin/listeChampionnat");
+            $this->redirect("/admin/listeRencontre");
         } elseif (isset($_GET['idRencontre'])) {
             $idRencontre = $_GET['idRencontre'];
             $this->modRenc = $this->loadModel('Rencontre');
@@ -272,44 +272,46 @@ class AdminController extends Controller
         }
     }
 
-    function listeJournee($id)
+    function listeJournee()
     {
         $this->filterAndGetUser();
 
-        $idChampionnat = trim($id);
+        if (isset($_GET['idchampionnat'])) {
+            $idChampionnat = $_GET['idchampionnat'];
 
-        $nbrjournee = 0;
-        $j = array();
-        $r = array();
+            $nbrjournee = 0;
+            $j = array();
+            $r = array();
 
-        $modJournee = $this->loadModel('Journee');
-        $conditions = array('idChampionnat' => $idChampionnat);
-        $params = array('conditions' => $conditions);
-        $d['journee'] = $modJournee->find($params);
+            $modJournee = $this->loadModel('Journee');
+            $conditions = array('idChampionnat' => $idChampionnat);
+            $params = array('conditions' => $conditions);
+            $d['journee'] = $modJournee->find($params);
 
 
-        if (empty($d['journee'])) {
-            $this->e404('Le calendrier du championnat sera prochainement publié');
+            if (empty($d['journee'])) {
+                $this->e404('Le calendrier du championnat sera prochainement publié');
+            }
+
+            $modChamp = $this->loadModel('Championnat');
+            $conditions = array('championnat.idChampionnat' => $idChampionnat);
+            $params = array('conditions' => $conditions);
+            $d['championnat'] = $modChamp->findFirst($params);
+            //var_dump ($d);
+            $this->set($d);
+        } else {
+            $this->e404('Page introuvable. Nous nous excusons de cet incident.');
         }
-
-        $modChamp = $this->loadModel('Championnat');
-        $conditions = array('championnat.idChampionnat' => $idChampionnat);
-        $params = array('conditions' => $conditions);
-        $d['championnat'] = $modChamp->findFirst($params);
-        //var_dump ($d);
-        $this->set($d);
-
     }
 
-    function listeRencontre($id)
+    function listeRencontre()
     {
         $this->filterAndGetUser();
 
-        if (isset($id)) {
-            $tmp = explode("-", $id);
-            $idChampionnat = trim($tmp[0]);
-            $idJournee = trim($tmp[1]);
-            $nomPoule = trim($tmp[2]);
+        if (isset($_GET['idchampionnat'])) {
+            $idChampionnat = $_GET['idchampionnat'];
+            $idJournee = $_GET['idjournee'];
+            $nomPoule = $_GET['nompoule'];
 
             $modRencontre = $this->loadModel('Rencontre');
             $modRencontre->table .= " INNER JOIN poule ON poule.idChampionnat = championnat.idChampionnat";
