@@ -11,7 +11,7 @@ class AdminController extends Controller
 
     function listeChampionnat()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(1);
 
         $this->modChamp = $this->loadModel("Championnat");
         $this->modPoule = $this->loadModel("Poule");
@@ -38,7 +38,7 @@ class AdminController extends Controller
 
     function listeJoueur()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(1);
 
         $this->modJoueur = $this->loadModel('Joueur');
         $projection = 'personne.nom, personne.prenom, joueur.idJoueur, joueur.scoreGlobale';
@@ -112,7 +112,7 @@ class AdminController extends Controller
 
     function listeEquipe()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(1);
 
         $this->modEquipe = $this->loadModel('Equipe');
         $groupby = "equipe.idEquipe";
@@ -129,7 +129,7 @@ class AdminController extends Controller
 
     function formEquipe()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(1);
 
         if (isset($_POST["creerEquipe"])) {
             $equipeModele = $this->loadModel("Equipe");
@@ -158,7 +158,7 @@ class AdminController extends Controller
 
     function formJoueur()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(1);
 
         if (isset($_POST["creerJoueur"])) {
             $joueurModele = $this->loadModel("Joueur");
@@ -193,13 +193,13 @@ class AdminController extends Controller
 
     function formJournee()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(1);
     }
 
 
     function formRencontre()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(2);
 
         if (isset($_POST["creerrencontre"])) {
             $EquipeRencontreModele = $this->loadModel("EquipeRencontre");
@@ -239,7 +239,7 @@ class AdminController extends Controller
             $params = array('donnees' => $donnees, 'conditions' => $conditions);
             echo 'ok';
             $RencontreModele->update($params);
-            $this->redirect("/admin/listeRencontre");
+            $this->redirect("/admin/listeChampionnat");
         } elseif (isset($_GET['idRencontre'])) {
             $idRencontre = $_GET['idRencontre'];
             $this->modRenc = $this->loadModel('Rencontre');
@@ -274,7 +274,7 @@ class AdminController extends Controller
 
     function listeJournee()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(1);
 
         if (isset($_GET['idchampionnat'])) {
             $idChampionnat = $_GET['idchampionnat'];
@@ -306,7 +306,7 @@ class AdminController extends Controller
 
     function listeRencontre()
     {
-        $this->filterAndGetUser();
+        $this->filterAndGetUser(1);
 
         if (isset($_GET['idchampionnat'])) {
             $idChampionnat = $_GET['idchampionnat'];
