@@ -47,6 +47,7 @@
             <td><label>Journée</label></td>
             <td>
             <select class="form-control" name="journee" required>
+                
                     <?php
                     foreach ($journees as $journee) : ?>
                         <option value="<?= $journee->idJournee ?>"<?php if ($rencontre[0]->idJournee == $journee->idJournee) { echo " selected"; } ?>>
@@ -58,6 +59,7 @@
             <td><label>Arbitre</label></td>
             <td>
             <select class="form-control" name="arbitre" required>
+                    <option value="88">Aucun</option>
                     <?php
                     foreach ($joueurs as $joueur) : ?>
                         <option value="<?= $joueur->idJoueur ?>"<?php if ($rencontre[0]->idArbitre == $joueur->idJoueur) { echo " selected"; } ?>>
@@ -65,6 +67,7 @@
                         </option>
                     <?php endforeach; ?>
                 </select>
+                <p>(Par défaut ce sera : martin)</p>
             </td>
         </tr>
         <tr>

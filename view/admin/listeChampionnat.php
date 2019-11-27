@@ -31,7 +31,7 @@
                     <?= $nomChampionnat ?>
                 </td>
                 <td>
-                    <a href="<?= BASE_URL . DS . "admin" . DS . "listeJournee/" . $c->idChampionnat
+                    <a href="<?= BASE_URL . DS . "admin" . DS . "listeJournee/?idchampionnat=" . $c->idChampionnat
                     ?>" class="button primarybuttonBlue">Gérer</a>
                 </td>
             </tr>
