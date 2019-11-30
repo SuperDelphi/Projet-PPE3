@@ -5,11 +5,23 @@
 $idCompte = isset($user["idCompte"]) ? $user["idCompte"] : "";
 $identifiant = isset($user["identifiant"]) ? $user["identifiant"] : "";
 $typeCompte = isset($user["typeCompte"]) ? $user["typeCompte"] : "";
+$id = $userId;
+$title = "Nouvel utilisateur";
+$subtitle = "Vous êtes en train de créer un nouvel utilisateur.";
 
+if (!$newForm) {
+    if (($c_user["idCompte"] === $id)) {
+        $title = "Mon compte";
+        $subtitle = "Vous êtes en train de paramétrer votre compte.";
+    } else {
+        $title = "Mise à jour d'un utilisateur";
+        $subtitle = "Vous êtes en train de modifier l'utilisateur <b>" . $user["identifiant"] . "</b>.";
+    }
+}
 ?>
 
-    <h2><?= $newForm ? "Nouvel utilisateur" : "Mise à jour d'un utilisateur" ?></h2>
-    <?= $newForm ? "" : "<h6>Vous êtes en train de modifier l'utilisateur <b>" . $user["identifiant"] . "</b>.</h6>" ?>
+    <h2><?= $title ?></h2>
+    <h6><?= $subtitle ?></h6>
     <hr>
 
     <table class="form-table">
@@ -46,6 +58,7 @@ $typeCompte = isset($user["typeCompte"]) ? $user["typeCompte"] : "";
                     <b class="form-alert" id="password-alert">Le mot de passe doit être identique !</b>
                 </td>
             </tr>
+            <?php if ($c_user["idCompte"] !== $id): ?>
             <tr>
                 <td>
                     <label for="typeCompte">Rôle</label>
@@ -77,6 +90,7 @@ $typeCompte = isset($user["typeCompte"]) ? $user["typeCompte"] : "";
                     </select>
                 </td>
             </tr>
+            <?php endif; ?>
             <tr>
                 <td>
                     <a class="button primarybuttonWhite" href="<?= BASE_URL . DS . "admin/listeUtilisateur" ?>">Retour</a>
@@ -101,6 +115,8 @@ $typeCompte = isset($user["typeCompte"]) ? $user["typeCompte"] : "";
     let idValid = true, passValid = true;
 
     idInput.addEventListener("keyup", () => {
+        idInput.value = idInput.value.toLowerCase();
+
         if (/\W+/.test(idInput.value)) {
             idAlert.style.display = "initial";
             idValid = false;
@@ -111,7 +127,7 @@ $typeCompte = isset($user["typeCompte"]) ? $user["typeCompte"] : "";
         updateSubmitButtonState([idValid, passValid]);
     });
 
-    passInput2.addEventListener("change", () => {
+    passInput2.addEventListener("blur", () => {
         if (passInput1.value === passInput2.value) {
             passwordAlert.style.display = "none";
             passValid = true;

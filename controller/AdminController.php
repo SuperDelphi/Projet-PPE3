@@ -407,7 +407,7 @@ class AdminController extends Controller
 
     public function formUtilisateur($id)
     {
-        $this->filterAndGetUser(2);
+        $c_user = $this->filterAndGetUser(1);
 
         $personneModele = $this->loadModel("Personne");
         $compteModele = $this->loadModel("Compte");
@@ -437,11 +437,14 @@ class AdminController extends Controller
         $d["newForm"] = $newForm;
         $d["types"] = $types;
         $d["personnes"] = $filteredPersonnes;
+        $d["userId"] = $id;
 
         if ($newForm) {
             // Nouvel utilisateur
+            $this->filterAndGetUser(2);
+
             if (isset($_POST["identifiant"], $_POST["password"], $_POST["typeCompte"], $_POST["idPersonne"])) {
-                $identifiant = Security::shorten(Security::hardEscape($_POST["identifiant"]), 32);
+                $identifiant = mb_strtolower(Security::shorten(Security::hardEscape($_POST["identifiant"]), 32));
                 $password = Security::shorten($_POST["password"], 72);
 
                 if (preg_match("/\W+/", $password))
@@ -464,6 +467,10 @@ class AdminController extends Controller
             }
         } else {
             // Mise à jour d'un utilisateur
+            if (($c_user["idCompte"] !== $id) && ($c_user["typeCompte"] !== "GÉRANT")) {
+                $this->filterAndGetUser(2);
+            }
+
             $user = $compteModele->find([
                 "conditions" => ["idCompte" => $id]
             ], "TAB");
@@ -476,7 +483,7 @@ class AdminController extends Controller
             $d["user"] = $user[0];
 
             if (isset($_POST["identifiant"], $_POST["typeCompte"], $_POST["idPersonne"])) {
-                $identifiant = Security::shorten(Security::hardEscape($_POST["identifiant"]), 32);
+                $identifiant = mb_strtolower(Security::shorten(Security::hardEscape($_POST["identifiant"]), 32));
                 $typeCompte = $_POST["typeCompte"];
                 $idPersonne = $_POST["idPersonne"];
 
