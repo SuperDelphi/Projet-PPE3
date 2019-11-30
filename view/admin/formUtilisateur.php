@@ -54,12 +54,11 @@ if (!$newForm) {
                 </td>
                 <td>
                     <input class="form-control" type="password" id="pass2" name="password"
-                           maxlength="128" placeholder="••••••" <?= $newForm ? "required" : "" ?>>
+                           maxlength="72" placeholder="••••••" <?= $newForm ? "required" : "" ?>>
                     <b class="form-alert" id="password-alert">Le mot de passe doit être identique !</b>
                 </td>
             </tr>
-            <?php if ($c_user["idCompte"] !== $id): ?>
-            <tr>
+            <tr <?= $c_user["idCompte"] === $id ? 'style="display:none"' : "" ?>>
                 <td>
                     <label for="typeCompte">Rôle</label>
                 </td>
@@ -73,7 +72,7 @@ if (!$newForm) {
                     </select>
                 </td>
             </tr>
-            <tr>
+            <tr <?= $c_user["idCompte"] === $id ? 'style="display:none"' : "" ?>>
                 <td>
                     <label for="idPersonne">Propriétaire</label>
                 </td>
@@ -90,10 +89,10 @@ if (!$newForm) {
                     </select>
                 </td>
             </tr>
-            <?php endif; ?>
             <tr>
                 <td>
-                    <a class="button primarybuttonWhite" href="<?= BASE_URL . DS . "admin/listeUtilisateur" ?>">Retour</a>
+                    <a class="button primarybuttonWhite"
+                       href="<?= BASE_URL . DS . ($c_user["typeCompte"] === "GÉRANT" ? "admin/listeUtilisateur" : "admin/listeChampionnat") ?>">Retour</a>
                     <input id="submitButton" class="primarybuttonBlue" type="submit" value="Enregistrer">
                 </td>
             </tr>

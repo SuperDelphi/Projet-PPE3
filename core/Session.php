@@ -4,7 +4,7 @@ class Session
 {
     static function set($k, $v)
     {
-        $k = "'$k'";
+        $k = "$k";
         $_SESSION[$k] = $v;
     }
 

@@ -61,7 +61,7 @@ class AdminController extends Controller
 
             $nomChampionnat = $_POST["nomChampionnat"];
             $typeChampionnat = $_POST["typeChampionnat"];
-            $nombreJournees = $_POST["nombreJournee"]; // TODO S'occuper de ça
+            $nombreJournees = $_POST["nombreJournee"];
             $idDivision = $_POST["idDivision"];
 
             $valid1 = filter_var_array(
@@ -297,7 +297,6 @@ class AdminController extends Controller
             $conditions = array('championnat.idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
             $d['championnat'] = $modChamp->findFirst($params);
-            //var_dump ($d);
             $this->set($d);
         } else {
             $this->e404('Page introuvable. Nous nous excusons de cet incident.');
@@ -336,7 +335,6 @@ class AdminController extends Controller
             $conditions = array('championnat.idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
             $d['championnat'] = $modChamp->findFirst($params);
-            //var_dump($d);
             $this->set($d);
         } else {
             $this->e404('Aucune rencontre trouvée. Nous nous execusons de cet incident.');
@@ -409,6 +407,8 @@ class AdminController extends Controller
     {
         $c_user = $this->filterAndGetUser(1);
 
+        $redirectURL = $c_user["typeCompte"] === "GÉRANT" ? "/admin/listeUtilisateur" : "/admin/listeChampionnat";
+
         $personneModele = $this->loadModel("Personne");
         $compteModele = $this->loadModel("Compte");
         $arbitreModele = $this->loadModel("Arbitre");
@@ -448,7 +448,7 @@ class AdminController extends Controller
                 $password = Security::shorten($_POST["password"], 72);
 
                 if (preg_match("/\W+/", $password))
-                    $this->redirect("admin/listeUtilisateur");
+                    $this->redirect($redirectURL);
 
                 $typeCompte = $_POST["typeCompte"];
                 $idPersonne = $_POST["idPersonne"];
@@ -463,7 +463,7 @@ class AdminController extends Controller
                     $arbitreModele->insert(["idArbitre"], [$idPersonne]);
                 }
 
-                $this->redirect("/admin/listeUtilisateur");
+                $this->redirect($redirectURL);
             }
         } else {
             // Mise à jour d'un utilisateur
@@ -471,19 +471,10 @@ class AdminController extends Controller
                 $this->filterAndGetUser(2);
             }
 
-            $user = $compteModele->find([
-                "conditions" => ["idCompte" => $id]
-            ], "TAB");
-
-            if (!$user)
-                $this->e404("Cet utilisateur n'existe pas.");
-            elseif (!$personnes)
-                $this->e404("Il n'existe aucune personne dans la base de données.");
-
-            $d["user"] = $user[0];
-
             if (isset($_POST["identifiant"], $_POST["typeCompte"], $_POST["idPersonne"])) {
                 $identifiant = mb_strtolower(Security::shorten(Security::hardEscape($_POST["identifiant"]), 32));
+                $password = (isset($_POST["password"]) && strlen($_POST["password"]) > 0) ? Security::shorten($_POST["password"], 72) : "";
+                $hash = $password ? Security::hash($password) : "";
                 $typeCompte = $_POST["typeCompte"];
                 $idPersonne = $_POST["idPersonne"];
 
@@ -493,12 +484,11 @@ class AdminController extends Controller
                     "typeCompte" => $typeCompte
                 ];
 
-                if (isset($_POST["password"]) && strlen($_POST["password"]) > 0) {
-                    $password = Security::shorten($_POST["password"], 128);
+                if ($password) {
                     if (preg_match("/\W+/", $password)) {
-                        $this->redirect("admin/listeUtilisateur");
+                        $this->redirect($redirectURL);
                     } else
-                        $donneesCompte["password"] = Security::hash($password);
+                        $donneesCompte["password"] = $hash;
                 }
 
                 if ($typeCompte === "ARBITRE" && $idPersonne !== $id) {
@@ -523,8 +513,26 @@ class AdminController extends Controller
                     ]
                 ]);
 
-                $this->redirect("/admin/listeUtilisateur");
+                if ($c_user["idCompte"] === $id) {
+                    Session::set("identifiant", $identifiant);
+                    if ($password) {
+                        Session::set("hash", $hash);
+                    }
+                }
+
+                $this->redirect($redirectURL);
             }
+
+            $user = $compteModele->find([
+                "conditions" => ["idCompte" => $id]
+            ], "TAB");
+
+            if (!$user)
+                $this->e404("Cet utilisateur n'existe pas.");
+            elseif (!$personnes)
+                $this->e404("Il n'existe aucune personne dans la base de données.");
+
+            $d["user"] = $user[0];
         }
 
         $this->set($d);

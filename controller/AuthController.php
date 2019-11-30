@@ -15,7 +15,6 @@ class AuthController extends Controller
 
             if (!$account) {
                 $error = true;
-
                 $this->set(["info" => "Identifiants incorrects."]);
                 $this->render("login");
             } else {
