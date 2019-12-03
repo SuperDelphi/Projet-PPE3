@@ -9,6 +9,40 @@ class AdminController extends Controller
         "GÉRANT" => 2
     ];
 
+    // Méthode de filtrage
+    private function filterAndGetUser($minAuthLevel = 1)
+    {
+        $compteModele = $this->loadModel("Compte");
+        $redirectURL = "/auth/login";
+
+        if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
+            $ip = IP::getUserIP();
+            $accountType = $_SESSION["type"];
+
+            $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
+            $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
+
+            if (isset($this->auth_levels["$accountType"])) {
+                $validAuthorization = $this->auth_levels["$accountType"] >= $minAuthLevel;
+            } else {
+                $validAuthorization = false;
+            }
+
+            if (!($validUser && $validIP && $validAuthorization)) {
+                Session::destruct();
+                $this->redirect($redirectURL);
+            }
+        } else {
+            Session::destruct();
+            $this->redirect($redirectURL);
+        }
+
+        $d["c_user"] = $compteModele->getByLogin($_SESSION["identifiant"], $_SESSION["hash"], true);
+        $this->set($d);
+
+        return $d["c_user"];
+    }
+
     function listeChampionnat()
     {
         $this->filterAndGetUser(1);
@@ -538,39 +572,5 @@ class AdminController extends Controller
         $this->set($d);
 
         $this->render("formUtilisateur");
-    }
-
-    // Méthode de filtrage
-    private function filterAndGetUser($minAuthLevel = 1)
-    {
-        $compteModele = $this->loadModel("Compte");
-        $redirectURL = "/auth/login";
-
-        if (isset($_SESSION["identifiant"], $_SESSION["hash"], $_SESSION["type"], $_SESSION["ippref"])) {
-            $ip = IP::getUserIP();
-            $accountType = $_SESSION["type"];
-
-            $validUser = $compteModele->userExists(Security::hardEscape($_SESSION["identifiant"]));
-            $validIP = IP::startsWithPrefix($ip, Security::hardEscape($_SESSION["ippref"]));
-
-            if (isset($this->auth_levels["$accountType"])) {
-                $validAuthorization = $this->auth_levels["$accountType"] >= $minAuthLevel;
-            } else {
-                $validAuthorization = false;
-            }
-
-            if (!($validUser && $validIP && $validAuthorization)) {
-                Session::destruct();
-                $this->redirect($redirectURL);
-            }
-        } else {
-            Session::destruct();
-            $this->redirect($redirectURL);
-        }
-
-        $d["c_user"] = $compteModele->getByLogin($_SESSION["identifiant"], $_SESSION["hash"], true);
-        $this->set($d);
-
-        return $d["c_user"];
     }
 }
