@@ -32,9 +32,17 @@
     </a>
     <hr>
     <?php if ($c_user["typeCompte"] === "GÉRANT"): ?>
+        <a href="<?= BASE_URL . DS ?>admin/listePersonne">
+            <div class="row mx-0">
+                <div class="nav-item icon-container"><i class="fas fa-user-cog"></i></div>
+                <div class="col nav-item">Gestion des personnes</div>
+            </div>
+        </a>
+    <?php endif; ?>
+    <?php if ($c_user["typeCompte"] === "GÉRANT"): ?>
         <a href="<?= BASE_URL . DS ?>admin/listeUtilisateur">
             <div class="row mx-0">
-                <div class="nav-item icon-container"><i class="fas fa-users-cog"></i></div>
+                <div class="nav-item icon-container"><i class="fas fa-user-shield"></i></div>
                 <div class="col nav-item">Gestion des utilisateurs</div>
             </div>
         </a>

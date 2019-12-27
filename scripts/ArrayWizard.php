@@ -10,4 +10,11 @@ class ArrayWizard
         }
         return null;
     }
+
+    public static function arrayKeyFirst($array) {
+        foreach ($array as $key => $value) {
+            return $key;
+        }
+        return null;
+    }
 }

@@ -47,6 +47,7 @@ if (!$newForm) {
                     <input class="form-control" type="password" id="pass1"
                            maxlength="72" placeholder="••••••" <?= $newForm ? "required" : "" ?>>
                 </td>
+            </tr>
             <tr>
                 <td>
                     <label for="password">Confirmer le mot de passe</label>

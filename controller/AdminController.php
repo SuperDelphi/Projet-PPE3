@@ -313,10 +313,6 @@ class AdminController extends Controller
         if (isset($_GET['idchampionnat'])) {
             $idChampionnat = $_GET['idchampionnat'];
 
-            $nbrjournee = 0;
-            $j = array();
-            $r = array();
-
             $modJournee = $this->loadModel('Journee');
             $conditions = array('idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
@@ -324,7 +320,7 @@ class AdminController extends Controller
 
 
             if (empty($d['journee'])) {
-                $this->e404('Le calendrier du championnat sera prochainement publié');
+                $this->e404('Le calendrier du championnat sera prochainement publié.');
             }
 
             $modChamp = $this->loadModel('Championnat');
@@ -333,7 +329,7 @@ class AdminController extends Controller
             $d['championnat'] = $modChamp->findFirst($params);
             $this->set($d);
         } else {
-            $this->e404('Page introuvable. Nous nous excusons de cet incident.');
+            $this->e404('Page introuvable. Nous nous excusons pour cet incident.');
         }
     }
 
@@ -371,7 +367,7 @@ class AdminController extends Controller
             $d['championnat'] = $modChamp->findFirst($params);
             $this->set($d);
         } else {
-            $this->e404('Aucune rencontre trouvée. Nous nous execusons de cet incident.');
+            $this->e404('Aucune rencontre trouvée. Nous nous execusons pour cet incident.');
         }
     }
 
@@ -388,6 +384,20 @@ class AdminController extends Controller
         $this->set(["users" => $users]);
 
         $this->render("listeUtilisateur");
+    }
+
+    public function listePersonne() {
+        $this->filterAndGetUser(2);
+
+        $personneModele = $this->loadModel("Personne");
+
+        $personnes = $personneModele->find([
+            "orderby" => "personne.nom"
+        ], "TAB");
+
+        $this->set(["personnes" => $personnes]);
+
+        $this->render("listePersonne");
     }
 
     public function deleteUtilisateur($id)
@@ -501,6 +511,7 @@ class AdminController extends Controller
             }
         } else {
             // Mise à jour d'un utilisateur
+
             if (($c_user["idCompte"] !== $id) && ($c_user["typeCompte"] !== "GÉRANT")) {
                 $this->filterAndGetUser(2);
             }
@@ -572,5 +583,90 @@ class AdminController extends Controller
         $this->set($d);
 
         $this->render("formUtilisateur");
+    }
+
+    public function formPersonne($id)
+    {
+        $this->filterAndGetUser(2);
+
+        // Limites possible de l'âge
+        $ageBounds = [15, 150];
+
+        $redirectURL = "/admin/listePersonne";
+
+        $personneModele = $this->loadModel("Personne");
+
+        $newForm = !isset($id);
+
+        $d["c_user"] = $newForm;
+        $d["newForm"] = $newForm;
+        $d["ageBounds"] = $ageBounds;
+
+        $isAllSet = isset($_POST["nom"], $_POST["prenom"], $_POST["age"], $_POST["sexe"], $_POST["mail"], $_POST["adresse"]);
+
+
+        if ($isAllSet) {
+
+            $nom = Security::shorten(Security::hardEscape($_POST["nom"]), 64);
+            $prenom = Security::shorten(Security::hardEscape($_POST["prenom"]), 64);
+            $age = $_POST["age"];
+            $sexe = $_POST["sexe"];
+            $mail = filter_var(Security::shorten(Security::hardEscape($_POST["mail"]), 64), FILTER_VALIDATE_EMAIL);
+            $adresse = Security::shorten(Security::hardEscape($_POST["adresse"]), 128);
+
+            // L'adresse e-mail doit être valide.
+            if (!$mail)
+                $this->redirect($redirectURL);
+
+            // L'âge doit être compris entre 15 et 150 (inclus).
+            if (!Security::valueIsBetween($age, $ageBounds[0], $ageBounds[1]) || !is_numeric($age))
+                $this->redirect($redirectURL);
+        }
+
+        if ($newForm) {
+            // Nouvelle personne
+
+            if ($isAllSet) {
+                $personneModele->insert(
+                    ["nom", "prenom", "age", "sexe", "mail", "adresse"],
+                    [$nom, $prenom, $age, $sexe, $mail, $adresse]
+                );
+
+                $this->redirect($redirectURL);
+            }
+        } else {
+            // Mise à jour d'une personne
+
+            if ($isAllSet) {
+                $personneModele->update([
+                    "donnees" => [
+                        "nom" => $nom,
+                        "prenom" => $prenom,
+                        "age" => $age,
+                        "sexe" => $sexe,
+                        "mail" => $mail,
+                        "adresse" => $adresse
+                    ],
+                    "conditions" => [
+                        "idPersonne" => $id
+                    ]
+                ]);
+
+                $this->redirect($redirectURL);
+            }
+
+            $personne = $personneModele->find([
+                "conditions" => ["idPersonne" => $id]
+            ], "TAB");
+
+            if (!$personne)
+                $this->e404("Cet utilisateur n'existe pas.");
+
+            $d["personne"] = $personne[0];
+        }
+
+        $this->set($d);
+
+        $this->render("formPersonne");
     }
 }
