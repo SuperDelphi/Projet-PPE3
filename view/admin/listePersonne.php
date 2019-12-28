@@ -12,7 +12,7 @@
     <div class="data-table">
     <?php foreach ($personnes as $p) : ?>
     <?php $isMyAccount = $c_user["idCompte"] === $p["idPersonne"]; ?>
-    <div class="person-container col-lg-9 col-md-10 col row">
+    <div class="<?= $isMyAccount ? "highlighted" : "" ?> person-container col-lg-9 col-md-10 col row">
         <div class="col">
             <div class="row">
                 <div class="col-lg-9 col-6">

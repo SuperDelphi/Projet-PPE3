@@ -119,14 +119,16 @@ a:hover {
     padding: 10px 20px;
 }
 
-.data-table.sober > tr:hover, .data-table.sober > tbody > tr:hover {
+.data-table.sober > tr:hover,
+.data-table.sober > tbody > tr:hover {
     transition: 100ms;
     z-index: 10;
     background-image: none;
     color: initial;
 }
 
-.data-table.sober > tr:hover a, .data-table.sober > tbody > tr:hover a {
+.data-table.sober > tr:hover a,
+.data-table.sober > tbody > tr:hover a {
     color: unset;
 }
 
@@ -148,7 +150,9 @@ a:hover {
 
 /* Titles */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Barlow Condensed", sans-serif;
 }
 
@@ -420,7 +424,8 @@ section#main-section input[type="password"]::placeholder {
 
 /* Stickers */
 
-.label-gerant, .label-arbitre {
+.label-gerant,
+.label-arbitre {
     padding: 6px 15px;
     border-style: solid;
     border-width: 1px;
@@ -440,7 +445,7 @@ section#main-section input[type="password"]::placeholder {
 }
 
 .highlighted {
-    animation: blinking 2s 2;
+    animation: blinking 1s 2;
     border: solid 2px rgb(255, 165, 0);
     background-color: rgba(255, 165, 0, 0.05) !important;
 }
