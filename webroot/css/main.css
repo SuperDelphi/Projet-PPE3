@@ -466,7 +466,22 @@ aside {
 
 .person-container {
     border-radius: 10px;
-    padding: 25px;
+    padding: 20px;
+}
+
+.person-container .button-container {
+    opacity: 0.25;
+    transition: opacity 100ms;
+}
+
+.person-container:hover .button-container {
+    opacity: 1;
+}
+
+.person-container .button-container .primarybuttonBlue,
+.person-container .button-container .primarybuttonWhite,
+.person-container .button-container .dangerbutton {
+    padding: 5px;
 }
 
 .data-indicator {

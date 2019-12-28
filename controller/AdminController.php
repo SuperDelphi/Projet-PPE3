@@ -432,17 +432,62 @@ class AdminController extends Controller
 
                 $arbitreModele = $this->loadModel("Arbitre");
 
-                if ($user["typeCompte"] === "ARBITRE") {
-                    $arbitreModele->delete([
-                        "conditions" => ["idArbitre" => $id]
-                    ]);
-                }
-
+                $arbitreModele->delete([
+                    "conditions" => ["idArbitre" => $id]
+                ]);
                 $compteModele->delete([
                     "conditions" => ["idCompte" => $id]
                 ]);
 
                 $this->redirect("/admin/listeUtilisateur");
+            }
+        }
+    }
+
+    public function deletePersonne($id)
+    {
+        $c_user = $this->filterAndGetUser(2);
+
+        $personneModele = $this->loadModel("Personne");
+        $compteModele = $this->loadModel("Compte");
+
+        $personne = $personneModele->find([
+            "conditions" => ["idPersonne" => $id]
+        ], "TAB");
+
+        if (!$personne) {
+            $this->e404("Cette personne n'existe pas.");
+        } elseif ($personne[0]["idPersonne"] === $c_user["idCompte"]) {
+            $this->e404("Vous ne pouvez pas vous supprimer vous-même.");
+        }
+
+        $personne = $personne[0];
+
+        $this->set(["personne" => $personne]);
+
+        if (isset($_POST["passwd"])) {
+            $password = Security::hardEscape($_POST["passwd"]);
+
+            $validUser = $compteModele->getByLogin($_SESSION["identifiant"], $password);
+
+            if (!$validUser) {
+                $this->set(["info" => "Mot de passe incorrect."]);
+            } else {
+                // Suppression de la personne
+
+                $arbitreModele = $this->loadModel("Arbitre");
+
+                $arbitreModele->delete([
+                    "conditions" => ["idArbitre" => $id]
+                ]);
+                $compteModele->delete([
+                    "conditions" => ["idCompte" => $id]
+                ]);
+                $personneModele->delete([
+                    "conditions" => ["idPersonne" => $id]
+                ]);
+
+                $this->redirect("/admin/listePersonne");
             }
         }
     }
