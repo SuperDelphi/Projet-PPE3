@@ -4,25 +4,25 @@
     <hr>
 
     <div>
-        <b>Equipe :</b>
+        <b>Équipe :</b>
         <label><?= $joueur->nomEquipe ?></label>
     </div>
     <div>
-        <b>Age :</b>
+        <b>Âge :</b>
         <label><?= $joueur->age . ' ans'?></label>
     </div>
     <div>
         <b>E-mail :</b>
-        <label><?= ($joueur->mail == '') ? 'inconnu' : $joueur->mail ?></label>
+        <label><?= ($joueur->mail === '') ? '-' : $joueur->mail ?></label>
     </div>
     <div>
         <b>Adresse :</b>
-        <label><?= ($joueur->adresse == '') ? 'inconnu' : $joueur->adresse ?></label>
+        <label><?= ($joueur->adresse === '') ? '-' : $joueur->adresse ?></label>
     </div>
     
     <div>
         <b>Licence :</b>
-        <label><?= $joueur->licenceJoueur ?></label>
+        <label><?= mb_strtoupper($joueur->licenceJoueur) ?></label>
     </div>
     <div>
         <b>Classement :</b>
