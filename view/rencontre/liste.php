@@ -5,10 +5,10 @@
     </div>
     <hr>
 
-    <?php
-    $cpt = 1;
-    $idJournee = $rencontres[0]['idJournee'];
-    ?>
+<?php
+$cpt = 1;
+$idJournee = $rencontres[0]['idJournee'];
+?>
 
     <div>
         <h3><a href="<?= BASE_URL ?>/rencontre/listeEquipePoule/?idChampionnat=<?= $championnat->idChampionnat ?>
@@ -22,16 +22,13 @@
     <br>
     <div>
         <div class="col-lg-12">
-            <table border='1' style="width:100%" class="data-table">
+            <table style="width:100%" class="data-table">
                 <thead class="text-center">
                 <th colspan="5">J<?= $cpt++ . '<br>' . $rencontres[0][0]['rencontre']->datePrev ?></th>
                 </thead>
                 <tbody>
                 <?php
-                foreach ($rencontres
-
-                as $r) :
-                //var_dump($r);
+                foreach ($rencontres as $r):
                 if ($r[0]['rencontre']->idJournee == $idJournee) {
                     ?>
                     <tr>
@@ -47,7 +44,9 @@
                         <td style='width:5%'> <?= isset($r[0]['rencontre']->scoreFinalA) ? $r[0]['rencontre']->scoreFinalA : '?' ?> </td>
                         <td style='width:5%'><a
                                     href="<?php echo BASE_URL . '/rencontre/detail/?idRencontre=' . $r[0]['rencontre']->idRencontre;
-                                    if (isset($nomPoule)) {echo '&nomPoule=' . $nomPoule; } ?>"><i class="far fa-list-alt"></i></a></td>
+                                    if (isset($nomPoule)) {
+                                        echo '&nomPoule=' . $nomPoule;
+                                    } ?>"><i class="far fa-list-alt"></i></a></td>
                         <td style='width:5%'> <?= isset($r[0]['rencontre']->scoreFinalB) ? $r[0]['rencontre']->scoreFinalB : '?' ?> </td>
                         <td style='width:40%'><a
                                     href="<?php echo BASE_URL . '/joueur/liste/' . $r[0]['rencontre']->idEquipeB ?>">
@@ -63,10 +62,10 @@
                 } else { ?>
                 </tbody>
             </table>
+            <hr>
         </div>
-        <br>
         <div class="col-lg-12">
-            <table border='1' style="width:100%" class="data-table">
+            <table style="width:100%" class="data-table">
                 <thead class="text-center">
                 <th colspan="5">J<?= $cpt++ . '<br>' . $r[0]['rencontre']->datePrev ?></th>
                 </thead>
@@ -83,8 +82,9 @@
                             ?></a></td>
                     <td style='width:5%'> <?= isset($r[0]['rencontre']->scoreFinalA) ? $r[0]['rencontre']->scoreFinalA : '?' ?> </td>
                     <td style='width:5%'><a
-                                    href="<?php echo BASE_URL . '/rencontre/detail/?idRencontre=' . $r[0]['rencontre']->idRencontre;
-                                    (isset($nomPoule)) ? '&nomPoule=' . $nomPoule : "" ?>"><i class="far fa-list-alt"></i></a></td>
+                                href="<?php echo BASE_URL . '/rencontre/detail/?idRencontre=' . $r[0]['rencontre']->idRencontre;
+                                (isset($nomPoule)) ? '&nomPoule=' . $nomPoule : "" ?>"><i
+                                    class="far fa-list-alt"></i></a></td>
                     <td style='width:5%'> <?= isset($r[0]['rencontre']->scoreFinalB) ? $r[0]['rencontre']->scoreFinalB : '?' ?> </td>
                     <td style='width:40%'>
                         <?php

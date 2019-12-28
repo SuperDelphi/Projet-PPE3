@@ -7,7 +7,7 @@
 </h3>
 <hr>
 <div>
-    <table border=1 class="data-table">
+    <table class="data-table">
     <thead>
         <th>Place</th>
         <th>Equipes participantes</th>
