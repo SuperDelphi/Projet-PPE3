@@ -153,6 +153,7 @@ class AdminController extends Controller
         $params = array();
         $params = array('groupby' => $groupby);
         $d['equipes'] = $this->modEquipe->find($params);
+
         if (empty($d['equipes'])) {
             $this->e404('Page introuvable');
         }
@@ -229,7 +230,6 @@ class AdminController extends Controller
     {
         $this->filterAndGetUser(1);
     }
-
 
     function formRencontre()
     {
@@ -311,22 +311,28 @@ class AdminController extends Controller
         $this->filterAndGetUser(1);
 
         if (isset($_GET['idchampionnat'])) {
+            $modJournee = $this->loadModel("Journee");
+            $modChamp = $this->loadModel("Championnat");
+            $modPoules = $this->loadModel("Poule");
+
             $idChampionnat = $_GET['idchampionnat'];
 
-            $modJournee = $this->loadModel('Journee');
             $conditions = array('idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
             $d['journee'] = $modJournee->find($params);
-
 
             if (empty($d['journee'])) {
                 $this->e404('Le calendrier du championnat sera prochainement publié.');
             }
 
-            $modChamp = $this->loadModel('Championnat');
             $conditions = array('championnat.idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
             $d['championnat'] = $modChamp->findFirst($params);
+
+            // Vérification de la présence de plusieurs poules dans le championnat
+            $poules = $modPoules->find(["conditions" => ["idChampionnat" => $idChampionnat]], "TAB");
+            $d["hasPoules"] = count($poules) !== 0;
+
             $this->set($d);
         } else {
             $this->e404('Page introuvable. Nous nous excusons pour cet incident.');
@@ -338,33 +344,50 @@ class AdminController extends Controller
         $this->filterAndGetUser(1);
 
         if (isset($_GET['idchampionnat'])) {
+            // Récupération des modèles
+            $modRencontre = $this->loadModel("Rencontre");
+            $modJournee = $this->loadModel("Journee");
+            $modEquipe = $this->loadModel('Equipe');
+            $modChamp = $this->loadModel('Championnat');
+
+            // Récupération des paramètres de la requête
             $idChampionnat = $_GET['idchampionnat'];
             $idJournee = $_GET['idjournee'];
-            $nomPoule = $_GET['nompoule'];
+            $nomPoule = isset($_GET['nompoule']) ? $_GET["nompoule"] : null;
+            $equipes = [];
 
-            $modRencontre = $this->loadModel('Rencontre');
-            $modRencontre->table .= " INNER JOIN poule ON poule.idChampionnat = championnat.idChampionnat";
-            $conditions = array('journee.idJournee' => $idJournee, 'nomPoule' => $nomPoule);
-            $groupby = 'idEquipeA';
-            $params = array('conditions' => $conditions, 'groupby' => $groupby);
-            $rencontres = $modRencontre->find($params);
-            $d['rencontre'] = $rencontres;
-            $r = array();
+            $conditions = ['journee.idJournee' => $idJournee];
 
-            $modEquipe = $this->loadModel('Equipe');
-            foreach ($rencontres as $rencontre) {
-                $conditions = array('equipe.idEquipe' => $rencontre->idEquipeA);
-                $params = array('conditions' => $conditions);
-                array_push($r, $modEquipe->find($params));
-                $conditions = array('equipe.idEquipe' => $rencontre->idEquipeB);
-                $params = array('conditions' => $conditions);
-                array_push($r, $modEquipe->find($params));
+            if ($nomPoule) {
+                $modRencontre->table .= " INNER JOIN poule ON poule.idChampionnat = championnat.idChampionnat";
+                $conditions["nomPoule"] = $nomPoule;
             }
-            $d['equipes'] = $r;
-            $modChamp = $this->loadModel('Championnat');
+
+            $groupby = 'idEquipeA';
+            $params = ['conditions' => $conditions, 'groupby' => $groupby];
+
+            $rencontres = $modRencontre->find($params);
+            $journee = $modJournee->find(["conditions" => ["idJournee" => $idJournee]])[0];
+
+            foreach ($rencontres as $rencontre) {
+                // Équipe A
+                $conditions = ['equipe.idEquipe' => $rencontre->idEquipeA];
+                $params = ['conditions' => $conditions];
+                array_push($equipes, $modEquipe->find($params));
+                // Équipe B
+                $conditions = ['equipe.idEquipe' => $rencontre->idEquipeB];
+                $params = ['conditions' => $conditions];
+                array_push($equipes, $modEquipe->find($params));
+            }
+
             $conditions = array('championnat.idChampionnat' => $idChampionnat);
             $params = array('conditions' => $conditions);
+
             $d['championnat'] = $modChamp->findFirst($params);
+            $d['equipes'] = $equipes;
+            $d['journee'] = $journee;
+            $d['rencontre'] = $rencontres;
+
             $this->set($d);
         } else {
             $this->e404('Aucune rencontre trouvée. Nous nous execusons pour cet incident.');

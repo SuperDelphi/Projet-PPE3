@@ -1,8 +1,9 @@
 <?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
 
-<h2><?= $championnat->nomChampionnat . " " . $championnat->typeChampionnat . " " . $championnat->nomDivision; ?> : Liste des rencontres</h2>
+<h2><?= $championnat->nomChampionnat . " " . $championnat->typeChampionnat
+. " " . $championnat->nomDivision ?> : Liste des rencontres</h2>
 <hr>
-<table border='1' style='text-align:center' class="data-table">
+<table style='text-align:center' class="data-table sober">
 <?php
 $cpt = 0;
 foreach ($rencontre as $r) :
@@ -13,6 +14,7 @@ foreach ($rencontre as $r) :
                         foreach ($equipes as $e) {
                             if ($e[0]->idEquipe === $r->idEquipeA) {
                                 echo $e[0]->nomEquipe;
+                                break;
                             }
                         }
                         ?></td>
@@ -22,8 +24,9 @@ foreach ($rencontre as $r) :
             <td style='width:30%'>
                 <?php
                     foreach ($equipes as $e) {
-                        if ($e[0]->idEquipe == $r->idEquipeB) {
+                        if ($e[0]->idEquipe === $r->idEquipeB) {
                             echo $e[0]->nomEquipe;
+                            break;
                         }
                     }
                     ?></td>

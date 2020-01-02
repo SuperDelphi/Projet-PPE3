@@ -12,10 +12,10 @@
     <div class="data-table">
     <?php foreach ($personnes as $p) : ?>
     <?php $isMyAccount = $c_user["idCompte"] === $p["idPersonne"]; ?>
-    <div class="<?= $isMyAccount ? "highlighted" : "" ?> person-container col-lg-9 col-md-10 col row">
+    <div class="<?= $isMyAccount ? "highlighted" : "" ?> person-container col-lg-9 col-md-12 col-12 mx-0 row">
         <div class="col">
             <div class="row">
-                <div class="col-lg-9 col-6">
+                <div class="col-lg-9 col-md-8 col-6">
                     <div class="row">
                         <div class="col px-0">
                     <span><?= "<b>" . mb_strtoupper($p["nom"]) . " "
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="button-container col-lg-3 col-6">
+                <div class="button-container col-lg-3 col-md-4 col-6">
                     <div class="row">
                         <div class="col">
                             <a class="button primarybuttonBlue col-lg text-center" href="<?= BASE_URL . DS . "admin" . DS . "formPersonne/" . $p["idPersonne"] ?>">Gérer</a>
@@ -49,6 +49,5 @@
         </div>
     </div>
     <?php endforeach; ?>
-    </div>
 
 <?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_bottom.php"; ?>

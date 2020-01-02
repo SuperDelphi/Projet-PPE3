@@ -3,7 +3,7 @@
 <h2><?= (isset($rencontre)) ? "Modification de la rencontre" : "Nouvelle rencontre" ?></h2>
 <hr>
 
-<table class="form-table" ">
+<table class="form-table">
     <form method="POST" action="">
         <tr>
             <td><label>Heure</label></td>
@@ -67,7 +67,6 @@
                         </option>
                     <?php endforeach; ?>
                 </select>
-                <p>(Par défaut ce sera : martin)</p>
             </td>
         </tr>
         <tr>

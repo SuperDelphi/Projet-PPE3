@@ -474,12 +474,12 @@ aside {
     padding: 20px;
 }
 
-.person-container .button-container {
+.person-container .button-container, .hover-accent .button-container {
     opacity: 0.25;
     transition: opacity 100ms;
 }
 
-.person-container:hover .button-container {
+.person-container:hover .button-container, .hover-accent:hover .button-container {
     opacity: 1;
 }
 
@@ -506,7 +506,7 @@ aside {
     }
 
     #admin-body {
-        padding: 80px;
+        padding: 25px;
     }
 
     .form-container {

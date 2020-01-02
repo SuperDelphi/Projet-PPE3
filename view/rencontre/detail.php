@@ -71,7 +71,7 @@
             <?php foreach ($joueurs as $j) {
                 if ($j->idJoueur == $matchs[$cpt]->idJoueurA) {
                     echo '<td>' . $j->nom . ' ' . $j->prenom . '</td>';
-                    echo '<td>' . $j->licenceJoueur . '</td>';
+                    echo '<td>' . mb_strtoupper($j->licenceJoueur) . '</td>';
                     echo '<td>' . $j->scoreGlobale . '</td>';
                 }
             } ?>
@@ -85,7 +85,7 @@
             <?php foreach ($joueurs as $j) {
                 if ($j->idJoueur == $matchs[$cpt]->idJoueurB) {
                     echo '<td>' . $j->nom . ' ' . $j->prenom . '</td>';
-                    echo '<td>' . $j->licenceJoueur . '</td>';
+                    echo '<td>' . mb_strtoupper($j->licenceJoueur) . '</td>';
                     echo '<td>' . $j->scoreGlobale . '</td>';
                 }
             } ?>
