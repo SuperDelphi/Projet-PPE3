@@ -1,6 +1,7 @@
 <?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
 
 <h2>Nouveau joueur</h2>
+<h6>Vous êtes en train d'ajouter un nouveau joueur.</h6>
 <hr>
 
 <form method="POST">

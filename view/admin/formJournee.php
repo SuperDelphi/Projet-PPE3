@@ -1,6 +1,7 @@
 <?php require_once ROOT . DS . "view" . DS . "layout" . DS . "admin" . DS . "_admin_top.php"; ?>
 
     <h2>Nouvelle journée</h2>
+    <h6>Vous êtes en train de créer une nouvelle journée.</h6>
     <hr>
 
     <form method="POST" action="<?= BASE_URL . DS ?>admin/">

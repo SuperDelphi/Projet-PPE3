@@ -3,9 +3,11 @@
     <h2>Liste des championnats</h2>
     <hr>
 
+    <?php if ($c_user["typeCompte"] === "GÉRANT"): ?>
     <a href="<?php echo BASE_URL . DS . "admin" . DS . "formChampionnat" ?>"
        class="button primarybuttonBlue">
         <i class="fas fa-plus fa-sm"></i>&nbsp Nouveau championnat</a>
+    <?php endif; ?>
 
     <table class="data-table sober">
         <?php foreach ($championnats as $c) : ?>
@@ -24,7 +26,6 @@
                     $c->idChampionnat
                 )->nomChampionnat . " " . $c->typeChampionnat . " "
                 . $c->nomDivision . ($pouleAmount ? "<b style='color: #00379a'> • $pouleAmount poules</b>" : "");
-
             ?>
             <tr>
                 <td class="text-left">

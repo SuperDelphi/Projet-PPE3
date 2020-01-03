@@ -19,7 +19,7 @@
                 <select class="form-control" name="equipea" required>
                     <?php
                     foreach ($equipes as $equipe) : ?>
-                        <option value="<?= $equipe->idEquipe?>"<?php if ($rencontre[0]->idEquipeA == $equipe->idEquipe) { echo " selected"; } ?>>
+                        <option value="<?= $equipe->idEquipe?>"<?php if (isset($rencontre) AND $rencontre[0]->idEquipeA === $equipe->idEquipe) { echo " selected"; } ?>>
                             <?= $equipe->nomEquipe ?>
                         </option>
                     <?php endforeach; ?>
@@ -30,7 +30,7 @@
                 <select class="form-control" name="equipeb" required>
                     <?php
                     foreach ($equipes as $equipe) : ?>
-                        <option value="<?= $equipe->idEquipe?>"<?php if ($rencontre[0]->idEquipeB == $equipe->idEquipe) { echo " selected"; } ?>>
+                        <option value="<?= $equipe->idEquipe?>"<?php if (isset($rencontre) AND $rencontre[0]->idEquipeB === $equipe->idEquipe) { echo " selected"; } ?>>
                             <?= $equipe->nomEquipe ?>
                         </option>
                     <?php endforeach; ?>
@@ -50,7 +50,7 @@
                 
                     <?php
                     foreach ($journees as $journee) : ?>
-                        <option value="<?= $journee->idJournee ?>"<?php if ($rencontre[0]->idJournee == $journee->idJournee) { echo " selected"; } ?>>
+                        <option value="<?= $journee->idJournee ?>"<?php if (isset($rencontre) AND $rencontre[0]->idJournee === $journee->idJournee) { echo " selected"; } ?>>
                             <?= $journee->numJournee ?>
                         </option>
                     <?php endforeach; ?>
@@ -62,7 +62,7 @@
                     <option value="88">Aucun</option>
                     <?php
                     foreach ($joueurs as $joueur) : ?>
-                        <option value="<?= $joueur->idJoueur ?>"<?php if ($rencontre[0]->idArbitre == $joueur->idJoueur) { echo " selected"; } ?>>
+                        <option value="<?= $joueur->idJoueur ?>"<?php if (isset($rencontre) AND $rencontre[0]->idArbitre === $joueur->idJoueur) { echo " selected"; } ?>>
                             <?= $joueur->nom ?>
                         </option>
                     <?php endforeach; ?>
